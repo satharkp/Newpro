@@ -21,8 +21,8 @@ const Carousel = () => {
       </h1>
     </div>
 
-   <div className="flex items-center flex-col h-screen lg:ml-0">
-      <div className="flex justify-center gap-4 mb-4">
+   <div className="flex items-center flex-col h-screen ml:3 lg:ml-0">
+      <div className="flex justify-center gap-4 mb-5 lg:mb-4">
         <button
           onClick={() => swiperRef.current.swiper.slidePrev()}
           className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition"
@@ -31,8 +31,7 @@ const Carousel = () => {
         </button>
         <button
           onClick={() => swiperRef.current.swiper.slideNext()}
-          className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition"
-        >
+          className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition">
           →
         </button>
       </div>
