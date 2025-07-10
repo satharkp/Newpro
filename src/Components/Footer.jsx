@@ -27,7 +27,7 @@ const Footer = () => {
       </div>
       <div className="flex">
         <p className="mr-1 text-gray-400">Address:</p>
-        <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" aria-label="Our address" title="Our address" className="text-white transition-colors duration-300 hover:text-blue-400">
+        <a href="https://maps.app.goo.gl/FAkuDHfp8r5y8J8L6" target="_blank" rel="noopener noreferrer" aria-label="Our address" title="Our address" className="text-white transition-colors duration-300 hover:text-blue-400">
           Opp.Police Station,<br />
           Pattambi
         </a>
