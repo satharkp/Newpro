@@ -3,7 +3,7 @@ import tech from '../assets/tech.jpg'
 
 const About = () => {
   return (
-    <div id='about' className="px-4 py-16 max-w-7xl mx-auto overflow-x-hidden">
+    <div id='about' className="px-4 py-16 max-w-7xl mx-auto ">
       <h1
         data-aos="fade-down"
         data-aos-easing="linear"
@@ -61,5 +61,6 @@ const About = () => {
     </div>
   )
 }
+
 
 export default About;

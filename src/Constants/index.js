@@ -1,6 +1,6 @@
 
-import { PiSolarPanelThin } from "react-icons/pi";
-import { GiCctvCamera,GiAutoRepair } from "react-icons/gi";
+
+import { GiCctvCamera,GiAutoRepair,GiSolarPower } from "react-icons/gi";
 import { FaHome } from "react-icons/fa";
 import { GrCloudSoftware } from "react-icons/gr";
 import { FaComputer } from "react-icons/fa6";
@@ -14,7 +14,7 @@ import SpaceCity9 from "../assets/it.jpg";
 
 export const ServiceData = [
   {
-    icon: PiSolarPanelThin,
+    icon: GiSolarPower,
     title: "SOLAR SYSTEM",
     content: "Lorem ipsum dolor sit /amet, consectetur adipiscing elit.",
     backgroundImage: SpaceCity1,
