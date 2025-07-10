@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { Swiper,SwiperSlide } from "swiper/react";
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -8,6 +9,7 @@ import { RxArrowTopRight } from "react-icons/rx";
 import { ServiceData } from "../Constants";
 
 const Carousel = () => {
+  const swiperRef = useRef(null);
   return (
 
     <>
@@ -19,20 +21,35 @@ const Carousel = () => {
       </h1>
     </div>
 
-   <div className="flex items-center flex-col h-screen ml-20 lg:ml-0">
+   <div className="flex items-center flex-col h-screen lg:ml-0 items-start">
+      <div className="flex justify-center gap-4 mb-4">
+        <button
+          onClick={() => swiperRef.current.swiper.slidePrev()}
+          className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition"
+        >
+          ←
+        </button>
+        <button
+          onClick={() => swiperRef.current.swiper.slideNext()}
+          className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition"
+        >
+          →
+        </button>
+      </div>
       <Swiper
+        ref={swiperRef}
         breakpoints={{
           0: {
             slidesPerView: 1,
-            spaceBetween: 15
+            spaceBetween: 16
           },
           640: {
             slidesPerView: 2,
-            spaceBetween: 15
+            spaceBetween: 24
           },
           1024: {
             slidesPerView: 3,
-            spaceBetween: 20
+            spaceBetween: 32
           }
         }}
       freeMode={true}
@@ -42,7 +59,7 @@ const Carousel = () => {
 
       modules={[FreeMode, Pagination, Mousewheel]}
       mousewheel={true}
-        className='max-w-[90%] lg:max-w-[80%]'
+        className='max-w-[90%] lg:max-w-[80%] justify-start'
         >
           {ServiceData.map((item) => (
             <SwiperSlide key={item.title}>
