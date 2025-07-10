@@ -21,7 +21,7 @@ const Carousel = () => {
       </h1>
     </div>
 
-   <div className="flex items-center flex-col h-screen ml:3 lg:ml-0">
+   <div className="flex items-center flex-col h-screen ml-4 lg:ml-0">
       <div className="flex justify-center gap-4 mb-5 lg:mb-4">
         <button
           onClick={() => swiperRef.current.swiper.slidePrev()}
