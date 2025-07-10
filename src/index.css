@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgba(209, 209, 209);
+}
+
+@layer base{
+
+  body{
+    @apply text-black relative font-sans h-screen overflow-x-hidden;
+  }
+}
+
+.spline-model {
+  @apply mt-[10%] scale-[0.6];
+}
+
+@media (min-width: 640px) {
+  .spline-model {
+    @apply mt-0;
+  }
+}
