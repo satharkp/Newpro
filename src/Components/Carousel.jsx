@@ -12,7 +12,7 @@ const Carousel = () => {
   const swiperRef = useRef(null);
   return (
 
-    <>
+    <div id='wwd'>
     <div>
       <h1 data-aos="fade-right"
      data-aos-offset="300"
@@ -22,19 +22,6 @@ const Carousel = () => {
     </div>
 
    <div className="flex items-center flex-col h-screen ml-4 lg:ml-0">
-      <div className="flex justify-center gap-4 mb-5 lg:mb-4">
-        <button
-          onClick={() => swiperRef.current.swiper.slidePrev()}
-          className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition"
-        >
-          ←
-        </button>
-        <button
-          onClick={() => swiperRef.current.swiper.slideNext()}
-          className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition">
-          →
-        </button>
-      </div>
       <Swiper
         ref={swiperRef}
         breakpoints={{
@@ -58,7 +45,7 @@ const Carousel = () => {
 
       modules={[FreeMode, Pagination, Mousewheel]}
       mousewheel={true}
-        className='max-w-[90%] lg:max-w-[80%] justify-start'
+        className='max-w-[90%] lg:max-w-[80%]'
         >
           {ServiceData.map((item) => (
             <SwiperSlide key={item.title}>
@@ -84,8 +71,24 @@ const Carousel = () => {
           ))}
       </Swiper>
 
+      {/* Buttons below pagination */}
+      <div className="flex justify-center gap-4 mt-6">
+        <button
+          onClick={() => swiperRef.current.swiper.slidePrev()}
+          className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition"
+        >
+          ←
+        </button>
+        <button
+          onClick={() => swiperRef.current.swiper.slideNext()}
+          className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition"
+        >
+          →
+        </button>
+      </div>
+
     </div>
-    </>
+    </div>
 
     
   )

@@ -27,11 +27,11 @@ const toggleMenu=()=>{
       <nav className="hidden md:flex items-center gap-12 ">
         <a data-aos="fade-down"
      data-aos-easing="linear"
-     data-aos-duration="1000" className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="">Home</a>
+     data-aos-duration="1000" className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="/">Home</a>
 
         <a data-aos="fade-down"
      data-aos-easing="linear"
-     data-aos-duration="1500" className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="">Features</a>
+     data-aos-duration="1500" className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href='#wwd'>What We Do</a>
 
         <a data-aos="fade-down"
      data-aos-easing="linear"
