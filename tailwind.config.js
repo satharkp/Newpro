@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        logo: ['Orbitron', 'sans-serif'],
+        logo: ['Montserrat', 'sans-serif'],
       },
     },
   },
