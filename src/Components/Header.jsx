@@ -63,16 +63,16 @@ const toggleMenu=()=>{
           aria-modal="true"
         >
           <nav className="flex flex-col gap-8 items-center w-full">
-            <a className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="">
+            <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="">
               Home
             </a>
-            <a className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="#wwd">
+            <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="#wwd">
               What we do?
             </a>
-            <a className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="">
+            <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="">
               Resources
             </a>
-            <a className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="">
+            <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="">
               Contact
             </a>
           </nav>
