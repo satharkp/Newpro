@@ -31,7 +31,7 @@ const toggleMenu=()=>{
 
         <a data-aos="fade-down"
      data-aos-easing="linear"
-     data-aos-duration="1500" className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href='#wwd'>What We Do</a>
+     data-aos-duration="1500" className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href='#wwd'>What We Do?</a>
 
         <a data-aos="fade-down"
      data-aos-easing="linear"
@@ -66,8 +66,8 @@ const toggleMenu=()=>{
             <a className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="">
               Home
             </a>
-            <a className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="">
-              Features
+            <a className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="#wwd">
+              What we do?
             </a>
             <a className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="">
               Resources
