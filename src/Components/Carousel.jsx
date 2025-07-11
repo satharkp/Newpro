@@ -22,67 +22,68 @@ const Carousel = () => {
     </div>
 
    <div className="flex items-center flex-col h-screen ml-4 lg:ml-0">
-      <div className="flex justify-center gap-4 mb-5 lg:mb-4">
+      <div className="relative w-full flex justify-center items-center lg:mt-4">
         <button
           onClick={() => swiperRef.current.swiper.slidePrev()}
-          className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition"
+          className="absolute left-2 z-30 bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition lg:hidden"
         >
           ←
         </button>
+        <Swiper
+          ref={swiperRef}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 16
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 24
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 32
+            }
+          }}
+        freeMode={true}
+        pagination={{
+           clickable:true
+        }}
+
+        modules={[FreeMode, Pagination, Mousewheel]}
+        mousewheel={true}
+          className='max-w-[90%] lg:max-w-[80%]'
+          >
+            {ServiceData.map((item) => (
+              <SwiperSlide key={item.title}>
+                <div className="relative mb-20 group h-[320px] w-[280px] lg:h-[400px] lg:w-[300px] rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300 ease-in-out">
+                  {/* Background Image */}
+                  <div
+                    className="absolute inset-0 bg-cover bg-center opacity-70 lg:opacity-40 group-hover:opacity-70 transition-opacity duration-300 z-0"
+                    style={{ backgroundImage: `url(${item.backgroundImage})` }}
+                  />
+
+                  {/* Overlay on hover */}
+                  <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-0 transition-opacity duration-300 z-10" />
+
+                  {/* Foreground Content */}
+                  <div className="flex flex-col gap-6 relative z-20 text-white px-6 py-8 h-full w-full">
+                    <item.icon className="text-blue-600 group-hover:text-blue-400 w-[32px] h-[32px]:"/>
+                    <h3 className="text-lg font-bold">{item.title}</h3>
+                    <p className="text-sm">{item.content}</p>
+                    <RxArrowTopRight className="absolute bottom-5 left-5 w-[35px] h-[35px] text-white group-hover:to-blue-500 group-hover:rotate-45 duration-100 " />
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+        </Swiper>
         <button
           onClick={() => swiperRef.current.swiper.slideNext()}
-          className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition">
+          className="absolute right-2 z-30 bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition lg:hidden"
+        >
           →
         </button>
       </div>
-      <Swiper
-        ref={swiperRef}
-        breakpoints={{
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 16
-          },
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 24
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 32
-          }
-        }}
-      freeMode={true}
-      pagination={{
-         clickable:true
-      }}
-
-      modules={[FreeMode, Pagination, Mousewheel]}
-      mousewheel={true}
-        className='max-w-[90%] lg:max-w-[80%] justify-start'
-        >
-          {ServiceData.map((item) => (
-            <SwiperSlide key={item.title}>
-              <div className="relative mb-20 group h-[320px] w-[280px] lg:h-[400px] lg:w-[300px] rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300 ease-in-out">
-                {/* Background Image */}
-                <div
-                  className="absolute inset-0 bg-cover bg-center opacity-70 lg:opacity-40 group-hover:opacity-70 transition-opacity duration-300 z-0"
-                  style={{ backgroundImage: `url(${item.backgroundImage})` }}
-                />
-
-                {/* Overlay on hover */}
-                <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-0 transition-opacity duration-300 z-10" />
-
-                {/* Foreground Content */}
-                <div className="flex flex-col gap-6 relative z-20 text-white px-6 py-8 h-full w-full">
-                  <item.icon className="text-blue-600 group-hover:text-blue-400 w-[32px] h-[32px]:"/>
-                  <h3 className="text-lg font-bold">{item.title}</h3>
-                  <p className="text-sm">{item.content}</p>
-                  <RxArrowTopRight className="absolute bottom-5 left-5 w-[35px] h-[35px] text-white group-hover:to-blue-500 group-hover:rotate-45 duration-100 " />
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-      </Swiper>
 
     </div>
     </>
