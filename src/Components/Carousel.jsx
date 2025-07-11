@@ -14,9 +14,9 @@ const Carousel = () => {
 
     <>
     <div>
-      <h1 data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500" className="text-3xl mt-32 sm:text-4xl md:text-5xl lg:text-4xl font-semibold tracking-wider p-8 mb-10">
+      <h1 data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine" className="text-3xl mt-32 sm:text-4xl md:text-5xl lg:text-4xl font-semibold tracking-wider p-8 mb-10">
         WHAT WE DO?
       </h1>
     </div>

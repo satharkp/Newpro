@@ -5,9 +5,9 @@ const About = () => {
   return (
     <div id='about' className="px-4 py-16 max-w-7xl mx-auto ">
       <h1
-        data-aos="fade-down"
-        data-aos-easing="linear"
-        data-aos-duration="1500"
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
         className="text-3xl mt-10 sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16 "
       >
         ABOUT US
@@ -46,8 +46,8 @@ const About = () => {
           />
         </div>
         <div data-aos="fade-right"
-             data-aos-offset="300"
-            data-aos-easing="ease-in-sine" 
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="1500"
             className="w-full lg:w-1/2 text-gray-600 text-lg leading-relaxed space-y-6">
           <p>
             Technology moves fast — and so do we. At <span className="font-bold text-blue-500">NETMAGIC</span>, we provide complete digital and technical support to keep your systems running smoothly.
