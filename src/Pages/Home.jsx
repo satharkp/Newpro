@@ -36,7 +36,7 @@ useEffect(() => {
         />
 
         {/* Blur effect */}
-        <div className="h-0 w-[40rem] absolute top-[20%] right-[-5%] shadow-[0_0_900px_20px_blue] -rotate-[30deg] z-[-1]"></div>
+        <div className="h-0 w-[40rem] absolute top-[5%] right-[-5%] shadow-[0_0_900px_20px_blue] -rotate-[30deg] z-[-1]"></div>
 
         {/* Actual content */}
         <Header/>
