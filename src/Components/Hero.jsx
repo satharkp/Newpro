@@ -9,7 +9,7 @@ const Hero = () => {
     <div data-aos="fade-right"
      data-aos-offset="300"
      data-aos-easing="ease-in-sine" className="max-w-xl ml-[3%] z-10 mt-[40%] md:mt-[20%] lg:mt-0">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wider mt-8 mb-1">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wider mt-10 mb-1">
         SECURE. POWER.AUTOMATE. REPAIR.
         </h1>
         <p className="text-base mb-5 sm:text-lg tracking-wider text-gray-600 max-w-[25rem] lg:max-w-[30rem]">
