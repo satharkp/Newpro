@@ -1,13 +1,16 @@
-import Home from "./Pages/Home"
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import Contact from "./Pages/Contact";
 
 function App() {
-
   return (
-    <>
-    <Home/>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

@@ -1,45 +1,72 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import 'boxicons/css/boxicons.min.css';
 
 const Header = () => {
-  const[menuOpen,setMenuOpen]=useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
+  const idleTimer = useRef(null);
 
+  const toggleMenu = () => {
+    setMenuOpen(pre => !pre);
+  };
 
-const toggleMenu=()=>{
-  setMenuOpen(pre=>!pre)
-}
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY.current) {
+        setIsVisible(false); // scrolling down
+      } else {
+        setIsVisible(true); // scrolling up
+      }
+
+      lastScrollY.current = currentScrollY;
+      resetIdleTimer();
+    };
+
+    const handleMouseMove = () => {
+      setIsVisible(true);
+      resetIdleTimer();
+    };
+
+    const resetIdleTimer = () => {
+      if (idleTimer.current) clearTimeout(idleTimer.current);
+      idleTimer.current = setTimeout(() => setIsVisible(false), 4000);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('touchstart', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('touchstart', handleMouseMove);
+    };
+  }, []);
 
   return (
-    <header className="flex justify-between items-center py-4 px-4 lp:px-20">
+    <header
+      id='home'
+      className={`fixed top-0 left-0 w-full bg-[#d1d1d1] shadow z-50 flex justify-between items-center h-16 px-4 lp:px-20 transition-transform duration-500 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
+    >
 
       <div className="flex items-center">
         <h1
-          data-aos="fade-down"
-          data-aos-easing="linear"
-          data-aos-duration="1500"
           className="text-xl font-logo md:ml-8"
         >
-          NETMAGIC
+          <a href="/">NETMAGIC</a>
+          
         </h1>
       </div>
 
       {/* Navabars*/}
       <nav className="hidden md:flex items-center gap-12 ">
-        <a data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1000" className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="/">Home</a>
-
-        <a data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500" className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href='#wwd'>What We Do?</a>
-
-        <a data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="2000" className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="">Resources</a>
-
-        <a data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="2500" className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="">Contact</a>
+        <a className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50 opacity-100" href="/">Home</a>
+        <a className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50 opacity-100" href='#wwd'>What We Do?</a>
+        <a className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50 opacity-100" href="">Resources</a>
+        <a className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50 opacity-100" href="/contact">Contact</a>
       </nav>
 
       {/* mobile view*/}
@@ -51,7 +78,7 @@ const toggleMenu=()=>{
         aria-controls="mobile-menu"
         type="button"
       >
-        <i className="bx bx-menu"></i>
+        <i className={`bx ${menuOpen ? 'bx-x' : 'bx-menu'}`}></i>
       </button>
 
       {/* mobile view-sidebar*/}
@@ -63,7 +90,7 @@ const toggleMenu=()=>{
           aria-modal="true"
         >
           <nav className="flex flex-col gap-8 items-center w-full">
-            <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="">
+            <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="#home">
               Home
             </a>
             <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="#wwd">

@@ -15,18 +15,24 @@ const Home = () => {
   }, []);
   return (
     <div className="overflow-x-hidden">
-      <main className="w-full">
-        {/* Gradient image*/}
-        <img className='absolute top-0 right-0 opacity-60 -z-1' src={gradient} alt="Colorful gradient background" />
+      <main className="w-full relative">
+        {/* Gradient image */}
+        <img
+          className="absolute top-0 right-0 opacity-60 z-[-1]"
+          src={gradient}
+          alt="Colorful gradient background"
+        />
 
-        {/* Blur image */}
-        <div className='h-0 w-[40rem] absolute top-[20%] right-[-5%] shadow-[0_0_900px_20px_blue] -rotate-[30deg]'></div>
+        {/* Blur effect */}
+        <div className="h-0 w-[40rem] absolute top-[20%] right-[-5%] shadow-[0_0_900px_20px_blue] -rotate-[30deg] z-[-1]"></div>
+
+        {/* Actual content */}
+        <Header/>
+        <Hero/>
+        <About/>
+        <Carousel/>
+        <Footer/>
       </main>
-      <Header/>
-      <Hero/>
-      <About/>
-      <Carousel/>
-      <Footer/>
     </div>
   )
 }
