@@ -7,12 +7,24 @@ import { useEffect } from 'react';
 import Carousel from '../Components/Carousel';
 import Footer from '../Components/Footer';
 import About from '../Components/About';
+import { useLocation } from 'react-router-dom';
 
 const Home = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
     AOS.refresh();
   }, []);
+
+  const location = useLocation();
+
+useEffect(() => {
+  if (location.hash === "#wwd") {
+    const section = document.getElementById("wwd");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+}, [location]);
   return (
     <div className="overflow-x-hidden">
       <main className="w-full relative">
@@ -30,7 +42,9 @@ const Home = () => {
         <Header/>
         <Hero/>
         <About/>
-        <Carousel/>
+        <section id="wwd">
+         <Carousel />
+        </section>
         <Footer/>
       </main>
     </div>
