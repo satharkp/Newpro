@@ -23,14 +23,14 @@ const Hero = () => {
             <i className='bx bx-link-external'></i>
               More about Us
             </a>
-            <a className="border border-blue-500 py-4 sm:py-5 px-5 sm:px-7  rounded-full sm:text-lg text-sm font-semibold tracking-wider transition-all duration-300 hover:bg-black hover:text-white" href="">
+            <a className="border border-blue-500 py-4 sm:py-5 px-5 sm:px-7  rounded-full sm:text-lg text-sm font-semibold tracking-wider transition-all duration-300 hover:bg-black hover:text-white" href="/contact">
               Contact Us
               <i className='bx bx-chevron-right'></i> 
             </a>
         </div>
     </div>
     {/* 3d Robot*/}
-    <div className="flex justify-center mt-10 lg:mt-0 items-center w-full max-w-5xl mx-auto scale-[2] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1.5]">
+    <div className="flex justify-center mt-28 lg:mt-0 items-center w-full max-w-5xl mx-auto scale-[2] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1.5]">
       <Spline scene="https://prod.spline.design/Mzsufjfbt4z5nMrl/scene.splinecode" />
     </div>
     {/*robot that only can for canvas*/} 
