@@ -59,9 +59,9 @@ const Contact = () => {
         >
           CONTACT US
         </h1>
-        <form onSubmit={handleSubmit} className="w-full max-w-xl text-center font-mono space-y-6 rounded-lg bg-[#c3c2c2] p-20 ">
+        <form onSubmit={handleSubmit} className="w-full max-w-xl text-center font-mono space-y-6 rounded-lg bg-[#c3c2c2] p-5 ">
           <p className="text-sm text-center break-words">
-            Email us at <br /><span className="font-bold break-all">netmagiccomputersptb@gmail.com</span><br />or message us here:
+            Email us at <br /><span className="font-bold break-all ">netmagiccomputersptb@gmail.com</span><br />or message us here:
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <input
