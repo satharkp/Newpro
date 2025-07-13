@@ -133,7 +133,7 @@ const Contact = () => {
           >
             DIRECTION
           </h1>
-          <div className="flex flex-col md:flex-row gap-8 mt-6 font-mono bg-[#c3c2c2] p-10 rounded-xl">
+          <div className="flex flex-col md:flex-row gap-8 mt-6 font-mono bg-[#c3c2c2] p-5 rounded-xl">
             <div className="md:w-1/2 space-y-2">
             <p className="text-md mb-20">
             
@@ -141,7 +141,7 @@ const Contact = () => {
                 Pattambi, Kerala 679303
             </p>
 
-              <div className="bg-[#adacac] p-5 rounded-xl"  >
+              <div className="bg-[#adacac] p-3 m-0 rounded-xl"  >
                 <p className="mb-5 underline"><strong>Working Hours:</strong></p>
                 <table className="text-md leading-6 w-full">
                   <tbody>
