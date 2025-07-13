@@ -60,8 +60,8 @@ const Contact = () => {
           CONTACT US
         </h1>
         <form onSubmit={handleSubmit} className="w-full max-w-xl text-center font-mono space-y-6 rounded-lg bg-[#c3c2c2] p-20 ">
-          <p className="text-sm">
-            Email us at <span className="font-bold">netmagiccomputersptb@gmail.com</span> or message us here:
+          <p className="text-sm text-center break-words">
+            Email us at <span className="font-bold break-all">netmagiccomputersptb@gmail.com</span><br />or message us here:
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <input
@@ -145,13 +145,13 @@ const Contact = () => {
                 <p className="mb-5 underline"><strong>Working Hours:</strong></p>
                 <table className="text-md leading-6 w-full">
                   <tbody>
-                    <tr><td className="pr-4">Sunday</td><td>Closed</td></tr>
-                    <tr><td className="pr-4">Monday</td><td>9:30 am–7 pm</td></tr>
-                    <tr><td className="pr-4">Tuesday</td><td>9:30 am–7 pm</td></tr>
-                    <tr><td className="pr-4">Wednesday</td><td>9:30 am–7 pm</td></tr>
-                    <tr><td className="pr-4">Thursday</td><td>9:30 am–7 pm</td></tr>
-                    <tr><td className="pr-4">Friday</td><td>9:30 am–7 pm</td></tr>
-                    <tr><td className="pr-4">Saturday</td><td>9:30 am–7 pm</td></tr>
+                    <tr><td className="pr-4 text-left">Sunday</td><td className="text-right">Closed</td></tr>
+                    <tr><td className="pr-4 text-left">Monday</td><td className="text-right">9:30 am–7 pm</td></tr>
+                    <tr><td className="pr-4 text-left">Tuesday</td><td className="text-right">9:30 am–7 pm</td></tr>
+                    <tr><td className="pr-4 text-left">Wednesday</td><td className="text-right">9:30 am–7 pm</td></tr>
+                    <tr><td className="pr-4 text-left">Thursday</td><td className="text-right">9:30 am–7 pm</td></tr>
+                    <tr><td className="pr-4 text-left">Friday</td><td className="text-right">9:30 am–7 pm</td></tr>
+                    <tr><td className="pr-4 text-left">Saturday</td><td className="text-right">9:30 am–7 pm</td></tr>
                   </tbody>
                 </table>
               </div>
