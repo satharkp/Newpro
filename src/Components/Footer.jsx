@@ -7,7 +7,7 @@ const Footer = () => {
   <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
     <div className="sm:col-span-2">
       <a href="/" aria-label="Go home" title="Company" className="inline-flex items-center">
-        <span className="ml-2 text-xl font-bold tracking-wide text-white uppercase">NETMAGIC</span>
+        <span className="ml-2 text-xl font-bold font-logo tracking-wide text-white uppercase">NETMAGIC</span>
       </a>
       <div className="mt-6 lg:max-w-sm">
         <p className="text-sm text-gray-300">

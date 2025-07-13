@@ -54,7 +54,7 @@ const Contact = () => {
       <div className="min-h-screen pt-24 bg-[#d1d1d1] flex flex-col justify-center items-center px-4 py-10">
         <h1
           data-aos="zoom-in"
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-6 text-center"
+          className="text-3xl mt-10 sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16"
         >
           CONTACT US
         </h1>
@@ -117,19 +117,45 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto">
           <h1
             data-aos="zoom-in"
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-6 text-center"
+            className="text-3xl mt-10 sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16"
           >
-            LOCATION
+            DIRECTION
           </h1>
-          <LoadScript googleMapsApiKey="AIzaSyAQGIKzmVWKNZ7gdjOeJAmrPe2r7iBqSi0">
-            <GoogleMap
-              mapContainerStyle={containerStyle}
-              center={center}
-              zoom={12}
-            >
-              <Marker position={center} />
-            </GoogleMap>
-          </LoadScript>
+          <div className="flex flex-col md:flex-row gap-8 mt-6 bg-[#c3c2c2] p-10 rounded-md">
+            <div className="md:w-1/2 space-y-2">
+            <p className="text-md mb-20">
+            
+                Opposite Police Station, <br />
+                Pattambi, Kerala 679303
+            </p>
+
+              <div className="bg-[#adacac] p-5 rounded-xl"  >
+                <p className="mb-5 underline"><strong>Working Hours:</strong></p>
+                <table className="text-md leading-6 w-full">
+                  <tbody>
+                    <tr><td className="pr-4">Sunday</td><td>Closed</td></tr>
+                    <tr><td className="pr-4">Monday</td><td>9:30 am–7 pm</td></tr>
+                    <tr><td className="pr-4">Tuesday</td><td>9:30 am–7 pm</td></tr>
+                    <tr><td className="pr-4">Wednesday</td><td>9:30 am–7 pm</td></tr>
+                    <tr><td className="pr-4">Thursday</td><td>9:30 am–7 pm</td></tr>
+                    <tr><td className="pr-4">Friday</td><td>9:30 am–7 pm</td></tr>
+                    <tr><td className="pr-4">Saturday</td><td>9:30 am–7 pm</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div className="md:w-1/2">
+              <LoadScript googleMapsApiKey="AIzaSyAQGIKzmVWKNZ7gdjOeJAmrPe2r7iBqSi0">
+                <GoogleMap
+                  mapContainerStyle={containerStyle}
+                  center={center}
+                  zoom={12}
+                >
+                  <Marker position={center} />
+                </GoogleMap>
+              </LoadScript>
+            </div>
+          </div>
         </div>
       </section>
       <Footer />
