@@ -3,6 +3,18 @@ import Footer from "../Components/Footer";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect, useState } from "react";
+import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+
+
+const containerStyle = {
+  width: "100%",
+  height: "400px"
+};
+ 
+const center = {
+  lat: 10.804048122805051,   // You can change to your location
+  lng: 76.18664964170154
+};
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -100,6 +112,26 @@ const Contact = () => {
           </div>
         </form>
       </div>
+
+      <section className="w-full py-10 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h1
+            data-aos="zoom-in"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-6 text-center"
+          >
+            LOCATION
+          </h1>
+          <LoadScript googleMapsApiKey="AIzaSyAQGIKzmVWKNZ7gdjOeJAmrPe2r7iBqSi0">
+            <GoogleMap
+              mapContainerStyle={containerStyle}
+              center={center}
+              zoom={12}
+            >
+              <Marker position={center} />
+            </GoogleMap>
+          </LoadScript>
+        </div>
+      </section>
       <Footer />
     </>
   );
