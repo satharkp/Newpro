@@ -12,16 +12,16 @@ const Carousel = () => {
   const swiperRef = useRef(null);
   return (
 
-    <div id='wwd'>
     <div>
-      <h1 data-aos="fade-right"
+    <div>
+      <h1 id='wwd'  data-aos="fade-right"
      data-aos-offset="300"
      data-aos-easing="ease-in-sine" className="text-3xl mt-32 sm:text-4xl md:text-5xl lg:text-4xl font-semibold tracking-wider p-8 mb-10">
         WHAT WE DO?
       </h1>
     </div>
 
-   <div className="flex items-center flex-col h-screen ml-4 lg:ml-0">
+   <div  className="flex items-center flex-col h-screen ml-4 lg:ml-0">
       <Swiper
         ref={swiperRef}
         breakpoints={{
