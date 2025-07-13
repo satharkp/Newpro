@@ -10,21 +10,19 @@ import About from '../Components/About';
 import { useLocation } from 'react-router-dom';
 
 const Home = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-    AOS.refresh();
-  }, []);
-
   const location = useLocation();
 
-useEffect(() => {
-  if (location.hash === "#wwd") {
-    const section = document.getElementById("wwd");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+
+    if (location.hash === "#wwd") {
+      const section = document.getElementById("wwd");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
     }
-  }
-}, [location]);
+  }, [location]);
+
   return (
     <div className="overflow-x-hidden">
       <main className="w-full relative">

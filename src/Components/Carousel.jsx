@@ -16,8 +16,8 @@ const Carousel = () => {
     <div>
       <h1 id='wwd'  data-aos="fade-right"
      data-aos-offset="300"
-     data-aos-easing="ease-in-sine" className="text-3xl mt-32 sm:text-4xl md:text-5xl lg:text-4xl font-semibold tracking-wider p-8 mb-10">
-        WHAT WE DO?
+     data-aos-easing="ease-in-sine" className="text-center text-3xl mt-32 sm:text-4xl md:text-5xl lg:text-4xl font-semibold tracking-wider p-8 mb-10">
+        SERVICES
       </h1>
     </div>
 

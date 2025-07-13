@@ -73,7 +73,7 @@ const Header = () => {
       {/* Navabars*/}
       <nav className="hidden md:flex items-center gap-12 ">
         <a className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50 opacity-100" href="/">Home</a>
-        <a className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50 opacity-100" href="/#wwd">What We Do?</a>
+        <a className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50 opacity-100" href="/#wwd">Services</a>
         <a className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50 opacity-100" href="/#resources">Resources</a>
         <a className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50 opacity-100" href="/contact">Contact</a>
       </nav>
@@ -102,7 +102,7 @@ const Header = () => {
           >
             <nav className="flex flex-col gap-8 items-center w-full backdrop-blur-xl">
               <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50 backdrop-blur-md" href="/">Home</a>
-              <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50 backdrop-blur-md" href="/#wwd">What we do?</a>
+              <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50 backdrop-blur-md" href="/#wwd">Services</a>
               <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="/#resources">Resources</a>
               <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="/contact">Contact</a>
             </nav>

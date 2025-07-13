@@ -117,7 +117,7 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto">
           <h1
             data-aos="zoom-in"
-            className="text-3xl mt-10 sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16"
+            className="text-3xl mt-10 text-center sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16"
           >
             DIRECTION
           </h1>
