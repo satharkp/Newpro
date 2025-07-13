@@ -99,12 +99,12 @@ const Contact = () => {
             className="w-full border-b border-black bg-transparent py-2 outline-none"
           >
             <option value="" disabled>Select a service</option>
-            <option value="Solar installation">Solar installation</option>
-            <option value="CCTV">CCTV</option>
+            <option value="Solar installation">Solar Installation</option>
+            <option value="CCTV">CCTV Installation</option>
             <option value="Laptop Services">Laptop Services</option>
             <option value="Home Automation">Home Automation</option>
-            <option value="Networking and software">Networking and software</option>
-            <option value="Computer accessories">Computer accessories</option>
+            <option value="Networking and software">Networking and Software</option>
+            <option value="Computer accessories">Computer Accessories</option>
           </select>
 
           <textarea

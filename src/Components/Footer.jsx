@@ -11,7 +11,7 @@ const Footer = () => {
       </a>
       <div className="mt-6 lg:max-w-sm">
         <p className="text-sm text-gray-300">
-        Your space deserves reliable technology. <br /> We specialize in security systems, solar energy, home automation, and IT support — all delivered with expert care and attention to detail.
+          NetMagic Computers in Pattambi, Kerala specializes in solar panel installation, CCTV systems, home automation, laptop servicing, networking, and IT support. We deliver reliable tech solutions with expert care for homes and businesses.
         </p>
       </div>
     </div>
@@ -60,7 +60,8 @@ const Footer = () => {
         </a>
       </div>
       <p className="mt-4 text-sm text-gray-300">
-        Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken spare ribs salami.
+          Need help with tech?<br />
+           From solar to software — we’ve got you covered.
       </p>
     </div>
   </div>
