@@ -72,10 +72,10 @@ const Header = () => {
 
       {/* Navabars*/}
       <nav className="hidden md:flex items-center gap-12 ">
-        <a className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50 opacity-100" href="/">Home</a>
-        <a className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50 opacity-100" href="/#wwd">Services</a>
-        <a className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50 opacity-100" href="/#resources">Resources</a>
-        <a className="text-base tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50 opacity-100" href="/contact">Contact</a>
+        <a className="text-base tracking-wider transition-colors font-bold hover:text-grey-300 cursor-pointer z-50 opacity-100" href="/">Home</a>
+        <a className="text-base tracking-wider transition-colors font-bold hover:text-grey-300 cursor-pointer z-50 opacity-100" href="/#wwd">Services</a>
+        <a className="text-base tracking-wider transition-colors font-bold hover:text-grey-300 cursor-pointer z-50 opacity-100" href="/#resources">Resources</a>
+        <a className="text-base tracking-wider transition-colors font-bold hover:text-grey-300 cursor-pointer z-50 opacity-100" href="/contact">Contact</a>
       </nav>
 
       {/* mobile view*/}
@@ -101,10 +101,10 @@ const Header = () => {
             aria-modal="true"
           >
             <nav className="flex flex-col gap-8 items-center w-full backdrop-blur-xl">
-              <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50 backdrop-blur-md" href="/">Home</a>
-              <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50 backdrop-blur-md" href="/#wwd">Services</a>
-              <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="/#resources">Resources</a>
-              <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider transition-colors hover:text-grey-300 cursor-pointer z-50" href="/contact">Contact</a>
+              <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider font-bold transition-colors hover:text-grey-300 cursor-pointer z-50 backdrop-blur-md" href="/">Home</a>
+              <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider font-bold transition-colors hover:text-grey-300 cursor-pointer z-50 backdrop-blur-md" href="/#wwd">Services</a>
+              <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider font-bold transition-colors hover:text-grey-300 cursor-pointer z-50" href="/#resources">Resources</a>
+              <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider font-bold transition-colors hover:text-grey-300 cursor-pointer z-50" href="/contact">Contact</a>
             </nav>
           </div>
         </>
