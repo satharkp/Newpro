@@ -8,7 +8,7 @@ const Hero = () => {
 
     <div data-aos="fade-right"
      data-aos-offset="300"
-     data-aos-easing="ease-in-sine" className="max-w-xl ml-[3%] z-10 mt-[40%] md:mt-[20%] lg:mt-0">
+     data-aos-easing="ease-in-sine" className="max-w-xl ml-[3%] z-10 mt-[20%] md:mt-[20%] lg:mt-0">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wider mt-10 mb-1">
         SECURE. POWER.AUTOMATE. REPAIR.
         </h1>
@@ -30,7 +30,7 @@ const Hero = () => {
         </div>
     </div>
     {/* 3d Robot*/}
-    <div className="flex justify-center mt-28 lg:mt-0 items-center w-full max-w-5xl mx-auto scale-[2] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1.5]">
+    <div className="flex justify-center mt-[70%]  lg:mt-0 lg:ml-[13%] items-center w-full max-w-5xl mx-auto scale-[2] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1.5]">
       <Spline scene="https://prod.spline.design/Mzsufjfbt4z5nMrl/scene.splinecode" />
     </div>
     {/*robot that only can for canvas*/} 

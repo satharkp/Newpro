@@ -27,8 +27,8 @@ const About = () => {
               data-aos-duration="1500"
              className="w-full lg:w-1/2 text-gray-600 text-lg leading-relaxed space-y-6">
           <p>
-            At <span className="font-bold text-blue-500">NETMAGIC</span>, we bring technology to your doorstep — literally.
-            From solar panel installations to CCTV setups and home automation wiring, our skilled technicians work on-site to ensure every system is installed with care and precision.
+            At <span className="font-bold text-blue-500">NETMAGIC</span>, we specialize in delivering cutting-edge technology through expert <strong>on-site installation services</strong>. 
+            Whether it's <strong>solar panel installation</strong>, <strong>CCTV system setup</strong>, or advanced <strong>home automation services</strong>, our professional technicians ensure every solution is installed with care, precision, and tailored to your unique space.
           </p>
           <p>
             We believe in hands-on service that’s tailored to your unique environment. Our on-ground work reflects our commitment to safety, efficiency, and lasting solutions for your home or business.
@@ -50,11 +50,11 @@ const About = () => {
             data-aos-duration="1500"
             className="w-full lg:w-1/2 text-gray-600 text-lg leading-relaxed space-y-6">
           <p>
-            Technology moves fast — and so do we. At <span className="font-bold text-blue-500">NETMAGIC</span>, we provide complete digital and technical support to keep your systems running smoothly.
-            From laptop repairs to networking and software troubleshooting, we handle both home and business tech challenges with confidence.
+            At <span className="font-bold text-blue-500">NETMAGIC</span>, we offer comprehensive <strong>technical support services</strong> designed to keep your systems optimized and secure. 
+            Our solutions include <strong>laptop repair services</strong>, <strong>network setup and maintenance</strong>, and <strong>software troubleshooting</strong> for both <strong>residential and business clients</strong>.
           </p>
           <p>
-            Our team stays up to date with evolving tools and platforms, allowing us to offer intelligent, reliable, and future-proof tech solutions that support your growth.
+            With deep expertise in the latest technologies, our team delivers <strong>reliable IT support</strong> and <strong>future-ready tech solutions</strong> that ensure smooth operations and support your long-term growth.
           </p>
         </div>
       </div>
