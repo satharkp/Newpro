@@ -2,8 +2,10 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import emailjs from '@emailjs/browser';
+import { useNavigate } from "react-router-dom";
 
 
 const containerStyle = {
@@ -17,6 +19,9 @@ const center = {
 };
 
 const Contact = () => {
+  const formRef = useRef(null);
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,6 +31,7 @@ const Contact = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -42,10 +48,28 @@ const Contact = () => {
     let validationErrors = {};
     if (!formData.name.trim()) validationErrors.name = "Name is required";
     if (!formData.email.trim()) validationErrors.email = "Email is required";
+    if (!formData.phone.trim()) validationErrors.phone = "Phone number is required";
+    if (!formData.service.trim()) validationErrors.service = "Service is required";
     setErrors(validationErrors);
     if (Object.keys(validationErrors).length === 0) {
-      // Submit logic or email API here
-      alert("Message sent successfully!");
+      setLoading(true);
+      emailjs.sendForm(
+        'service_6v3jxml',
+        'template_1w15xwi',
+        formRef.current,
+        'LKzgczmfOYLfOIrVJ'
+      ).then(
+        (result) => {
+          setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+          setLoading(false);
+          navigate("/success");
+        },
+        (error) => {
+          alert("Failed to send message. Please try again later.");
+          console.error(error.text);
+          setLoading(false);
+        }
+      );
     }
   };
 
@@ -59,7 +83,12 @@ const Contact = () => {
         >
           CONTACT US
         </h1>
-        <form onSubmit={handleSubmit} className="w-full max-w-xl text-center font-mono space-y-6 rounded-lg bg-[#c3c2c2] p-5 ">
+        <form
+          ref={formRef}
+          data-aos="zoom-in"
+          onSubmit={handleSubmit}
+          className="w-full max-w-xl text-center font-mono space-y-6 rounded-xl bg-white/10 backdrop-blur-md border border-white/30 p-5 shadow-lg "
+        >
           <p className="text-sm text-center break-words">
             Email us at <br /><span className="font-bold break-all ">netmagiccomputersptb@gmail.com</span><br />or message us here:
           </p>
@@ -91,6 +120,7 @@ const Contact = () => {
           </div>
           {errors.name && <p className="text-red-500 text-xs">{errors.name}</p>}
           {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
+          {errors.phone && <p className="text-red-500 text-xs">{errors.phone}</p>}
 
           <select
             name="service"
@@ -106,6 +136,7 @@ const Contact = () => {
             <option value="Networking and software">Networking and Software</option>
             <option value="Computer accessories">Computer Accessories</option>
           </select>
+          {errors.service && <p className="text-red-500 text-xs">{errors.service}</p>}
 
           <textarea
             name="message"
@@ -118,9 +149,36 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="bg-blue-500 rounded-md text-white px-6 py-2 hover:opacity-90 transition"
+            disabled={loading}
+            className={`bg-blue-500 flex justify-center items-center gap-2 rounded-md text-white px-6 py-2 transition ${loading ? 'opacity-60 cursor-not-allowed' : 'hover:opacity-90'}`}
           >
-            Send Message
+            {loading ? (
+              <>
+                <svg
+                  className="animate-spin h-5 w-5 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                  ></path>
+                </svg>
+                Sending...
+              </>
+            ) : (
+              'Send Message'
+            )}
           </button>
         </form>
       </div>
@@ -133,7 +191,7 @@ const Contact = () => {
           >
             DIRECTION
           </h1>
-          <div className="flex flex-col md:flex-row gap-8 mt-6 font-mono bg-[#c3c2c2] p-5 rounded-xl">
+          <div className="flex flex-col md:flex-row gap-8 mt-6 font-mono bg-white/10 backdrop-blur-md border border-white/30 p-5 rounded-xl shadow-lg">
             <div className="md:w-1/2 space-y-2">
             <p className="text-md mb-20">
             
@@ -141,7 +199,7 @@ const Contact = () => {
                 Pattambi, Kerala 679303
             </p>
 
-              <div className="bg-[#adacac] p-3 m-0 rounded-xl"  >
+              <div className=" bg-white/20 backdrop-blur-md border border-white/30 shadow-lg p-3 m-0 rounded-xl"  >
                 <p className="mb-5 underline"><strong>Working Hours:</strong></p>
                 <table className="text-md leading-6 w-full">
                   <tbody>
