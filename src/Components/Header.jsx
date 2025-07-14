@@ -100,7 +100,7 @@ const Header = () => {
             role="dialog"
             aria-modal="true"
           >
-            <nav className="flex flex-col gap-8 items-center w-full backdrop-blur-xl">
+            <nav className="flex flex-col gap-8 items-center w-full backdrop-blur-xl p-40">
               <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider font-bold transition-colors hover:text-grey-300 cursor-pointer z-50 backdrop-blur-md" href="/">Home</a>
               <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider font-bold transition-colors hover:text-grey-300 cursor-pointer z-50 backdrop-blur-md" href="/#wwd">Services</a>
               <a onClick={() => setMenuOpen(false)} className="text-lg tracking-wider font-bold transition-colors hover:text-grey-300 cursor-pointer z-50" href="/#resources">Resources</a>
