@@ -74,7 +74,7 @@ const Header = () => {
         </div>
 
         {/* Navabars*/}
-        <nav className="hidden md:flex justify-end items-center gap-8 w-full bg-[#d1d1d1] py-3 text-sm font-semibold">
+        <nav className="hidden custom:flex justify-end items-center gap-8 w-full bg-[#d1d1d1] py-3 text-sm font-semibold">
           <a
             href="/"
             className={`px-3 py-1 rounded ${location.pathname === '/' ? 'text-white bg-blue-500' : 'hover:text-blue-500'}`}
@@ -138,7 +138,7 @@ const Header = () => {
         {/* mobile view*/}
         <button
           onClick={toggleMenu}
-          className="md:hidden text-5xl p-2 z-50 cursor-pointer"
+          className="custom:hidden text-5xl p-2 z-50 cursor-pointer"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
@@ -158,6 +158,13 @@ const Header = () => {
               role="dialog"
               aria-modal="true"
             >
+              <button
+                onClick={() => setMenuOpen(false)}
+                className="absolute top-4 right-4 text-3xl text-gray-700"
+                aria-label="Close menu"
+              >
+                <i className="bx bx-x"></i>
+              </button>
               <nav className="flex flex-col gap-6 items-start w-full max-w-sm">
                 <a onClick={() => setMenuOpen(false)} href="/" className="text-lg font-bold px-4 py-2 w-full hover:bg-gray-100 rounded">HOME</a>
 

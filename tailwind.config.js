@@ -9,6 +9,9 @@ export default {
       fontFamily: {
         logo: ['Montserrat', 'sans-serif'],
       },
+      screens: {
+        'custom': '1253px',
+      },
     },
   },
   plugins: [],
