@@ -5,6 +5,10 @@ import 'boxicons/css/boxicons.min.css';
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [productsOpen, setProductsOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [companyOpen, setCompanyOpen] = useState(false);
   const lastScrollY = useRef(0);
   const idleTimer = useRef(null);
   const location = useLocation();
@@ -82,29 +86,45 @@ const Header = () => {
             HOME
           </a>
 
-          <div className="relative group">
+          <div
+            className="relative"
+            onMouseEnter={() => setProductsOpen(true)}
+            onMouseLeave={() => setProductsOpen(false)}
+          >
             <a className="px-3 py-1 cursor-pointer hover:text-blue-500">PRODUCTS ▼</a>
-            <div className="absolute hidden group-hover:block bg-white border rounded shadow-md mt-2 w-40">
+            <div className={`absolute top-full mt-1 bg-white border rounded shadow-md w-40 z-50 ${productsOpen ? 'block' : 'hidden'}`}>
               <a href="/products/software" className="block px-4 py-2 hover:bg-gray-100">Software</a>
               <a href="/products/hardware" className="block px-4 py-2 hover:bg-gray-100">Hardware</a>
             </div>
           </div>
 
 
-          <div className="relative group">
+          <div
+            className="relative"
+            onMouseEnter={() => setSolutionsOpen(true)}
+            onMouseLeave={() => setSolutionsOpen(false)}
+          >
             <a className="px-3 py-1 cursor-pointer hover:text-blue-500">SOLUTIONS ▼</a>
-            <div className="absolute hidden group-hover:block bg-white border rounded shadow-md mt-2 w-40">
+            <div className={`absolute top-full mt-1 bg-white border rounded shadow-md w-40 z-50 ${solutionsOpen ? 'block' : 'hidden'}`}>
               <a href="/solutions/cloud" className="block px-4 py-2 hover:bg-gray-100">Cloud</a>
               <a href="/solutions/security" className="block px-4 py-2 hover:bg-gray-100">Security</a>
             </div>
           </div>
 
 
-          <div className="relative group">
+          <div
+            className="relative"
+            onMouseEnter={() => setServicesOpen(true)}
+            onMouseLeave={() => setServicesOpen(false)}
+          >
             <a className="px-3 py-1 cursor-pointer hover:text-blue-500">SERVICES ▼</a>
-            <div className="absolute hidden group-hover:block bg-white border rounded shadow-md mt-2 w-40">
-              <a href="/services/web" className="block px-4 py-2 hover:bg-gray-100">Web</a>
-              <a href="/services/app" className="block px-4 py-2 hover:bg-gray-100">App</a>
+            <div className={`absolute top-full mt-1 bg-white border rounded shadow-md w-64 p-2 z-50 ${servicesOpen ? 'block' : 'hidden'}`}>
+              <a href="/services/it-computing" className="block px-4 py-2 hover:bg-gray-100">Power & Energy Solutions</a>
+              <a href="/services/networking-security" className="block px-4 py-2 hover:bg-gray-100">Networking & Security</a>
+              <a href="/services/power-energy" className="block px-4 py-2 hover:bg-gray-100">IT & Computing</a>
+              <a href="/services/smart-automation" className="block px-4 py-2 hover:bg-gray-100">Smart Automation</a>
+              <a href="/services/surveillance-safety" className="block px-4 py-2 hover:bg-gray-100">Surveillance & Safety</a>
+              <a href="/services/support-maintenance" className="block px-4 py-2 hover:bg-gray-100">Support & Maintenance</a>
             </div>
           </div>
 
@@ -122,9 +142,13 @@ const Header = () => {
             SUPPORT
           </a>
 
-          <div className="relative group">
+          <div
+            className="relative"
+            onMouseEnter={() => setCompanyOpen(true)}
+            onMouseLeave={() => setCompanyOpen(false)}
+          >
             <a className="px-3 py-1 cursor-pointer hover:text-blue-500">COMPANY ▼</a>
-            <div className="absolute hidden group-hover:block bg-white border rounded shadow-md mt-2 w-40">
+            <div className={`absolute top-full mt-1 bg-white border rounded shadow-md w-40 z-50 ${companyOpen ? 'block' : 'hidden'}`}>
               <a href="/company/about" className="block px-4 py-2 hover:bg-gray-100">About Us</a>
               <a href="/company/careers" className="block px-4 py-2 hover:bg-gray-100">Careers</a>
             </div>
@@ -132,7 +156,7 @@ const Header = () => {
 
           <a
             href="/contact"
-            className={`px-3 py-1 rounded ${location.pathname === '/contact' ? 'text-white bg-blue-500' : 'hover:text-blue-500'}`}
+            className={`px-3 py-1 cursor-pointer rounded ${location.pathname === '/contact' ? 'text-white bg-blue-500' : 'hover:text-blue-500'}`}
           >
             CONTACT
           </a>
@@ -172,10 +196,10 @@ const Header = () => {
                 <a onClick={() => setMenuOpen(false)} href="/" className="text-lg font-bold px-4 py-2 w-full hover:bg-gray-100 rounded">HOME</a>
 
                 <details className="w-full">
-                  <summary className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded">SERVICES</summary>
+                  <summary className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded">PRODUCTS</summary>
                   <div className="flex flex-col pl-6">
-                    <a onClick={() => setMenuOpen(false)} href="/services/web" className="py-1 hover:underline">Web</a>
-                    <a onClick={() => setMenuOpen(false)} href="/services/app" className="py-1 hover:underline">App</a>
+                    <a onClick={() => setMenuOpen(false)} href="/products/software" className="py-1 hover:underline">Software</a>
+                    <a onClick={() => setMenuOpen(false)} href="/products/hardware" className="py-1 hover:underline">Hardware</a>
                   </div>
                 </details>
 
@@ -188,10 +212,14 @@ const Header = () => {
                 </details>
 
                 <details className="w-full">
-                  <summary className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded">PRODUCTS</summary>
+                  <summary className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded">SERVICES</summary>
                   <div className="flex flex-col pl-6">
-                    <a onClick={() => setMenuOpen(false)} href="/products/software" className="py-1 hover:underline">Software</a>
-                    <a onClick={() => setMenuOpen(false)} href="/products/hardware" className="py-1 hover:underline">Hardware</a>
+                    <a onClick={() => setMenuOpen(false)} href="/services/it-computing" className="py-1 hover:underline">Power & Energy Solutions</a>
+                    <a onClick={() => setMenuOpen(false)} href="/services/networking-security" className="py-1 hover:underline">Networking & Security</a>
+                    <a onClick={() => setMenuOpen(false)} href="/services/power-energy" className="py-1 hover:underline">IT & Computing</a>
+                    <a onClick={() => setMenuOpen(false)} href="/services/smart-automation" className="py-1 hover:underline">Smart Automation</a>
+                    <a onClick={() => setMenuOpen(false)} href="/services/surveillance-safety" className="py-1 hover:underline">Surveillance & Safety</a>
+                    <a onClick={() => setMenuOpen(false)} href="/services/support-maintenance" className="py-1 hover:underline">Support & Maintenance</a>
                   </div>
                 </details>
 

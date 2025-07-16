@@ -14,10 +14,10 @@ const Carousel = () => {
 
     <div>
     <div>
-      <h1 id='wwd'  data-aos="fade-right"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine" className="text-center text-3xl mt-32 sm:text-4xl md:text-5xl lg:text-4xl font-semibold tracking-wider p-8 mb-10">
-        SERVICES
+      <h1 id='wwd'  
+      data-aos="zoom-in" 
+     className="text-3xl text-center mt-10 sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16">
+        What We Do?
       </h1>
     </div>
 

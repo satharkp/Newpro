@@ -5,12 +5,10 @@ const About = () => {
   return (
     <div id='about' className="px-4 py-16 max-w-7xl mx-auto ">
       <h1
-        data-aos="fade-right"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine"
-        className="text-3xl mt-10 sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16 "
+        data-aos="zoom-in"
+        className="text-3xl text-center mt-10 sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16 "
       >
-        ABOUT US
+        What Are We?
       </h1>
 
       {/* Section 1 – On-site services (solar) */}

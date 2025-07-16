@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import Carousel from '../Components/Carousel';
 import Footer from '../Components/Footer';
-import About from '../Components/About';
+import About from '../Components/Waw';
 import { useLocation } from 'react-router-dom';
 
 const Home = () => {
