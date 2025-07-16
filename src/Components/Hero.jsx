@@ -30,7 +30,7 @@ const Hero = () => {
         </div>
     </div>
     {/* 3d Robot*/}
-    <div className="flex justify-center mt-28  lg:mt-0 lg:ml-[13%] items-center w-full max-w-5xl mx-auto scale-[2] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1.5]">
+    <div className="flex justify-center mt-28  lg:mt-0 lg:ml-[13%] items-center w-full max-w-5xl mx-auto scale-[2] sm:scale-[1] md:scale-[1.2] lg:scale-[2]">
     <Spline scene="https://prod.spline.design/Mzsufjfbt4z5nMrl/scene.splinecode" />
 
 
