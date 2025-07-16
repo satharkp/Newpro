@@ -147,39 +147,41 @@ const Contact = () => {
             className="w-full border-b border-black bg-transparent py-2 outline-none"
           ></textarea>
 
-          <button
-            type="submit"
-            disabled={loading}
-            className={`bg-blue-500 flex justify-center items-center gap-2 rounded-md text-white px-6 py-2 transition ${loading ? 'opacity-60 cursor-not-allowed' : 'hover:opacity-90'}`}
-          >
-            {loading ? (
-              <>
-                <svg
-                  className="animate-spin h-5 w-5 text-white"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <circle
-                    className="opacity-25"
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    strokeWidth="4"
-                  ></circle>
-                  <path
-                    className="opacity-75"
-                    fill="currentColor"
-                    d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-                  ></path>
-                </svg>
-                Sending...
-              </>
-            ) : (
-              'Send Message'
-            )}
-          </button>
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              disabled={loading}
+              className={`bg-blue-500 flex justify-center items-center align-middle gap-2 rounded-md text-white px-6 py-2 transition ${loading ? 'opacity-60 cursor-not-allowed' : 'hover:opacity-90'}`}
+            >
+              {loading ? (
+                <>
+                  <svg
+                    className="animate-spin h-5 w-5 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                    ></path>
+                  </svg>
+                  Sending...
+                </>
+              ) : (
+                'Send Message'
+              )}
+            </button>
+          </div>
         </form>
       </div>
 
@@ -193,10 +195,11 @@ const Contact = () => {
           </h1>
           <div className="flex flex-col md:flex-row gap-8 mt-6 font-mono bg-white/10 backdrop-blur-md border border-white/30 p-5 rounded-xl shadow-lg">
             <div className="md:w-1/2 space-y-2">
-            <p className="text-md mb-20">
+            <p className="text-md mb-20 mt-3 ml-3">
             
-                Opposite Police Station, <br />
-                Pattambi, Kerala 679303
+            Corporate Address :1st Floor <br />
+            Anwariya Building ,Opp. Police Station ,<br />
+            Pattambi, Palakkad
             </p>
 
               <div className=" bg-white/20 backdrop-blur-md border border-white/30 shadow-lg p-3 m-0 rounded-xl"  >
