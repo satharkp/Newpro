@@ -83,12 +83,13 @@ const Header = () => {
           </a>
 
           <div className="relative group">
-            <a className="px-3 py-1 cursor-pointer hover:text-blue-500">SERVICES ▼</a>
+            <a className="px-3 py-1 cursor-pointer hover:text-blue-500">PRODUCTS ▼</a>
             <div className="absolute hidden group-hover:block bg-white border rounded shadow-md mt-2 w-40">
-              <a href="/services/web" className="block px-4 py-2 hover:bg-gray-100">Web</a>
-              <a href="/services/app" className="block px-4 py-2 hover:bg-gray-100">App</a>
+              <a href="/products/software" className="block px-4 py-2 hover:bg-gray-100">Software</a>
+              <a href="/products/hardware" className="block px-4 py-2 hover:bg-gray-100">Hardware</a>
             </div>
           </div>
+
 
           <div className="relative group">
             <a className="px-3 py-1 cursor-pointer hover:text-blue-500">SOLUTIONS ▼</a>
@@ -98,13 +99,15 @@ const Header = () => {
             </div>
           </div>
 
+
           <div className="relative group">
-            <a className="px-3 py-1 cursor-pointer hover:text-blue-500">PRODUCTS ▼</a>
+            <a className="px-3 py-1 cursor-pointer hover:text-blue-500">SERVICES ▼</a>
             <div className="absolute hidden group-hover:block bg-white border rounded shadow-md mt-2 w-40">
-              <a href="/products/software" className="block px-4 py-2 hover:bg-gray-100">Software</a>
-              <a href="/products/hardware" className="block px-4 py-2 hover:bg-gray-100">Hardware</a>
+              <a href="/services/web" className="block px-4 py-2 hover:bg-gray-100">Web</a>
+              <a href="/services/app" className="block px-4 py-2 hover:bg-gray-100">App</a>
             </div>
           </div>
+
 
           <a
             href="/industries"
