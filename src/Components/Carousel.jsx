@@ -17,7 +17,7 @@ const Carousel = () => {
       <h1 id='wwd'  
       data-aos="zoom-in" 
      className="text-3xl text-center mt-10 sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16">
-        What We Do?
+        Services
       </h1>
     </div>
 
