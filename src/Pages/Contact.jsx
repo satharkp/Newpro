@@ -232,6 +232,7 @@ const Contact = () => {
         </div>
       </section>
       <Footer />
+      
     </>
   );
 }
