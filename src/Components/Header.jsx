@@ -5,17 +5,14 @@ import 'boxicons/css/boxicons.min.css';
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState(null); 
   const [selectedMainService, setSelectedMainService] = useState(null);
-  const [productsOpen, setProductsOpen] = useState(false);
-  const [solutionsOpen, setSolutionsOpen] = useState(false);
-  const [industriesOpen, setIndustriesOpen] = useState(false);
+  const [selectedProductCategory, setSelectedProductCategory] = useState(null);
+  const [selectedSupport, setSelectedSupport] = useState('Accessories');
+  
   const lastScrollY = useRef(0);
   const idleTimer = useRef(null);
   const location = useLocation();
-const [selectedProductCategory, setSelectedProductCategory] = useState(null);
-const [supportOpen, setSupportOpen] = useState(false);
-const [selectedSupport, setSelectedSupport] = useState('Accessories');
 
 
   const toggleMenu = () => {
@@ -93,16 +90,13 @@ const [selectedSupport, setSelectedSupport] = useState('Accessories');
 
           <div className="relative">
   <button
-    onClick={() => {
-      setProductsOpen(prev => !prev);
-      setSelectedProductCategory(null);
-    }}
+    onClick={() => setOpenMenu(openMenu === 'products' ? null : 'products')}
     className="px-3 py-1 cursor-pointer hover:text-blue-500"
   >
     PRODUCTS ▼
   </button>
 
-  {productsOpen && (
+  {openMenu === 'products' &&  (
     <div className="absolute top-full right-0 mt-1 bg-white border rounded shadow-md w-[600px] p-4 z-50 flex">
       
       {/* LEFT: Sub-Items */}
@@ -239,14 +233,12 @@ const [selectedSupport, setSelectedSupport] = useState('Accessories');
 </div>
 
 
-<div
-  className="relative"
-  onMouseEnter={() => setSolutionsOpen(true)}
-  onMouseLeave={() => setSolutionsOpen(false)}
->
-  <a className="px-3 py-1 cursor-pointer hover:text-blue-500">SOLUTIONS ▼</a>
+<div className="relative">
 
-  {solutionsOpen && (
+  <a onClick={() => setOpenMenu(openMenu === 'solutions' ? null : 'solutions')}
+  className="px-3 py-1 cursor-pointer hover:text-blue-500">SOLUTIONS ▼</a>
+
+  {openMenu === 'solutions' && (
     <div className="absolute top-full right-0 mt-1 bg-white border rounded shadow-md w-[600px] p-4 z-50 flex">
       
       {/* LEFT: Sub Items */}
@@ -359,16 +351,11 @@ const [selectedSupport, setSelectedSupport] = useState('Accessories');
 
 
           <div
-  className="relative"
-  onMouseEnter={() => setServicesOpen(true)}
-  onMouseLeave={() => {
-    setServicesOpen(false);
-    setSelectedMainService(null);
-  }}
->
-  <button className="px-3 py-1 cursor-pointer hover:text-blue-500">SERVICES ▼</button>
+  className="relative" >
+  <button onClick={() => setOpenMenu(openMenu === 'services' ? null : 'services')}
+   className="px-3 py-1 cursor-pointer hover:text-blue-500">SERVICES ▼</button>
 
-  {servicesOpen && (
+  {openMenu === 'services' && (
     <div className="absolute top-full right-0 mt-1 bg-white border rounded shadow-md w-[500px] p-4 z-50 flex">
 
       {/* Left Column: Subcategories */}
@@ -475,18 +462,16 @@ const [selectedSupport, setSelectedSupport] = useState('Accessories');
 </div>
 
 
-          <div
-  className="relative"
-  onMouseEnter={() => setIndustriesOpen(true)}
-  onMouseLeave={() => setIndustriesOpen(false)}
->
+          <div  className="relative">
+
   <button
+  onClick={() => setOpenMenu(openMenu === 'industries' ? null : 'industries')}
     className="px-3 py-1 cursor-pointer hover:text-blue-500"
   >
     INDUSTRIES ▼
   </button>
 
-  {industriesOpen && (
+  {openMenu === 'industries' && (
     <div className="absolute top-full right-0 mt-2 z-50">
       <div className="flex bg-white border rounded shadow-md w-[640px]">
 
@@ -510,7 +495,6 @@ const [selectedSupport, setSelectedSupport] = useState('Accessories');
               <li>Networking & Computer Labs</li>
             </ul>
           )}
-          
           {selectedMainService === 'Retail' && (
             <ul className="list-disc list-inside space-y-1">
               <li>CCTV & POS Integration</li>
@@ -565,15 +549,14 @@ const [selectedSupport, setSelectedSupport] = useState('Accessories');
   )}
 </div>
                   <div
-          className="relative"
-          onMouseEnter={() => setSupportOpen(true)}
-          onMouseLeave={() => setSupportOpen(false)}
-        >
-          <span className="px-3 py-1 cursor-pointer hover:text-blue-500">
-             SUPPORT ▼
-          </span>
+          className="relative"        >
+          <button 
+           onClick={() => setOpenMenu(openMenu === 'support' ? null : 'support')}
+           className="px-3 py-1 cursor-pointer hover:text-blue-500">
+            INSTALL & SUPPORT ▼
+          </button>
 
-          {supportOpen && (
+          {openMenu === 'support' && (
             <div className="absolute top-full right-0 mt-2 z-50">
               <div className="flex bg-white border rounded shadow-md w-[640px]">
 
