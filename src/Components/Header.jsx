@@ -22,19 +22,19 @@ const Header = () => {
   };
   
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        // If clicked outside, close the dropdown
-        setOpenMenu(null);
-      }
-    };
-  
-    document.addEventListener('mousedown', handleClickOutside);
-  
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [dropdownRef]);
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      // If clicked outside, close the dropdown
+      setOpenMenu(null);
+    }
+  };
+
+  document.addEventListener('mousedown', handleClickOutside);
+
+  return () => {
+    document.removeEventListener('mousedown', handleClickOutside);
+  };
+}, [dropdownRef]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -105,7 +105,7 @@ const Header = () => {
             HOME
           </a>
 
-          <div className="relative" ref={dropdownRef}>
+          <div className="relative">
           <button
   onClick={() => setOpenMenu(openMenu === 'products' ? null : 'products')}
   className="px-3 py-1 cursor-pointer hover:text-blue-500"
