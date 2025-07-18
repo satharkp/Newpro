@@ -83,7 +83,7 @@ const Contact = () => {
           >
             DIRECTION
           </h1>
-          <div className="w-full font-mono bg-white/10 backdrop-blur-md border border-white/30 p-6 rounded-xl shadow-lg flex flex-col lg:flex-row gap-6">
+          <div className="w-full font-mono bg-white/10 backdrop-blur-md border border-white/30 p-6 rounded-xl shadow-lg flex flex-col lg:flex-row gap-6 overflow-visible">
             {/* Section 1: Quote and Address */}
             <div className="flex-1 space-y-4   bg-white/20 backdrop-blur-md border border-white/30 p-5 rounded-xl shadow-lg">
               <h2 className="text-xl font-semibold">Get a Quote</h2>
@@ -114,7 +114,7 @@ const Contact = () => {
             </div>
 
             {/* Section 3: Map */}
-            <div className="flex-1 overflow-hidden  bg-white/20 backdrop-blur-md border border-white/30  rounded-xl shadow-lg " style={{ height: '400px' }}>
+            <div className="w-full overflow-hidden bg-white/20 backdrop-blur-md border border-white/30 rounded-xl shadow-lg h-[300px] lg:flex-1 lg:h-auto">
               <LoadScript googleMapsApiKey="AIzaSyAQGIKzmVWKNZ7gdjOeJAmrPe2r7iBqSi0">
                 <GoogleMap
                   mapContainerStyle={{ width: '100%', height: '100%' }}

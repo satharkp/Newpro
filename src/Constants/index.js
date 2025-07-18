@@ -7,7 +7,7 @@ import { FaComputer } from "react-icons/fa6";
 
 import SpaceCity1 from "../assets/Solar.jpg";
 import SpaceCity2 from "../assets/CCTV.jpg";
-import SpaceCity3 from "../assets/Laptop.jpg";
+import SpaceCity3 from "../assets/comp rep.jpg";
 import SpaceCity4 from "../assets/HA.jpg";
 import SpaceCity5 from "../assets/N&S.jpg";
 import SpaceCity6 from "../assets/Part.jpg";
