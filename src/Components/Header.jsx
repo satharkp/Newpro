@@ -664,6 +664,10 @@ const Header = () => {
 
                 <details className="w-full">
                   <summary className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded">PRODUCTS</summary>
+                  <div
+                    className="mt-2 px-2 pb-2"
+                    style={{ maxHeight: '40vh', overflowY: 'auto' }}
+                  >
                   <div className="flex flex-col pl-6 space-y-4 text-sm text-gray-700">
                     <div>
                       <p className="font-semibold flex justify-between items-center">Laptops & Desktops <span className="text-gray-400">→</span></p>
@@ -766,6 +770,7 @@ const Header = () => {
                       </ul>
                     </div>
                   </div>
+                  </div>
                 </details>
 
                 {/* SOLUTIONS - mobile menu */}
@@ -773,10 +778,9 @@ const Header = () => {
                   <summary className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded">SOLUTIONS</summary>
                   <div
                     className="mt-2 px-2 pb-2"
-                    style={{ maxHeight: '60vh', overflowY: 'auto' }}
+                    style={{ maxHeight: '40vh', overflowY: 'auto' }}
                   >
                     <div className="mt-2">
-                      <p className="font-bold text-lg mb-2">SOLUTIONS</p>
                       <ul className="space-y-3">
                         <li>
                           <p className="font-semibold">Video Surveillance</p>
@@ -863,6 +867,10 @@ const Header = () => {
 
                 <details className="w-full">
                   <summary className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded">SERVICES</summary>
+                  <div
+                    className="mt-2 px-2 pb-2"
+                    style={{ maxHeight: '40vh', overflowY: 'auto' }}
+                  >
                   <div className="flex flex-col pl-6 space-y-2 text-sm">
                     <div>
                       <p className="font-semibold flex justify-between items-center">
@@ -932,10 +940,15 @@ const Header = () => {
                       </ul>
                     </div>
                   </div>
+                  </div>
                 </details>
 
                 <details className="w-full">
                   <summary className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded">INDUSTRIES</summary>
+                  <div
+                    className="mt-2 px-2 pb-2"
+                    style={{ maxHeight: '40vh', overflowY: 'auto' }}
+                  >
                   <div className="flex flex-col pl-6 space-y-4 text-sm text-gray-700">
                     <div>
                       <p className="font-semibold flex justify-between items-center">Government <span className="text-gray-400">→</span></p>
@@ -988,62 +1001,68 @@ const Header = () => {
                       </ul>
                     </div>
                   </div>
+                  </div>
                 </details>
                 <details className="w-full">
-  <summary className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded">
-    INSTALL & SUPPORT
-  </summary>
+                  <summary className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded">
+                    INSTALL & SUPPORT
+                  </summary>
+                  <div
+                      className="mt-2 px-2 pb-2"
+                      style={{ maxHeight: '40vh', overflowY: 'auto' }}
+                      >
 
-  <div className="flex flex-col pl-6 space-y-4 text-sm text-gray-700">
+                  <div className="flex flex-col pl-6 space-y-4 text-sm text-gray-700">
 
-    {/* Accessories */}
-    <div>
-      <p className="font-semibold flex justify-between items-center">
-        Accessories <span className="text-gray-400">→</span>
-      </p>
-      <ul className="list-disc pl-6">
-        <li>CCTV & Surveillance (mounts, cables, HDDs)</li>
-        <li>Networking (LAN cables, switches, racks)</li>
-        <li>Solar Systems (controllers, wiring, mounts)</li>
-        <li>Automation (smart switches, sensors)</li>
-        <li>PC Builds (RAM, SSDs, GPUs, fans, peripherals)</li>
-      </ul>
-    </div>
+                    {/* Accessories */}
+                    <div>
+                      <p className="font-semibold flex justify-between items-center">
+                        Accessories <span className="text-gray-400">→</span>
+                      </p>
+                      <ul className="list-disc pl-6">
+                        <li>CCTV & Surveillance (mounts, cables, HDDs)</li>
+                        <li>Networking (LAN cables, switches, racks)</li>
+                        <li>Solar Systems (controllers, wiring, mounts)</li>
+                        <li>Automation (smart switches, sensors)</li>
+                        <li>PC Builds (RAM, SSDs, GPUs, fans, peripherals)</li>
+                      </ul>
+                    </div>
 
-    {/* Installations */}
-    <div>
-      <p className="font-semibold flex justify-between items-center">
-        Installations <span className="text-gray-400">→</span>
-      </p>
-      <ul className="list-disc pl-6">
-        <li>CCTV, Networking & Solar</li>
-        <li>Home & Office Automation</li>
-        <li>Smart Classrooms & AV Systems</li>
-        <li>Custom PC & Gaming Rigs</li>
-      </ul>
-      <p className="text-xs mt-2 italic">
-        Includes: Site survey, wiring, mounting, system testing, and demo.
-      </p>
-    </div>
+                    {/* Installations */}
+                    <div>
+                      <p className="font-semibold flex justify-between items-center">
+                        Installations <span className="text-gray-400">→</span>
+                      </p>
+                      <ul className="list-disc pl-6">
+                        <li>CCTV, Networking & Solar</li>
+                        <li>Home & Office Automation</li>
+                        <li>Smart Classrooms & AV Systems</li>
+                        <li>Custom PC & Gaming Rigs</li>
+                      </ul>
+                      <p className="text-xs mt-2 italic">
+                        Includes: Site survey, wiring, mounting, system testing, and demo.
+                      </p>
+                    </div>
 
-    {/* Maintenance & AMC */}
-    <div>
-      <p className="font-semibold flex justify-between items-center">
-        Maintenance & AMC <span className="text-gray-400">→</span>
-      </p>
-      <ul className="list-disc pl-6">
-        <li>Annual Maintenance Contracts (AMC)</li>
-        <li>One-time service & health checks</li>
-        <li>Scheduled checkups (monthly/quarterly)</li>
-        <li>On-call & on-site support</li>
-      </ul>
-      <p className="text-xs mt-2 italic">
-        Covers: CCTV, Solar, PCs, Networking, Automation
-      </p>
-    </div>
+                    {/* Maintenance & AMC */}
+                    <div>
+                      <p className="font-semibold flex justify-between items-center">
+                        Maintenance & AMC <span className="text-gray-400">→</span>
+                      </p>
+                      <ul className="list-disc pl-6">
+                        <li>Annual Maintenance Contracts (AMC)</li>
+                        <li>One-time service & health checks</li>
+                        <li>Scheduled checkups (monthly/quarterly)</li>
+                        <li>On-call & on-site support</li>
+                      </ul>
+                      <p className="text-xs mt-2 italic">
+                        Covers: CCTV, Solar, PCs, Networking, Automation
+                      </p>
+                    </div>
 
-  </div>
-</details>
+                  </div>
+                  </div>
+                </details>
 
 
                 <a onClick={() => setMenuOpen(false)} href="/contact" className="text-lg font-bold px-4 py-2 w-full hover:bg-gray-100 rounded">CONTACT</a>
