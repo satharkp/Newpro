@@ -85,10 +85,10 @@ const Contact = () => {
           </h1>
           <div className="w-full font-mono bg-white/10 backdrop-blur-md border border-white/30 p-6 rounded-xl shadow-lg flex flex-col lg:flex-row gap-6">
             {/* Section 1: Quote and Address */}
-            <div className="flex-1 space-y-4">
+            <div className="flex-1 space-y-4   bg-white/20 backdrop-blur-md border border-white/30 p-5 rounded-xl shadow-lg">
               <h2 className="text-xl font-semibold">Get a Quote</h2>
               <p className="text-sm">Call us for inquiries:</p>
-              <p className="text-lg font-bold ">+91 8921 627526</p>
+              <p className="text-lg font-bold ">+91 97450 45345 <br />+91 89432 01000</p>
               <p className="text-sm  mt-4">Corporate Address:</p>
               <p className="text-sm ">
                 1st Floor, Anwariya Building,<br />
@@ -98,8 +98,8 @@ const Contact = () => {
             </div>
 
             {/* Section 2: Opening Hours */}
-            <div className="flex-1">
-              <h2 className="text-xl font-semibold mb-4 text-center">Opening Hours</h2>
+            <div className="flex-1   bg-white/20 backdrop-blur-md border border-white/30 p-5 rounded-xl shadow-lg">
+              <h2 className="text-xl font-semibold mb-10 mt-10 text-center " >Opening Hours</h2>
               <table className="text-sm leading-6 w-full ">
                 <tbody>
                   <tr><td className="pr-4 text-red-600">Sunday</td><td className="text-right text-red-600">Closed</td></tr>
@@ -114,7 +114,7 @@ const Contact = () => {
             </div>
 
             {/* Section 3: Map */}
-            <div className="flex-1 overflow-hidden" style={{ height: '400px' }}>
+            <div className="flex-1 overflow-hidden  bg-white/20 backdrop-blur-md border border-white/30  rounded-xl shadow-lg " style={{ height: '400px' }}>
               <LoadScript googleMapsApiKey="AIzaSyAQGIKzmVWKNZ7gdjOeJAmrPe2r7iBqSi0">
                 <GoogleMap
                   mapContainerStyle={{ width: '100%', height: '100%' }}

@@ -19,7 +19,7 @@ const Footer = () => {
       <p className="text-base font-bold tracking-wide text-white">Contacts</p>
       <div className="flex">
         <p className="mr-1 text-gray-400">Phone:</p>
-        <a href="tel:974-504-5345" aria-label="Our phone" title="Our phone" className="text-white transition-colors duration-300 hover:text-blue-400">974-504-5345</a>
+        <a href="tel:974-504-5345" aria-label="Our phone" title="Our phone" className="text-white transition-colors duration-300 hover:text-blue-400"> 97450 45345</a>
       </div>
       <div className="flex">
         <p className="mr-1 text-gray-400">Email:</p>
@@ -28,8 +28,9 @@ const Footer = () => {
       <div className="flex">
         <p className="mr-1 text-gray-400">Address:</p>
         <a href="https://maps.app.goo.gl/FAkuDHfp8r5y8J8L6" target="_blank" rel="noopener noreferrer" aria-label="Our address" title="Our address" className="text-white transition-colors duration-300 hover:text-blue-400">
-          Opp.Police Station,<br />
-          Pattambi
+        1st Floor, Anwariya Building,<br />
+        Opp. Police Station, Pattambi,<br />
+        Palakkad
         </a>
       </div>
     </div>
