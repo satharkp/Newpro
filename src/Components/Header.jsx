@@ -9,7 +9,9 @@ const Header = () => {
   const [selectedMainService, setSelectedMainService] = useState(null);
   const [selectedProductCategory, setSelectedProductCategory] = useState(null);
   const [selectedSupport, setSelectedSupport] = useState('Accessories');
-  
+  const [openMobileSection, setOpenMobileSection] = useState(null);
+  const dropdownRef = useRef(null);
+
   const lastScrollY = useRef(0);
   const idleTimer = useRef(null);
   const location = useLocation();
@@ -18,6 +20,21 @@ const Header = () => {
   const toggleMenu = () => {
     setMenuOpen(pre => !pre);
   };
+  
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        // If clicked outside, close the dropdown
+        setOpenMenu(null);
+      }
+    };
+  
+    document.addEventListener('mousedown', handleClickOutside);
+  
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [dropdownRef]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,7 +84,7 @@ const Header = () => {
     <>
       <header
         id='home'
-        className={`fixed top-0 left-0 w-full bg-[#d1d1d1] shadow z-50 flex justify-between items-center h-16 px-4 lp:px-20 transition-transform duration-500 ${isVisible || menuOpen ? 'translate-y-0' : '-translate-y-full'}`}
+        className="fixed top-0 left-0 w-full bg-[#d1d1d1] shadow z-50 flex justify-between items-center h-16 px-4 lp:px-20"
       >
 
         <div className="flex items-center">
@@ -88,161 +105,192 @@ const Header = () => {
             HOME
           </a>
 
-          <div className="relative">
-  <button
-    onClick={() => setOpenMenu(openMenu === 'products' ? null : 'products')}
-    className="px-3 py-1 cursor-pointer hover:text-blue-500"
-  >
-    PRODUCTS ▼
-  </button>
+          <div className="relative" ref={dropdownRef}>
+          <button
+  onClick={() => setOpenMenu(openMenu === 'products' ? null : 'products')}
+  className="px-3 py-1 cursor-pointer hover:text-blue-500"
+>
+  PRODUCTS ▼
+</button>
 
-  {openMenu === 'products' &&  (
-    <div className="absolute top-full right-0 mt-1 bg-white border rounded shadow-md w-[600px] p-4 z-50 flex">
-      
-      {/* LEFT: Sub-Items */}
-      <div className="w-1/2 pr-4 text-sm text-gray-700 space-y-1 border-r border-gray-200">
-        {!selectedProductCategory && (
-          <p className="text-gray-400">← Select a product category</p>
-        )}
-
-        {selectedProductCategory === 'Laptops' && (
-          <>
-            <p className="text-xs mb-1 text-gray-500">For Offices, Businesses, Home, and Gaming</p>
-            <ul className="list-disc pl-5">
-              <li>Branded Laptops</li>
-              <li>Office & Business Desktops</li>
-              <li>Home Use Laptops & PCs</li>
-              <li>Gaming Laptops</li>
-              <li>Thin Clients & Mini PCs</li>
-            </ul>
-          </>
-        )}
-
-        {selectedProductCategory === 'CustomPC' && (
-          <>
-            <p className="text-xs mb-1 text-gray-500">Designed for Gamers, Creators, and Professionals</p>
-            <ul className="list-disc pl-5">
-              <li>Gaming PCs (Entry to Extreme)</li>
-              <li>Workstations</li>
-              <li>RGB Cabinets & Liquid Cooling</li>
-              <li>Performance Tuning</li>
-              <li>Tailor-Made PC Services</li>
-            </ul>
-          </>
-        )}
-
-        {selectedProductCategory === 'CCTV' && (
-          <>
-            <p className="text-xs mb-1 text-gray-500">For Homes, Offices, Apartments</p>
-            <ul className="list-disc pl-5">
-              <li>IP & Analog Cameras</li>
-              <li>Dome, Bullet & PTZ</li>
-              <li>NVR/DVR Systems</li>
-              <li>Night Vision</li>
-              <li>Video Door Phones</li>
-            </ul>
-          </>
-        )}
-
-        {selectedProductCategory === 'Networking' && (
-          <ul className="list-disc pl-5">
-            <li>Routers & Access Points</li>
-            <li>LAN Switches</li>
-            <li>Racks & Patch Panels</li>
-            <li>Firewalls</li>
-            <li>Networking Tools</li>
-          </ul>
-        )}
-
-        {selectedProductCategory === 'Solar' && (
-          <ul className="list-disc pl-5">
-            <li>Solar Panels</li>
-            <li>Inverters</li>
-            <li>Batteries</li>
-            <li>Charge Controllers</li>
-            <li>Mounting Kits</li>
-          </ul>
-        )}
-
-        {selectedProductCategory === 'Automation' && (
-          <ul className="list-disc pl-5">
-            <li>Smart Switches</li>
-            <li>Motion Sensors</li>
-            <li>Remote Control Systems</li>
-            <li>Timers</li>
-            <li>Alexa / Google Integration</li>
-          </ul>
-        )}
-
-        {selectedProductCategory === 'Access' && (
-          <ul className="list-disc pl-5">
-            <li>Biometric & RFID</li>
-            <li>Attendance Machines</li>
-            <li>Access Terminals</li>
-            <li>Smart Locks</li>
-            <li>Sirens & Sensors</li>
-          </ul>
-        )}
-
-        {selectedProductCategory === 'Gates' && (
-          <ul className="list-disc pl-5">
-            <li>Sliding/Swing Gate Motors</li>
-            <li>Rolling Shutters</li>
-            <li>Boom Barriers</li>
-            <li>Remote Controls</li>
-            <li>Backup Power Options</li>
-          </ul>
-        )}
-
-        {selectedProductCategory === 'Components' && (
-          <ul className="list-disc pl-5">
-            <li>RAM, SSD, HDD, GPUs</li>
-            <li>Power Supplies</li>
-            <li>Cabinets, Fans</li>
-            <li>Monitors, Mice</li>
-            <li>UPS, Speakers</li>
-          </ul>
-        )}
-
-        {selectedProductCategory === 'Accessories' && (
-          <ul className="list-disc pl-5">
-            <li>CCTV Accessories</li>
-            <li>Networking Cords & Tools</li>
-            <li>USB Hubs, Adapters</li>
-            <li>Solar Connectors</li>
-            <li>Smart Remotes</li>
-          </ul>
-        )}
-      </div>
-
-      {/* RIGHT: Product Categories */}
-      <div className="w-1/2 pl-4 space-y-2 text-sm font-medium text-gray-800">
-        <p onClick={() => setSelectedProductCategory('Laptops')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Laptops' && 'text-blue-600'}`}>Laptops & Desktops</p>
-        <p onClick={() => setSelectedProductCategory('CustomPC')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'CustomPC' && 'text-blue-600'}`}>Custom PC Builds</p>
-        <p onClick={() => setSelectedProductCategory('CCTV')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'CCTV' && 'text-blue-600'}`}>CCTV & Surveillance</p>
-        <p onClick={() => setSelectedProductCategory('Networking')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Networking' && 'text-blue-600'}`}>Networking Equipment</p>
-        <p onClick={() => setSelectedProductCategory('Solar')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Solar' && 'text-blue-600'}`}>Solar & Power Systems</p>
-        <p onClick={() => setSelectedProductCategory('Automation')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Automation' && 'text-blue-600'}`}>Home & Office Automation</p>
-        <p onClick={() => setSelectedProductCategory('Access')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Access' && 'text-blue-600'}`}>Security & Access Control</p>
-        <p onClick={() => setSelectedProductCategory('Gates')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Gates' && 'text-blue-600'}`}>Automated Gates & Shutters</p>
-        <p onClick={() => setSelectedProductCategory('Components')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Components' && 'text-blue-600'}`}>PC Components & Peripherals</p>
-        <p onClick={() => setSelectedProductCategory('Accessories')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Accessories' && 'text-blue-600'}`}>Accessories</p>
-      </div>
+{openMenu === 'products' && (
+  <div className="absolute top-full left-0 mt-1 bg-white border rounded shadow-md w-[600px] p-4 z-50 flex">
+    
+    {/* LEFT: Product Categories */}
+    <div className="w-1/2 pr-4 space-y-2 text-sm font-medium text-gray-800 border-r border-gray-200">
+      <p onClick={() => setSelectedProductCategory('Laptops')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Laptops' && 'text-blue-600'}`}>Laptops & Desktops</p>
+      <p onClick={() => setSelectedProductCategory('CustomPC')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'CustomPC' && 'text-blue-600'}`}>Custom PC Builds</p>
+      <p onClick={() => setSelectedProductCategory('CCTV')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'CCTV' && 'text-blue-600'}`}>CCTV & Surveillance</p>
+      <p onClick={() => setSelectedProductCategory('Networking')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Networking' && 'text-blue-600'}`}>Networking Equipment</p>
+      <p onClick={() => setSelectedProductCategory('Solar')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Solar' && 'text-blue-600'}`}>Solar & Power Systems</p>
+      <p onClick={() => setSelectedProductCategory('Automation')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Automation' && 'text-blue-600'}`}>Home & Office Automation</p>
+      <p onClick={() => setSelectedProductCategory('Access')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Access' && 'text-blue-600'}`}>Security & Access Control</p>
+      <p onClick={() => setSelectedProductCategory('Gates')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Gates' && 'text-blue-600'}`}>Automated Gates & Shutters</p>
+      <p onClick={() => setSelectedProductCategory('Components')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Components' && 'text-blue-600'}`}>PC Components & Peripherals</p>
+      <p onClick={() => setSelectedProductCategory('Accessories')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Accessories' && 'text-blue-600'}`}>Accessories</p>
     </div>
-  )}
+
+    {/* RIGHT: Sub-Items */}
+    <div className="w-1/2 pl-4 text-sm text-gray-700 space-y-1">
+      {!selectedProductCategory && (
+        <p className="text-gray-400">← Select a product category</p>
+      )}
+
+      {selectedProductCategory === 'Laptops' && (
+        <>
+          <p className="text-xs mb-1 text-gray-500">For Offices, Businesses, Home, and Gaming</p>
+          <ul className="list-disc pl-5">
+            <li>Branded Laptops</li>
+            <li>Office & Business Desktops</li>
+            <li>Home Use Laptops & PCs</li>
+            <li>Gaming Laptops</li>
+            <li>Thin Clients & Mini PCs</li>
+          </ul>
+        </>
+      )}
+
+      {selectedProductCategory === 'CustomPC' && (
+        <>
+          <p className="text-xs mb-1 text-gray-500">Designed for Gamers, Creators, and Professionals</p>
+          <ul className="list-disc pl-5">
+            <li>Gaming PCs (Entry to Extreme)</li>
+            <li>Workstations</li>
+            <li>RGB Cabinets & Liquid Cooling</li>
+            <li>Performance Tuning</li>
+            <li>Tailor-Made PC Services</li>
+          </ul>
+        </>
+      )}
+
+      {selectedProductCategory === 'CCTV' && (
+        <>
+          <p className="text-xs mb-1 text-gray-500">For Homes, Offices, Apartments</p>
+          <ul className="list-disc pl-5">
+            <li>IP & Analog Cameras</li>
+            <li>Dome, Bullet & PTZ</li>
+            <li>NVR/DVR Systems</li>
+            <li>Night Vision</li>
+            <li>Video Door Phones</li>
+          </ul>
+        </>
+      )}
+
+      {selectedProductCategory === 'Networking' && (
+        <ul className="list-disc pl-5">
+          <li>Routers & Access Points</li>
+          <li>LAN Switches</li>
+          <li>Racks & Patch Panels</li>
+          <li>Firewalls</li>
+          <li>Networking Tools</li>
+        </ul>
+      )}
+
+      {selectedProductCategory === 'Solar' && (
+        <ul className="list-disc pl-5">
+          <li>Solar Panels</li>
+          <li>Inverters</li>
+          <li>Batteries</li>
+          <li>Charge Controllers</li>
+          <li>Mounting Kits</li>
+        </ul>
+      )}
+
+      {selectedProductCategory === 'Automation' && (
+        <ul className="list-disc pl-5">
+          <li>Smart Switches</li>
+          <li>Motion Sensors</li>
+          <li>Remote Control Systems</li>
+          <li>Timers</li>
+          <li>Alexa / Google Integration</li>
+        </ul>
+      )}
+
+      {selectedProductCategory === 'Access' && (
+        <ul className="list-disc pl-5">
+          <li>Biometric & RFID</li>
+          <li>Attendance Machines</li>
+          <li>Access Terminals</li>
+          <li>Smart Locks</li>
+          <li>Sirens & Sensors</li>
+        </ul>
+      )}
+
+      {selectedProductCategory === 'Gates' && (
+        <ul className="list-disc pl-5">
+          <li>Sliding/Swing Gate Motors</li>
+          <li>Rolling Shutters</li>
+          <li>Boom Barriers</li>
+          <li>Remote Controls</li>
+          <li>Backup Power Options</li>
+        </ul>
+      )}
+
+      {selectedProductCategory === 'Components' && (
+        <ul className="list-disc pl-5">
+          <li>RAM, SSD, HDD, GPUs</li>
+          <li>Power Supplies</li>
+          <li>Cabinets, Fans</li>
+          <li>Monitors, Mice</li>
+          <li>UPS, Speakers</li>
+        </ul>
+      )}
+
+      {selectedProductCategory === 'Accessories' && (
+        <ul className="list-disc pl-5">
+          <li>CCTV Accessories</li>
+          <li>Networking Cords & Tools</li>
+          <li>USB Hubs, Adapters</li>
+          <li>Solar Connectors</li>
+          <li>Smart Remotes</li>
+        </ul>
+      )}
+    </div>
+
+  </div>
+)}
 </div>
 
 
 <div className="relative">
-
-  <a onClick={() => setOpenMenu(openMenu === 'solutions' ? null : 'solutions')}
-  className="px-3 py-1 cursor-pointer hover:text-blue-500">SOLUTIONS ▼</a>
+  <a
+    onClick={() => setOpenMenu(openMenu === 'solutions' ? null : 'solutions')}
+    className="px-3 py-1 cursor-pointer hover:text-blue-500"
+  >
+    SOLUTIONS ▼
+  </a>
 
   {openMenu === 'solutions' && (
-    <div className="absolute top-full right-0 mt-1 bg-white border rounded shadow-md w-[600px] p-4 z-50 flex">
-      
-      {/* LEFT: Sub Items */}
-      <div className="w-1/2 pr-4 text-sm text-gray-700 space-y-1 border-r border-gray-200">
+    <div className="absolute top-full left-0 mt-1 bg-white border rounded shadow-md w-[600px] p-4 z-50 flex">
+      {/* LEFT: Main Categories */}
+      <div className="w-1/2 pr-4 space-y-2 text-sm font-medium text-gray-800">
+        <p onClick={() => setSelectedMainService('VideoSurveillance')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'VideoSurveillance' && 'text-blue-600'}`}>
+          Video Surveillance
+        </p>
+        <p onClick={() => setSelectedMainService('AudioVisual')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'AudioVisual' && 'text-blue-600'}`}>
+          Audio Visual Solutions
+        </p>
+        <p onClick={() => setSelectedMainService('DigitalClassrooms')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'DigitalClassrooms' && 'text-blue-600'}`}>
+          Digital Classrooms
+        </p>
+        <p onClick={() => setSelectedMainService('AutoID')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'AutoID' && 'text-blue-600'}`}>
+          Auto ID Solutions
+        </p>
+        <p onClick={() => setSelectedMainService('VideoAnalytics')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'VideoAnalytics' && 'text-blue-600'}`}>
+          Video Analytics
+        </p>
+        <p onClick={() => setSelectedMainService('SmartCity')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'SmartCity' && 'text-blue-600'}`}>
+          Smart City Solutions
+        </p>
+        <p onClick={() => setSelectedMainService('ITInfra')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'ITInfra' && 'text-blue-600'}`}>
+          IT Infrastructure
+        </p>
+        <p onClick={() => setSelectedMainService('CommandCenter')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'CommandCenter' && 'text-blue-600'}`}>
+          Command & Control Center
+        </p>
+      </div>
+
+      {/* RIGHT: Sub Items */}
+      <div className="w-1/2 pl-4 text-sm text-gray-700 space-y-1 border-l border-gray-200">
         {!selectedMainService && (
           <p className="text-gray-400">← Select a solution category</p>
         )}
@@ -317,38 +365,9 @@ const Header = () => {
           </ul>
         )}
       </div>
-
-      {/* RIGHT: Main Categories */}
-      <div className="w-1/2 pl-4 space-y-2 text-sm font-medium text-gray-800">
-        <p onClick={() => setSelectedMainService('VideoSurveillance')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'VideoSurveillance' && 'text-blue-600'}`}>
-          Video Surveillance
-        </p>
-        <p onClick={() => setSelectedMainService('AudioVisual')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'AudioVisual' && 'text-blue-600'}`}>
-          Audio Visual Solutions
-        </p>
-        <p onClick={() => setSelectedMainService('DigitalClassrooms')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'DigitalClassrooms' && 'text-blue-600'}`}>
-          Digital Classrooms
-        </p>
-        <p onClick={() => setSelectedMainService('AutoID')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'AutoID' && 'text-blue-600'}`}>
-          Auto ID Solutions
-        </p>
-        <p onClick={() => setSelectedMainService('VideoAnalytics')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'VideoAnalytics' && 'text-blue-600'}`}>
-          Video Analytics
-        </p>
-        <p onClick={() => setSelectedMainService('SmartCity')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'SmartCity' && 'text-blue-600'}`}>
-          Smart City Solutions
-        </p>
-        <p onClick={() => setSelectedMainService('ITInfra')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'ITInfra' && 'text-blue-600'}`}>
-          IT Infrastructure
-        </p>
-        <p onClick={() => setSelectedMainService('CommandCenter')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'CommandCenter' && 'text-blue-600'}`}>
-          Command & Control Center
-        </p>
-      </div>
     </div>
   )}
 </div>
-
 
           <div
   className="relative" >
@@ -662,8 +681,16 @@ const Header = () => {
               <nav className="flex flex-col gap-6 items-start w-full max-w-sm">
                 <a onClick={() => setMenuOpen(false)} href="/" className="text-lg font-bold px-4 py-2 w-full hover:bg-gray-100 rounded">HOME</a>
 
-                <details className="w-full">
-                  <summary className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded">PRODUCTS</summary>
+                <details open={openMobileSection === 'products'} className="w-full">
+                  <summary
+                    onClick={() =>
+                      setOpenMobileSection(openMobileSection === 'products' ? null : 'products')
+                    }
+                    className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded"
+                  >
+                    PRODUCTS
+                  </summary>
+
                   <div
                     className="mt-2 px-2 pb-2"
                     style={{ maxHeight: '40vh', overflowY: 'auto' }}
@@ -774,12 +801,19 @@ const Header = () => {
                 </details>
 
                 {/* SOLUTIONS - mobile menu */}
-                <details className="w-full">
-                  <summary className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded">SOLUTIONS</summary>
-                  <div
-                    className="mt-2 px-2 pb-2"
-                    style={{ maxHeight: '40vh', overflowY: 'auto' }}
-                  >
+                <details open={openMobileSection === 'solutions'} className="w-full">
+                <summary
+                  onClick={() =>
+                    setOpenMobileSection(openMobileSection === 'solutions' ? null : 'solutions')
+                  }
+                  className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded"
+                >
+                  SOLUTIONS
+                </summary>
+                <div
+                  className="mt-2 px-2 pb-2"
+                  style={{ maxHeight: '40vh', overflowY: 'auto' }}
+                >
                     <div className="mt-2">
                       <ul className="space-y-3">
                         <li>
@@ -865,12 +899,19 @@ const Header = () => {
                   </div>
                 </details>
 
-                <details className="w-full">
-                  <summary className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded">SERVICES</summary>
-                  <div
-                    className="mt-2 px-2 pb-2"
-                    style={{ maxHeight: '40vh', overflowY: 'auto' }}
-                  >
+                <details open={openMobileSection === 'services'} className="w-full">
+                <summary
+                  onClick={() =>
+                    setOpenMobileSection(openMobileSection === 'services' ? null : 'services')
+                  }
+                  className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded"
+                >
+                  SERVICES
+                </summary>
+                <div
+                  className="mt-2 px-2 pb-2"
+                  style={{ maxHeight: '40vh', overflowY: 'auto' }}
+                >
                   <div className="flex flex-col pl-6 space-y-2 text-sm">
                     <div>
                       <p className="font-semibold flex justify-between items-center">
@@ -943,12 +984,19 @@ const Header = () => {
                   </div>
                 </details>
 
-                <details className="w-full">
-                  <summary className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded">INDUSTRIES</summary>
-                  <div
-                    className="mt-2 px-2 pb-2"
-                    style={{ maxHeight: '40vh', overflowY: 'auto' }}
-                  >
+                <details open={openMobileSection === 'industries'} className="w-full">
+                <summary
+                  onClick={() =>
+                    setOpenMobileSection(openMobileSection === 'industries' ? null : 'industries')
+                  }
+                  className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded"
+                >
+                  INDUSTRIES
+                </summary>
+                <div
+                  className="mt-2 px-2 pb-2"
+                  style={{ maxHeight: '40vh', overflowY: 'auto' }}
+                >
                   <div className="flex flex-col pl-6 space-y-4 text-sm text-gray-700">
                     <div>
                       <p className="font-semibold flex justify-between items-center">Government <span className="text-gray-400">→</span></p>
@@ -1003,14 +1051,19 @@ const Header = () => {
                   </div>
                   </div>
                 </details>
-                <details className="w-full">
-                  <summary className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded">
-                    INSTALL & SUPPORT
-                  </summary>
-                  <div
-                      className="mt-2 px-2 pb-2"
-                      style={{ maxHeight: '40vh', overflowY: 'auto' }}
-                      >
+                <details open={openMobileSection === 'installSupport'} className="w-full">
+                <summary
+                  onClick={() =>
+                    setOpenMobileSection(openMobileSection === 'installSupport' ? null : 'installSupport')
+                  }
+                  className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded"
+                >
+                  INSTALL & SUPPORT
+                </summary>
+                <div
+                  className="mt-2 px-2 pb-2"
+                  style={{ maxHeight: '40vh', overflowY: 'auto' }}
+                >
 
                   <div className="flex flex-col pl-6 space-y-4 text-sm text-gray-700">
 
