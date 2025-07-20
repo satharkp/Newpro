@@ -10,8 +10,8 @@ const Header = () => {
   const [selectedProductCategory, setSelectedProductCategory] = useState(null);
   const [selectedSupport, setSelectedSupport] = useState('Accessories');
   const [openMobileSection, setOpenMobileSection] = useState(null);
+  
   const dropdownRef = useRef(null);
-
   const lastScrollY = useRef(0);
   const idleTimer = useRef(null);
   const location = useLocation();
@@ -82,7 +82,7 @@ const Header = () => {
 
   return (
     <>
-      <header
+      <header ref={dropdownRef}
         id='home'
         className="fixed top-0 left-0 w-full bg-[#d1d1d1] shadow z-50 flex justify-between items-center h-16 px-4 lp:px-20"
       >
@@ -105,7 +105,7 @@ const Header = () => {
             HOME
           </a>
 
-          <div className="relative">
+          <div  className="relative">
           <button
   onClick={() => setOpenMenu(openMenu === 'products' ? null : 'products')}
   className="px-3 py-1 cursor-pointer hover:text-blue-500"
