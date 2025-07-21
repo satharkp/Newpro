@@ -7,10 +7,10 @@ import { FaComputer } from "react-icons/fa6";
 
 import SpaceCity1 from "../assets/Solar.jpg";
 import SpaceCity2 from "../assets/cc.jpg";
-import SpaceCity3 from "../assets/comp rep.jpg";
+import SpaceCity3 from "../assets/pcb.jpeg";
 import SpaceCity4 from "../assets/hom.jpg";
-import SpaceCity5 from "../assets/N&S.jpg";
-import SpaceCity6 from "../assets/Part.jpg";
+import SpaceCity5 from "../assets/netw.jpg";
+import SpaceCity6 from "../assets/maint.jpg";
 
 export const ServiceData = [
   {
