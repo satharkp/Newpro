@@ -40,7 +40,7 @@ export const ServiceData = [
   {
     icon: GrCloudSoftware,
     title: "Networking & Security",
-    content: "Design and installation of solar systems, inverters, and energy monitoring to keep your power reliable and efficient.",
+    content: "Complete setup of network infrastructure, Wi-Fi, firewalls, CCTV, access control, and biometric systems for secure, connected spaces.",
     backgroundImage: SpaceCity5,
   },
   {
