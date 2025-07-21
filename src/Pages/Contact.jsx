@@ -7,11 +7,6 @@ import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import emailjs from '@emailjs/browser';
 import { useNavigate } from "react-router-dom";
 
-
-const containerStyle = {
-  width: "100%",
-  height: "400px"
-};
  
 const center = {
   lat: 10.804048122805051,   // You can change to your location
@@ -88,7 +83,11 @@ const Contact = () => {
             <div className="flex-1 space-y-4   bg-white/20 backdrop-blur-md border border-white/30 p-5 rounded-xl shadow-lg">
               <h2 className="text-xl font-semibold">Get a Quote</h2>
               <p className="text-sm">Call us for inquiries:</p>
-              <p className="text-lg font-bold ">+91 97450 45345 <br />+91 89432 01000</p>
+              
+              <a href="tel:974-504-5345" aria-label="Our phone" title="Our phone" className="text-black transition-colors duration-300 hover:text-blue-400 text-lg font-bold">+91 97450 45345</a>
+              <br />
+              <a href="tel:894-320-1000" aria-label="Our phone" title="Our phone" className="text-black transition-colors duration-300 hover:text-blue-400 text-lg font-bold">+91 89432 01000</a>
+              
               <p className="text-sm  mt-4">Corporate Address:</p>
               <p className="text-sm ">
                 1st Floor, Anwariya Building,<br />

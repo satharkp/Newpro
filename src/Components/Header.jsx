@@ -4,18 +4,17 @@ import 'boxicons/css/boxicons.min.css';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
   const [openMenu, setOpenMenu] = useState(null); 
   const [selectedMainService, setSelectedMainService] = useState(null);
   const [selectedProductCategory, setSelectedProductCategory] = useState(null);
   const [selectedSupport, setSelectedSupport] = useState('Accessories');
   const [openMobileSection, setOpenMobileSection] = useState(null);
   
+  
   const dropdownRef = useRef(null);
-  const lastScrollY = useRef(0);
-  const idleTimer = useRef(null);
   const location = useLocation();
-
+  // const lastScrollY = useRef(0);
+  // const idleTimer = useRef(null);
 
   const toggleMenu = () => {
     setMenuOpen(pre => !pre);
@@ -36,45 +35,45 @@ const Header = () => {
   };
 }, [dropdownRef]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (menuOpen) return;
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (menuOpen) return;
 
-      const currentScrollY = window.scrollY;
+  //     const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY.current) {
-        setIsVisible(false); // scrolling down
-      } else {
-        setIsVisible(true); // scrolling up
-      }
+  //     if (currentScrollY > lastScrollY.current) {
+  //       setIsVisible(false); // scrolling down
+  //     } else {
+  //       setIsVisible(true); // scrolling up
+  //     }
 
-      lastScrollY.current = currentScrollY;
-      resetIdleTimer();
-    };
+  //     lastScrollY.current = currentScrollY;
+  //     resetIdleTimer();
+  //   };
 
-    const handleMouseMove = () => {
-      if (menuOpen) return;
-      setIsVisible(true);
-      resetIdleTimer();
-    };
+  //   const handleMouseMove = () => {
+  //     if (menuOpen) return;
+  //     setIsVisible(true);
+  //     resetIdleTimer();
+  //   };
 
-    const resetIdleTimer = () => {
-      if (idleTimer.current) clearTimeout(idleTimer.current);
-      idleTimer.current = setTimeout(() => {
-        if (!menuOpen) setIsVisible(false);
-      }, 4000);
-    };
+  //   const resetIdleTimer = () => {
+  //     if (idleTimer.current) clearTimeout(idleTimer.current);
+  //     idleTimer.current = setTimeout(() => {
+  //       if (!menuOpen) setIsVisible(false);
+  //     }, 4000);
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('touchstart', handleMouseMove);
+  //   window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('mousemove', handleMouseMove);
+  //   window.addEventListener('touchstart', handleMouseMove);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('touchstart', handleMouseMove);
-    };
-  }, [menuOpen]);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //     window.removeEventListener('mousemove', handleMouseMove);
+  //     window.removeEventListener('touchstart', handleMouseMove);
+  //   };
+  // }, [menuOpen]);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : 'auto';
@@ -681,16 +680,18 @@ const Header = () => {
               <nav className="flex flex-col gap-6 items-start w-full max-w-sm">
                 <a onClick={() => setMenuOpen(false)} href="/" className="text-lg font-bold px-4 py-2 w-full hover:bg-gray-100 rounded">HOME</a>
 
-                <details open={openMobileSection === 'products'} className="w-full">
-                  <summary
+                <div className="w-full">
+                  <button
                     onClick={() =>
                       setOpenMobileSection(openMobileSection === 'products' ? null : 'products')
                     }
                     className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded"
                   >
-                    PRODUCTS
-                  </summary>
+                    PRODUCTS ▼
+                  </button>
 
+
+                  {openMobileSection === 'products' &&(
                   <div
                     className="mt-2 px-2 pb-2"
                     style={{ maxHeight: '40vh', overflowY: 'auto' }}
@@ -798,22 +799,25 @@ const Header = () => {
                     </div>
                   </div>
                   </div>
-                </details>
+                  )}
+                </div>
 
                 {/* SOLUTIONS - mobile menu */}
-                <details open={openMobileSection === 'solutions'} className="w-full">
-                <summary
+                <div className="w-full">
+                <button
                   onClick={() =>
                     setOpenMobileSection(openMobileSection === 'solutions' ? null : 'solutions')
                   }
-                  className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded"
+                  className="text-lg font-bold px-4 py-2 w-full text-left hover:bg-gray-100 rounded"
                 >
-                  SOLUTIONS
-                </summary>
-                <div
-                  className="mt-2 px-2 pb-2"
-                  style={{ maxHeight: '40vh', overflowY: 'auto' }}
-                >
+                  SOLUTIONS ▼
+                </button>
+
+                {openMobileSection === 'solutions' && (
+                  <div
+                    className="mt-2 px-2 pb-2"
+                    style={{ maxHeight: '40vh', overflowY: 'auto' }}
+                  >
                     <div className="mt-2">
                       <ul className="space-y-3">
                         <li>
@@ -897,102 +901,108 @@ const Header = () => {
                       </ul>
                     </div>
                   </div>
-                </details>
+                )}
+              </div>
 
-                <details open={openMobileSection === 'services'} className="w-full">
-                <summary
+              <div className="w-full">
+                <button
                   onClick={() =>
                     setOpenMobileSection(openMobileSection === 'services' ? null : 'services')
                   }
-                  className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded"
+                  className="text-lg font-bold px-4 py-2 w-full text-left hover:bg-gray-100 rounded"
                 >
-                  SERVICES
-                </summary>
-                <div
-                  className="mt-2 px-2 pb-2"
-                  style={{ maxHeight: '40vh', overflowY: 'auto' }}
-                >
-                  <div className="flex flex-col pl-6 space-y-2 text-sm">
-                    <div>
-                      <p className="font-semibold flex justify-between items-center">
-                        Power & Energy Solutions <span className="text-gray-400">→</span>
-                      </p>
-                      <ul className="list-disc pl-6">
-                        <li>Solar System Installation & Maintenance</li>
-                        <li>Inverters & Battery Backup Systems</li>
-                        <li>Energy Monitoring & Management</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <p className="font-semibold flex justify-between items-center">
-                        Networking & Security <span className="text-gray-400">→</span>
-                      </p>
-                      <ul className="list-disc pl-6">
-                        <li>Network Infrastructure Setup</li>
-                        <li>Wi-Fi and LAN Installations</li>
-                        <li>Firewalls & Network Security Solutions</li>
-                        <li>Surveillance & CCTV Installations</li>
-                        <li>Access Control Systems</li>
-                        <li>Biometric & RFID Solutions</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <p className="font-semibold flex justify-between items-center">
-                        IT & Computing <span className="text-gray-400">→</span>
-                      </p>
-                      <ul className="list-disc pl-6">
-                        <li>Branded Laptops & Desktops (Sales & Service)</li>
-                        <li>Custom PC Builds (Gaming / Workstation)</li>
-                        <li>Computer Accessories & Peripherals</li>
-                        <li>Annual Maintenance Contracts (AMC)</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <p className="font-semibold flex justify-between items-center">
-                        Smart Automation <span className="text-gray-400">→</span>
-                      </p>
-                      <ul className="list-disc pl-6">
-                        <li>Home Automation Solutions</li>
-                        <li>Office Automation Systems</li>
-                        <li>Automated Gates & Shutters</li>
-                        <li>Smart Lighting & Appliance Control</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <p className="font-semibold flex justify-between items-center">
-                        Surveillance & Safety <span className="text-gray-400">→</span>
-                      </p>
-                      <ul className="list-disc pl-6">
-                        <li>CCTV Setup & Integration</li>
-                        <li>24/7 Monitoring Solutions</li>
-                        <li>Motion Detectors & Smart Alarms</li>
-                        <li>Remote Surveillance Access</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <p className="font-semibold flex justify-between items-center">
-                        Support & Maintenance <span className="text-gray-400">→</span>
-                      </p>
-                      <ul className="list-disc pl-6">
-                        <li>AMC for All Products (IT, CCTV, Solar, Automation)</li>
-                        <li>On-site & Remote Support</li>
-                        <li>Diagnostics & Repairs</li>
-                        <li>Warranty & Replacement Services</li>
-                      </ul>
-                    </div>
-                  </div>
-                  </div>
-                </details>
+                  SERVICES ▼
+                </button>
 
-                <details open={openMobileSection === 'industries'} className="w-full">
-                <summary
-                  onClick={() =>
-                    setOpenMobileSection(openMobileSection === 'industries' ? null : 'industries')
-                  }
-                  className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded"
-                >
-                  INDUSTRIES
-                </summary>
+                {openMobileSection === 'services' && (
+                  <div
+                    className="mt-2 px-2 pb-2"
+                    style={{ maxHeight: '40vh', overflowY: 'auto' }}
+                  >
+                    <div className="flex flex-col pl-6 space-y-2 text-sm">
+                      <div>
+                        <p className="font-semibold flex justify-between items-center">
+                          Power & Energy Solutions <span className="text-gray-400">→</span>
+                        </p>
+                        <ul className="list-disc pl-6">
+                          <li>Solar System Installation & Maintenance</li>
+                          <li>Inverters & Battery Backup Systems</li>
+                          <li>Energy Monitoring & Management</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <p className="font-semibold flex justify-between items-center">
+                          Networking & Security <span className="text-gray-400">→</span>
+                        </p>
+                        <ul className="list-disc pl-6">
+                          <li>Network Infrastructure Setup</li>
+                          <li>Wi-Fi and LAN Installations</li>
+                          <li>Firewalls & Network Security Solutions</li>
+                          <li>Surveillance & CCTV Installations</li>
+                          <li>Access Control Systems</li>
+                          <li>Biometric & RFID Solutions</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <p className="font-semibold flex justify-between items-center">
+                          IT & Computing <span className="text-gray-400">→</span>
+                        </p>
+                        <ul className="list-disc pl-6">
+                          <li>Branded Laptops & Desktops (Sales & Service)</li>
+                          <li>Custom PC Builds (Gaming / Workstation)</li>
+                          <li>Computer Accessories & Peripherals</li>
+                          <li>Annual Maintenance Contracts (AMC)</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <p className="font-semibold flex justify-between items-center">
+                          Smart Automation <span className="text-gray-400">→</span>
+                        </p>
+                        <ul className="list-disc pl-6">
+                          <li>Home Automation Solutions</li>
+                          <li>Office Automation Systems</li>
+                          <li>Automated Gates & Shutters</li>
+                          <li>Smart Lighting & Appliance Control</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <p className="font-semibold flex justify-between items-center">
+                          Surveillance & Safety <span className="text-gray-400">→</span>
+                        </p>
+                        <ul className="list-disc pl-6">
+                          <li>CCTV Setup & Integration</li>
+                          <li>24/7 Monitoring Solutions</li>
+                          <li>Motion Detectors & Smart Alarms</li>
+                          <li>Remote Surveillance Access</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <p className="font-semibold flex justify-between items-center">
+                          Support & Maintenance <span className="text-gray-400">→</span>
+                        </p>
+                        <ul className="list-disc pl-6">
+                          <li>AMC for All Products (IT, CCTV, Solar, Automation)</li>
+                          <li>On-site & Remote Support</li>
+                          <li>Diagnostics & Repairs</li>
+                          <li>Warranty & Replacement Services</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+              
+              <div className="w-full">
+              <button
+                onClick={() =>
+                  setOpenMobileSection(openMobileSection === 'industries' ? null : 'industries')
+                }
+                className="text-lg font-bold px-4 py-2 w-full text-left hover:bg-gray-100 rounded"
+              >
+                INDUSTRIES ▼
+              </button>
+
+              {openMobileSection === 'industries' && (
                 <div
                   className="mt-2 px-2 pb-2"
                   style={{ maxHeight: '40vh', overflowY: 'auto' }}
@@ -1049,73 +1059,76 @@ const Header = () => {
                       </ul>
                     </div>
                   </div>
+                </div>
+              )}
+            </div>
+
+
+            <div className="w-full">
+            <button
+              onClick={() =>
+                setOpenMobileSection(openMobileSection === 'installSupport' ? null : 'installSupport')
+              }
+              className="text-lg font-bold px-4 py-2 w-full text-left hover:bg-gray-100 rounded"
+            >
+              INSTALL & SUPPORT ▼
+            </button>
+
+            {openMobileSection === 'installSupport' && (
+              <div
+                className="mt-2 px-2 pb-2"
+                style={{ maxHeight: '40vh', overflowY: 'auto' }}
+              >
+                <div className="flex flex-col pl-6 space-y-4 text-sm text-gray-700">
+                  {/* Accessories */}
+                  <div>
+                    <p className="font-semibold flex justify-between items-center">
+                      Accessories <span className="text-gray-400">→</span>
+                    </p>
+                    <ul className="list-disc pl-6">
+                      <li>CCTV & Surveillance (mounts, cables, HDDs)</li>
+                      <li>Networking (LAN cables, switches, racks)</li>
+                      <li>Solar Systems (controllers, wiring, mounts)</li>
+                      <li>Automation (smart switches, sensors)</li>
+                      <li>PC Builds (RAM, SSDs, GPUs, fans, peripherals)</li>
+                    </ul>
                   </div>
-                </details>
-                <details open={openMobileSection === 'installSupport'} className="w-full">
-                <summary
-                  onClick={() =>
-                    setOpenMobileSection(openMobileSection === 'installSupport' ? null : 'installSupport')
-                  }
-                  className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded"
-                >
-                  INSTALL & SUPPORT
-                </summary>
-                <div
-                  className="mt-2 px-2 pb-2"
-                  style={{ maxHeight: '40vh', overflowY: 'auto' }}
-                >
 
-                  <div className="flex flex-col pl-6 space-y-4 text-sm text-gray-700">
-
-                    {/* Accessories */}
-                    <div>
-                      <p className="font-semibold flex justify-between items-center">
-                        Accessories <span className="text-gray-400">→</span>
-                      </p>
-                      <ul className="list-disc pl-6">
-                        <li>CCTV & Surveillance (mounts, cables, HDDs)</li>
-                        <li>Networking (LAN cables, switches, racks)</li>
-                        <li>Solar Systems (controllers, wiring, mounts)</li>
-                        <li>Automation (smart switches, sensors)</li>
-                        <li>PC Builds (RAM, SSDs, GPUs, fans, peripherals)</li>
-                      </ul>
-                    </div>
-
-                    {/* Installations */}
-                    <div>
-                      <p className="font-semibold flex justify-between items-center">
-                        Installations <span className="text-gray-400">→</span>
-                      </p>
-                      <ul className="list-disc pl-6">
-                        <li>CCTV, Networking & Solar</li>
-                        <li>Home & Office Automation</li>
-                        <li>Smart Classrooms & AV Systems</li>
-                        <li>Custom PC & Gaming Rigs</li>
-                      </ul>
-                      <p className="text-xs mt-2 italic">
-                        Includes: Site survey, wiring, mounting, system testing, and demo.
-                      </p>
-                    </div>
-
-                    {/* Maintenance & AMC */}
-                    <div>
-                      <p className="font-semibold flex justify-between items-center">
-                        Maintenance & AMC <span className="text-gray-400">→</span>
-                      </p>
-                      <ul className="list-disc pl-6">
-                        <li>Annual Maintenance Contracts (AMC)</li>
-                        <li>One-time service & health checks</li>
-                        <li>Scheduled checkups (monthly/quarterly)</li>
-                        <li>On-call & on-site support</li>
-                      </ul>
-                      <p className="text-xs mt-2 italic">
-                        Covers: CCTV, Solar, PCs, Networking, Automation
-                      </p>
-                    </div>
-
+                  {/* Installations */}
+                  <div>
+                    <p className="font-semibold flex justify-between items-center">
+                      Installations <span className="text-gray-400">→</span>
+                    </p>
+                    <ul className="list-disc pl-6">
+                      <li>CCTV, Networking & Solar</li>
+                      <li>Home & Office Automation</li>
+                      <li>Smart Classrooms & AV Systems</li>
+                      <li>Custom PC & Gaming Rigs</li>
+                    </ul>
+                    <p className="text-xs mt-2 italic">
+                      Includes: Site survey, wiring, mounting, system testing, and demo.
+                    </p>
                   </div>
+
+                  {/* Maintenance & AMC */}
+                  <div>
+                    <p className="font-semibold flex justify-between items-center">
+                      Maintenance & AMC <span className="text-gray-400">→</span>
+                    </p>
+                    <ul className="list-disc pl-6">
+                      <li>Annual Maintenance Contracts (AMC)</li>
+                      <li>One-time service & health checks</li>
+                      <li>Scheduled checkups (monthly/quarterly)</li>
+                      <li>On-call & on-site support</li>
+                    </ul>
+                    <p className="text-xs mt-2 italic">
+                      Covers: CCTV, Solar, PCs, Networking, Automation
+                    </p>
                   </div>
-                </details>
+                </div>
+              </div>
+            )}
+          </div>
 
 
                 <a onClick={() => setMenuOpen(false)} href="/contact" className="text-lg font-bold px-4 py-2 w-full hover:bg-gray-100 rounded">CONTACT</a>
