@@ -19,7 +19,7 @@ const Footer = () => {
       <p className="text-base font-bold tracking-wide text-white">Contacts</p>
       <div className="flex">
         <p className="mr-1 text-gray-400">Phone:</p>
-        <a href="tel:974-504-5345" aria-label="Our phone" title="Our phone" className="text-white transition-colors duration-300 hover:text-blue-400"> 97450 45345</a>
+        <a href="tel:974-504-5345" aria-label="Our phone" title="Our phone" className="text-white transition-colors duration-300 hover:text-blue-400">+91 97450 45345</a>
       </div>
       <div className="flex">
         <p className="mr-1 text-gray-400">Email:</p>
@@ -44,7 +44,7 @@ const Footer = () => {
             ></path>
           </svg>
         </a>
-        <a href="/" className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400">
+        <a href="https://www.instagram.com/netmagiccomputers?igsh=MTlwdXd1MHZ3ZXlxYQ==" className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400">
           <svg viewBox="0 0 30 30" fill="currentColor" className="h-6">
             <circle cx="15" cy="15" r="4"></circle>
             <path
