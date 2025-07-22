@@ -8,11 +8,15 @@ import mes from '../assets/logos/mes.png';
 import bob from '../assets/logos/bob.png';
 import pnb from '../assets/logos/pnb.png';
 import mrl from '../assets/logos/MrL.webp';
+import total from '../assets/logos/total.png';
+import dmart from '../assets/logos/dmart.png';
+import am from '../assets/logos/am.png';
+
 
 
 const HappyCl = () => {
   const logos = [
-    rev,kp,wa,edk,sng,ptb,mes,bob,pnb,mrl
+    rev,kp,wa,edk,sng,ptb,mes,bob,pnb,mrl,total,dmart,am
   ];
   return (
     <section className=" text-center px-4">
