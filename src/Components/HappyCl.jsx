@@ -5,28 +5,30 @@ import rev from '../assets/logos/rev.png';
 import sng from '../assets/logos/SNGS.png';
 import ptb from '../assets/logos/ptb.png';
 import mes from '../assets/logos/mes.png';
-
+import bob from '../assets/logos/bob.png';
+import pnb from '../assets/logos/pnb.png';
+import mrl from '../assets/logos/MrL.webp';
 
 
 const HappyCl = () => {
   const logos = [
-    rev,kp,wa,edk,sng,ptb,mes
+    rev,kp,wa,edk,sng,ptb,mes,bob,pnb,mrl
   ];
   return (
-    <section className="py-10 text-center">
+    <section className="py-10 text-center px-4">
       <h1  
       data-aos="zoom-in" 
      className="text-3xl text-center mt-10 sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16">
         Our Happy Clients
       </h1>
       <p className="mb-10 text-gray-600">Trusted by leading businesses</p>
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 place-items-center mx-auto max-w-[700px] mb-32 ">
         {logos.map((src, idx) => (
           <img
             key={idx}
             src={src}
             alt={`Client ${idx + 1}`}
-            className="h-[60px] object-contain"
+            className="h-[60px] max-w-[100px] object-contain mx-auto"
           />
         ))}
       </div>
