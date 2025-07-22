@@ -32,7 +32,7 @@ const HappyCl = () => {
             key={idx}
             src={src}
             alt={`Client ${idx + 1}`}
-            className="h-[60px] max-w-[100px] object-contain mx-auto"
+            className="h-[60px] max-w-[100px] object-contain mx-auto transition-transform duration-300 hover:scale-110 "
           />
         ))}
       </div>
