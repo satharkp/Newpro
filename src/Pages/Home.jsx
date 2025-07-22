@@ -8,6 +8,7 @@ import Carousel from '../Components/Carousel';
 import Footer from '../Components/Footer';
 import About from '../Components/Waw';
 import { useLocation } from 'react-router-dom';
+import HappyCl from '../Components/HappyCl';
 
 const Home = () => {
   const location = useLocation();
@@ -43,6 +44,7 @@ const Home = () => {
         <section id="wwd">
          <Carousel />
         </section>
+        <HappyCl/>
         <Footer/>
       </main>
     </div>
