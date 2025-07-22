@@ -17,11 +17,11 @@ const Carousel = () => {
       <h1 id='wwd'  
       data-aos="zoom-in" 
      className="text-3xl text-center mt-10 sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16">
-        Services
+        SERVICES
       </h1>
     </div>
 
-   <div  className="flex items-center flex-col h-screen ml-4 lg:ml-0">
+   <div  className="flex items-center flex-col h-screen ml-4 lg:ml-10">
       <Swiper
         ref={swiperRef}
         breakpoints={{
@@ -60,8 +60,8 @@ const Carousel = () => {
                 <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-0 transition-opacity duration-300 z-10 " />
 
                 {/* Foreground Content */}
-                <div className="flex flex-col gap-6 relative z-20 text-white px-6 py-8 h-full w-full  hover:font-bold hover:text-black ">
-                  <item.icon className="text-blue-600 w-[32px] h-[32px]:"/>
+                <div className="flex flex-col gap-6 relative z-20 text-white px-6 py-8 h-full w-full  hover:font-bold hover:text-black">
+                  <item.icon className="text-blue-600 w-[32px] h-[32px]"/>
                   <h3 className="text-lg font-bold">{item.title}</h3>
                   <p className="text-sm">{item.content}</p>
                   <RxArrowTopRight className="absolute bottom-5 left-5 w-[35px] h-[35px] text-white group-hover:to-blue-500 group-hover:rotate-45 duration-100 " />

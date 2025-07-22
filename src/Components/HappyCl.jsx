@@ -18,11 +18,11 @@ const HappyCl = () => {
     <section className=" text-center px-4">
       <h1  
       data-aos="zoom-in" 
-     className="text-3xl text-center mt-10 sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16">
-        Our Happy Clients
+     className="text-3xl text-center  sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16">
+        OUR HAPPY CLIENTS
       </h1>
       <p className="mb-10 text-gray-600">Trusted by leading businesses</p>
-      <div className="grid grid-cols- sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 place-items-center mx-auto max-w-[700px] mb-32 ">
+      <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 place-items-center mx-auto max-w-[700px] mb-32 ">
         {logos.map((src, idx) => (
           <img
             key={idx}

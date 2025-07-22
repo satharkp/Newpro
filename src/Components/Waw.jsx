@@ -8,7 +8,7 @@ const About = () => {
         data-aos="zoom-in"
         className="text-3xl text-center mt-10 sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16 "
       >
-        About Us
+        ABOUT US
       </h1>
 
       {/* Section 1 – On-site services (solar) */}
