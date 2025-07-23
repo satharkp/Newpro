@@ -16,16 +16,17 @@ const Footer = () => {
       </div>
     </div>
     <div className="space-y-2 text-sm">
-      <p className="text-base font-bold tracking-wide text-white">Contacts</p>
-      <div className="flex">
+      <p className="text-base tracking-wide font-bold text-white">Get in Touch</p>
+      <div className="flex flex-col">
         <p className="mr-1 text-gray-400">Phone:</p>
-        <a href="tel:974-504-5345" aria-label="Our phone" title="Our phone" className="text-white transition-colors duration-300 hover:text-blue-400">+91 97450 45345</a>
+        <a href="tel:974-504-5345" aria-label="Our phone" title="Our phone" className="text-white transition-colors duration-300 hover:text-blue-400">+91 97450 45345   </a>
+        <a href="tel:894-320-1000" aria-label="Our phone" title="Our phone" className="text-white transition-colors duration-300 hover:text-blue-400">   +91 89432 01000</a>
       </div>
-      <div className="flex">
+      <div className="flex flex-col">
         <p className="mr-1 text-gray-400">Email:</p>
         <a href="mailto:netmagiccomputersptb@gmail.com" aria-label="Our email" title="Our email" className="text-white transition-colors duration-300 hover:text-blue-400">netmagiccomputersptb@gmail.com</a>
       </div>
-      <div className="flex">
+      <div className="flex flex-col">
         <p className="mr-1 text-gray-400">Address:</p>
         <a href="https://maps.app.goo.gl/FAkuDHfp8r5y8J8L6" target="_blank" rel="noopener noreferrer" aria-label="Our address" title="Our address" className="text-white transition-colors duration-300 hover:text-blue-400">
         1st Floor, Anwariya Building,<br />

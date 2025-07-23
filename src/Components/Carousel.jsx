@@ -17,9 +17,9 @@ const Carousel = () => {
       <h1 id='wwd'  
       data-aos="zoom-in" 
      className="text-3xl text-center mt-10 sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-10 ">
-        PRODUCTS
+        PRODUCTS & SOLUTIONS
       </h1>
-      <p className="mb-16 text-gray-600 text-center text-[10px] ">Every product is backed by expert service & installation support <br /> Need help choosing the right solution? <br /> 📞 Contact us anytime
+      <p className="mb-16 text-gray-600 text-center text-[13px] ">Every product is backed by expert service & installation support <br /> Need help choosing the right solution? <br /> <a href="/contact" className=" transition-colors duration-300 text-blue-400 ">📞 Contact us </a>anytime
       </p>
     </div>
 
