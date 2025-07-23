@@ -19,6 +19,8 @@ const Carousel = () => {
      className="text-3xl text-center mt-10 sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16">
         PRODUCTS
       </h1>
+      <p className="mb-10 text-gray-600 text-center">Every product is backed by expert service & installation support <br /> Need help choosing the right solution? <br /> 📞 Contact us anytime
+      </p>
     </div>
 
    <div  className="flex items-center flex-col h-screen ml-4 lg:ml-10">
