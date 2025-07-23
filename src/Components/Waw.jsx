@@ -3,7 +3,7 @@ import tech from '../assets/tech.jpg'
 
 const About = () => {
   return (
-    <div id='about' className="px-4 py-16 max-w-7xl mx-auto ">
+    <div id='about' className="px-4 py-16 max-w-7xl mx-auto mb-20">
       <h1
         data-aos="zoom-in"
         className="text-3xl text-center mt-10 sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16 "
