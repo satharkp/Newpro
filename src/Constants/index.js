@@ -15,185 +15,104 @@ export const ServiceData = [
   {
     icon: GiSolarPower,
     title: "Laptops & Desktops",
-    subHeading: "For Offices, Businesses, Homes & Gamers",
     content: [
-      "Branded Laptops",
-      "Office & Business Desktops",
-      "Home Use Laptops & PCs",
-      "High-Performance Gaming Laptops",
-      "Thin Clients & Mini PCs"
+      "Branded laptops from all leading brands for offices, businesses, homes, and gaming, including office and business desktops, home-use PCs, high-performance gaming laptops, thin clients, and mini PCs."
     ],
     backgroundImage: SpaceCity1,
   },
   {
     icon: GiCctvCamera,
     title: "Custom PC Builds",
-    subHeading: "Designed for Gamers, Creators & Professionals",
     content: [
-      "Custom Gaming PCs",
-      "Workstations",
-      "RGB Cabinets",
-      "Liquid Cooling",
-      "Overclocking",
-      "Tailor-Made Builds"
+      "Designed for gamers, creators, and professionals — custom gaming PCs from entry-level to extreme, content creation workstations, RGB cabinets with liquid cooling, performance tuning, and tailor-made PC build services."
     ],
     backgroundImage: SpaceCity3,
   },
   {
     icon: GiCctvCamera,
     title: "CCTV & Surveillance Systems",
-    subHeading: "For Homes, Shops, Offices, Apartments & Schools",
     content: [
-      "IP & Analog Cameras",
-      "Bullet, Dome & PTZ Models",
-      "NVR/DVR",
-      "Night Vision",
-      "Motion Detection",
-      "Intercoms"
+      "For homes, shops, offices, apartments, and schools — IP and analog cameras, bullet, dome, and PTZ models, NVR/DVR recorders, night vision and motion detection, video door phones, and intercom systems."
     ],
     backgroundImage: SpaceCity2,
   },
   {
     icon: FaHome,
     title: "Networking Equipment",
-    subHeading: "Enterprise & Home Network Solutions",
     content: [
-      "Routers",
-      "Access Points",
-      "LAN Switches",
-      "Network Racks",
-      "Firewalls",
-      "Cabling",
-      "Tools & Testers"
+      "Enterprise and home network solutions — routers and wireless access points, LAN switches (managed/unmanaged), network racks, patch panels, firewalls, load balancers, cabling, tools, and testers."
     ],
     backgroundImage: SpaceCity5,
   },
   {
     icon: FaComputer,
     title: "Printers & Scanners",
-    subHeading: "Essential Office & Institutional Devices",
     content: [
-      "Inkjet & Laser Printers",
-      "All-in-One Devices",
-      "Document & Flatbed Scanners",
-      "Wireless Printers",
-      "Barcode Printers"
+      "Essential devices for offices and institutions — inkjet and laser printers, all-in-one printers for print, scan, and copy, document and flatbed scanners, wireless and network printers, plus thermal and barcode printers for retail use."
     ],
     backgroundImage: SpaceCity7,
   },
   {
     icon: FaComputer,
     title: "Interactive Panels & Displays",
-    subHeading: "For Classrooms, Meeting Rooms & Digital Signage",
     content: [
-      "Smart Panels",
-      "Collaboration Displays",
-      "Classroom Boards",
-      "Digital Signage",
-      "Mounts & Accessories"
+      "For classrooms, meeting rooms, and digital signage — smart interactive panels with touch, office collaboration displays, classroom boards and education panels, digital signage solutions, wall mounts, and installation accessories."
     ],
     backgroundImage: SpaceCity6,
   },
   {
     icon: GrCloudSoftware,
     title: "ERP & Business Software",
-    subHeading: "Smart Software for Business & Institutional Growth",
     content: [
-      "Billing & Inventory",
-      "CRM",
-      "HRM",
-      "POS",
-      "ERP for Schools, Colleges & SMEs",
-      "Cloud or On-Premise",
-      "Training"
+      "Smart software for business and institutional growth — billing and inventory software, CRM, HRM, POS solutions, ERP systems for schools, colleges, and SMEs, cloud or on-premise options, plus staff training and deployment."
     ],
     backgroundImage: SpaceCity1,
   },
   {
     icon: GiSolarPower,
     title: "Solar & Power Systems",
-    subHeading: "Eco-Friendly Power for Homes, Shops & Offices",
     content: [
-      "Solar Panels",
-      "Inverters",
-      "Batteries",
-      "Charge Controllers",
-      "Wiring Kits",
-      "Mounting Accessories"
+      " Eco-friendly power solutions for homes, shops, and offices — monocrystalline and polycrystalline solar panels, inverters (hybrid, on/off-grid), lithium and lead-acid batteries, charge controllers and optimizers, wiring kits, and mounting accessories."
     ],
     backgroundImage: SpaceCity1,
   },
   {
     icon: FaHome,
     title: "Home & Office Automation",
-    subHeading: "Smart Living & Productivity Solutions",
     content: [
-      "Smart Switches",
-      "Voice Control",
-      "Sensors",
-      "Appliance Automation",
-      "Smart Plugs",
-      "App & Voice Assistant Integration"
+      "Smart living and productivity solutions — smart switches and voice-control systems, motion and light sensors, appliance automation and remote control, smart plugs and timers, with app and voice assistant integration (Alexa, Google)."
     ],
     backgroundImage: SpaceCity3,
   },
   {
     icon: GiAutoRepair,
     title: "Security & Access Control",
-    subHeading: "Safety Solutions for Homes, Offices & Institutions",
     content: [
-      "Biometric & RFID",
-      "Time Attendance",
-      "Door Access",
-      "Smart Locks",
-      "Sensors",
-      "Buzzers & Sirens"
+      "Safety solutions for homes, offices, and institutions — biometric and RFID systems, time attendance machines, door access terminals, smart locks, sensors, buzzers, and sirens."
     ],
     backgroundImage: SpaceCity4,
   },
   {
     icon: GiAutoRepair,
     title: "Automated Gates & Shutters",
-    subHeading: "Commercial & Residential Entry Solutions",
     content: [
-      "Gate Motors",
-      "Rolling Shutters",
-      "Boom Barriers",
-      "Remote/App Control",
-      "Safety Sensors",
-      "Backup Power"
+      "Commercial and residential entry solutions — sliding and swing gate motors, motorized and manual rolling shutters, boom barriers for vehicle control, remote and app-based control systems, safety sensors, and backup power options."
     ],
     backgroundImage: SpaceCity5,
   },
   {
     icon: FaComputer,
     title: "PC Components & Peripherals",
-    subHeading: "Upgrade & Accessorize with Quality Parts",
     content: [
-      "RAM",
-      "SSD & HDD",
-      "GPUs & CPUs",
-      "Power Supplies",
-      "Cabinets",
-      "Motherboards",
-      "Cooling",
-      "Monitors & Keyboards",
-      "UPS"
+      "Upgrade and accessorize with quality parts — RAM, SSD, HDD, GPUs, CPUs, power supplies, cabinets, motherboards, cooling fans, liquid coolers, monitors, keyboards, mice, UPS, speakers, and headphones."
     ],
     backgroundImage: SpaceCity6,
   },
   {
     icon: FaComputer,
     title: "Accessories",
-    subHeading: "Add-Ons & Spare Parts for Every Product Line",
     content: [
-      "CCTV Cables",
-      "Mounts",
-      "Networking Tools",
-      "PC Cooling Pads",
-      "Solar Connectors",
-      "Smart Remotes",
-      "Toners"
+      "All add-ons and spare parts for every product line — CCTV cables, mounts, and HDDs; networking patch cords, tools, and crimpers; PC cooling pads, USB hubs, and adapters; solar connectors, wiring kits, and monitoring tools; smart remotes and sensors for home automation; plus ERP and printer accessories like toners, software keys, and scanning apps."
     ],
     backgroundImage: SpaceCity1,
   },

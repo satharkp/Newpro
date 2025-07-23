@@ -16,10 +16,10 @@ const Carousel = () => {
     <div>
       <h1 id='wwd'  
       data-aos="zoom-in" 
-     className="text-3xl text-center mt-10 sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16">
+     className="text-3xl text-center mt-10 sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-10 ">
         PRODUCTS
       </h1>
-      <p className="mb-10 text-gray-600 text-center">Every product is backed by expert service & installation support <br /> Need help choosing the right solution? <br /> 📞 Contact us anytime
+      <p className="mb-16 text-gray-600 text-center text-[15px] ">Every product is backed by expert service & installation support <br /> Need help choosing the right solution? <br /> 📞 Contact us anytime
       </p>
     </div>
 
@@ -65,12 +65,9 @@ const Carousel = () => {
                 <div className="flex flex-col gap-6 relative z-20 text-white px-6 py-8 h-full w-full  hover:font-bold hover:text-black">
                   <item.icon className="text-blue-600 w-[30px] h-[30px]"/>
                   <h3 className="text-lg font-bold mb-[-10px]">{item.title}</h3>
-                  <p className="text-sm font-bold mb-[-20px]">{item.subHeading}</p>
-                  <ul className="text-sm list-disc list-inside">
-                    {item.content.map((point, index) => (
-                      <li key={index}>{point}</li>
-                    ))}
-                  </ul>
+                  <p className="text-sm">
+                    {item.content.join(" ")}
+                  </p>
                   {/* <RxArrowTopRight className="absolute bottom-5 left-5 w-[35px] h-[35px] text-white group-hover:to-blue-500 group-hover:rotate-45 duration-100 " /> */}
                 </div>
               </div>
