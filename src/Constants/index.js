@@ -16,7 +16,7 @@ export const ServiceData = [
     icon: GiSolarPower,
     title: "Laptops & Desktops",
     content: [
-      "Branded laptops from all leading brands for offices, businesses, homes, and gaming, including office and business desktops, home-use PCs, high-performance gaming laptops, thin clients, and mini PCs."
+      " Business PCs, Gaming Rigs, Home Systems"
     ],
     backgroundImage: SpaceCity1,
   },
@@ -24,7 +24,7 @@ export const ServiceData = [
     icon: GiCctvCamera,
     title: "Custom PC Builds",
     content: [
-      "Designed for gamers, creators, and professionals — custom gaming PCs from entry-level to extreme, content creation workstations, RGB cabinets with liquid cooling, performance tuning, and tailor-made PC build services."
+      " Custom Builds with RGB, Liquid Cooling & Tuning"
     ],
     backgroundImage: SpaceCity3,
   },
@@ -32,7 +32,8 @@ export const ServiceData = [
     icon: GiCctvCamera,
     title: "CCTV & Surveillance Systems",
     content: [
-      "For homes, shops, offices, apartments, and schools — IP and analog cameras, bullet, dome, and PTZ models, NVR/DVR recorders, night vision and motion detection, video door phones, and intercom systems."
+      " Bullet/Dome Cameras, NVR/DVR, Video Door Phones",
+      " Biometric Access, RFID, Smart Locks & Sensors"
     ],
     backgroundImage: SpaceCity2,
   },
@@ -40,7 +41,8 @@ export const ServiceData = [
     icon: FaHome,
     title: "Networking Equipment",
     content: [
-      "Enterprise and home network solutions — routers and wireless access points, LAN switches (managed/unmanaged), network racks, patch panels, firewalls, load balancers, cabling, tools, and testers."
+      " Routers, Switches, Racks, Firewalls & LAN Setup",
+      "Structured Cabling & Enterprise Networking"
     ],
     backgroundImage: SpaceCity5,
   },
