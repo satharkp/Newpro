@@ -1,5 +1,5 @@
 import kp from '../assets/logos/kp.png'; 
-import wa from '../assets/logos/WA.png';
+import wa from '../assets/logos/WA.webp';
 import edk from '../assets/logos/EDK.png';
 import rev from '../assets/logos/rev.png';
 import sng from '../assets/logos/SNGS.png';

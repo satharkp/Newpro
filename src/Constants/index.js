@@ -11,7 +11,7 @@ import SpaceCity2 from "../assets/cct.jpg";
 import SpaceCity3 from "../assets/homie.png";
 import SpaceCity4 from "../assets/autoG.png";
 import SpaceCity5 from "../assets/inter.jpg";
-import SpaceCity6 from "../assets/pcj.png";
+import SpaceCity6 from "../assets/pcj.jpg";
 import SpaceCity7 from "../assets/pri.jpg";
 import SpaceCity8 from "../assets/netw.jpg";
 import SpaceCity9 from "../assets/pcA.jpg";
