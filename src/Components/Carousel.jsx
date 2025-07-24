@@ -19,11 +19,23 @@ const Carousel = () => {
      className="text-3xl text-center mt-10 sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-10 ">
         PRODUCTS & SOLUTIONS
       </h1>
-      <p className="mb-16 text-gray-600 text-center text-[13px] ">Every product is backed by expert service & installation support <br /> Need help choosing the right solution? <br /> <a href="/contact" className=" transition-colors duration-300 text-blue-400 ">📞 Contact us </a>anytime
+      <p className=" text-gray-600 text-center text-[13px] ">Every product is backed by expert service & installation support <br /> Need help choosing the right solution? <br /> <a href="/contact" className=" transition-colors duration-300 text-blue-400 ">📞 Contact us </a>anytime
       </p>
     </div>
 
-   <div  className="flex items-center flex-col h-screen ml-4 lg:ml-10">
+   <div className="relative flex items-center justify-between h-screen px-5">
+      <button
+        onClick={() => swiperRef.current.swiper.slidePrev()}
+        className="absolute mt-[-50px] left-0 sm:left-4 top-1/2 -translate-y-1/2 sm:-translate-y-1/2 bg-gray-400 text-white text-3xl sm:text-5xl p-3 sm:p-5 rounded-full hover:bg-gray-500 transition z-50"
+      >
+        &#10094;
+      </button>
+      <button
+        onClick={() => swiperRef.current.swiper.slideNext()}
+        className="absolute mt-[-50px] right-0 sm:right-4 top-1/2 -translate-y-1/2 sm:-translate-y-1/2 bg-gray-400 text-white text-3xl sm:text-5xl p-3 sm:p-5 rounded-full hover:bg-gray-500 transition z-50"
+      >
+        &#10095;
+      </button>
       <Swiper
         ref={swiperRef}
         breakpoints={{
@@ -47,7 +59,7 @@ const Carousel = () => {
 
       modules={[FreeMode, Pagination, Mousewheel]}
       mousewheel={true}
-        className='max-w-[90%] lg:max-w-[80%]'
+        className="max-w-[90%] lg:max-w-[80%] !pb-10 swiper-center-pagination mx-auto flex flex-col items-center"
         >
           {ServiceData.map((item) => (
             <SwiperSlide key={item.title}>
@@ -78,21 +90,6 @@ const Carousel = () => {
           ))}
       </Swiper>
 
-      {/* Buttons below pagination */}
-      <div className="flex justify-center gap-4 mt-6">
-        <button
-          onClick={() => swiperRef.current.swiper.slidePrev()}
-          className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition"
-        >
-          ←
-        </button>
-        <button
-          onClick={() => swiperRef.current.swiper.slideNext()}
-          className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition"
-        >
-          →
-        </button>
-      </div>
 
     </div>
     </div>
