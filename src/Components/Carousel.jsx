@@ -47,7 +47,7 @@ const Carousel = () => {
             slidesPerView: 2,
             spaceBetween: 24
           },
-          1024: {
+          1180: {
             slidesPerView: 3,
             spaceBetween: 32
           }
@@ -63,10 +63,10 @@ const Carousel = () => {
         >
           {ServiceData.map((item) => (
             <SwiperSlide key={item.title}>
-              <div className="relative mb-20 ml-1 lg:ml-6 group h-[320px] w-[280px] lg:h-[400px] lg:w-[300px] rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300 ease-in-out">
+              <div className="relative mb-20 ml-4 lg:ml-6 group h-[320px] w-[280px] lg:h-[400px] lg:w-[300px] rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300 ease-in-out">
                 {/* Background Image */}
                 <div
-                  className="absolute inset-0 bg-cover bg-center opacity-100 lg:opacity-100 group-hover:opacity-30 transition-opacity duration-300 z-0 "
+                  className="absolute inset-0 bg-cover bg-center opacity-40 lg:opacity-40 group-hover:opacity-50 transition-opacity duration-300 z-0 "
                   style={{ backgroundImage: `url(${item.backgroundImage})` }}
                 />
 
@@ -74,7 +74,7 @@ const Carousel = () => {
                 <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-0 transition-opacity duration-300 z-10 " />
 
                 {/* Foreground Content */}
-                <div className="flex flex-col gap-6 relative z-20 text-white px-6 py-8 h-full w-full  hover:font-bold hover:text-black">
+                <div className="flex flex-col gap-6 relative z-20 text-black px-6 py-8 h-full w-full  hover:font-bold hover:text-black">
                   <item.icon className="text-blue-600 w-[30px] h-[30px]"/>
                   <h3 className="text-lg font-bold mb-[-10px]">{item.title}</h3>
                   <p className="text-sm font-bold mb-[-20px]">{item.subHeading}</p>

@@ -22,7 +22,7 @@ const About = () => {
         </div>
         <div data-aos="fade-left"
               data-aos-easing="ease-in-sine"
-              data-aos-duration="1500"
+              data-aos-duration="500"
              className="w-full lg:w-1/2 text-gray-600 text-lg leading-relaxed space-y-6">
           <p>
             At <span className="font-bold text-blue-500">NETMAGIC</span>, we specialize in delivering cutting-edge technology through expert <strong>on-site installation services</strong>. 
@@ -45,7 +45,7 @@ const About = () => {
         </div>
         <div data-aos="fade-right"
             data-aos-easing="ease-in-sine"
-            data-aos-duration="1500"
+            data-aos-duration="500"
             className="w-full lg:w-1/2 text-gray-600 text-lg leading-relaxed space-y-6">
           <p>
             At <span className="font-bold text-blue-500">NETMAGIC</span>, we offer comprehensive <strong>technical support services</strong> designed to keep your systems optimized and secure. 
