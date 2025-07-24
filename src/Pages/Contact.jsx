@@ -81,7 +81,7 @@ const Contact = () => {
             data-aos="zoom-in"
             className="text-3xl mt-20 text-center sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16"
           >
-            GET IN TOUCHES
+            GET IN TOUCH WITH US
           </h1>
           <div className="w-full font-mono bg-white/10 backdrop-blur-md border border-white/30 p-6 rounded-xl shadow-lg flex flex-col lg:flex-row gap-6 overflow-visible">
             {/* Section 1: Quote and Address */}
