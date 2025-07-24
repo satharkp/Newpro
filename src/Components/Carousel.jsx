@@ -26,13 +26,13 @@ const Carousel = () => {
    <div className="relative flex items-center justify-between h-screen px-5">
       <button
         onClick={() => swiperRef.current.swiper.slidePrev()}
-        className="absolute mt-[-50px] left-0 sm:left-4 top-1/2 -translate-y-1/2 sm:-translate-y-1/2 bg-gray-400 text-white text-3xl sm:text-5xl p-3 sm:p-5 rounded-full hover:bg-gray-500 transition z-50"
+        className="absolute mt-[-50px] left-0 sm:left-4 top-1/2 -translate-y-1/2 sm:-translate-y-1/2 bg-gray-400 text-white text-3xl sm:text-5xl p-3 sm:p-5 rounded-full hover:bg-gray-500 transition z-40"
       >
         &#10094;
       </button>
       <button
         onClick={() => swiperRef.current.swiper.slideNext()}
-        className="absolute mt-[-50px] right-0 sm:right-4 top-1/2 -translate-y-1/2 sm:-translate-y-1/2 bg-gray-400 text-white text-3xl sm:text-5xl p-3 sm:p-5 rounded-full hover:bg-gray-500 transition z-50"
+        className="absolute mt-[-50px] right-0 sm:right-4 top-1/2 -translate-y-1/2 sm:-translate-y-1/2 bg-gray-400 text-white text-3xl sm:text-5xl p-3 sm:p-5 rounded-full hover:bg-gray-500 transition z-40"
       >
         &#10095;
       </button>
@@ -63,7 +63,7 @@ const Carousel = () => {
         >
           {ServiceData.map((item) => (
             <SwiperSlide key={item.title}>
-              <div className="relative mb-20 ml-4 lg:ml-6 group h-[320px] w-[280px] lg:h-[400px] lg:w-[300px] rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300 ease-in-out">
+              <div className="relative mb-20  group h-[320px] w-[280px] lg:h-[400px] lg:w-[300px] rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300 ease-in-out">
                 {/* Background Image */}
                 <div
                   className="absolute inset-0 bg-cover bg-center opacity-40 lg:opacity-40 group-hover:opacity-50 transition-opacity duration-300 z-0 "
