@@ -106,7 +106,7 @@ const Header = () => {
 
           <div  className="relative">
           <button
-  onClick={() => setOpenMenu(openMenu === 'products' ? null : 'products')}
+  onMouseEnter={() => setOpenMenu(openMenu === 'products' ? null : 'products')}
   className="px-3 py-1 cursor-pointer hover:text-blue-500"
 >
   PRODUCTS ▼
@@ -117,16 +117,16 @@ const Header = () => {
     
     {/* LEFT: Product Categories */}
     <div className="w-1/2 pr-4 space-y-2 text-sm font-medium text-gray-800 border-r border-gray-200">
-      <p onClick={() => setSelectedProductCategory('Laptops')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Laptops' && 'text-blue-600'}`}>Laptops & Desktops</p>
-      <p onClick={() => setSelectedProductCategory('CustomPC')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'CustomPC' && 'text-blue-600'}`}>Custom PC Builds</p>
-      <p onClick={() => setSelectedProductCategory('CCTV')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'CCTV' && 'text-blue-600'}`}>CCTV & Surveillance</p>
-      <p onClick={() => setSelectedProductCategory('Networking')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Networking' && 'text-blue-600'}`}>Networking Equipment</p>
-      <p onClick={() => setSelectedProductCategory('Solar')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Solar' && 'text-blue-600'}`}>Solar & Power Systems</p>
-      <p onClick={() => setSelectedProductCategory('Automation')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Automation' && 'text-blue-600'}`}>Home & Office Automation</p>
-      <p onClick={() => setSelectedProductCategory('Access')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Access' && 'text-blue-600'}`}>Security & Access Control</p>
-      <p onClick={() => setSelectedProductCategory('Gates')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Gates' && 'text-blue-600'}`}>Automated Gates & Shutters</p>
-      <p onClick={() => setSelectedProductCategory('Components')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Components' && 'text-blue-600'}`}>PC Components & Peripherals</p>
-      <p onClick={() => setSelectedProductCategory('Accessories')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Accessories' && 'text-blue-600'}`}>Accessories</p>
+      <p onMouseEnter={() => setSelectedProductCategory('Laptops')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Laptops' && 'text-blue-600'}`}>Laptops & Desktops</p>
+      <p onMouseEnter={() => setSelectedProductCategory('CustomPC')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'CustomPC' && 'text-blue-600'}`}>Custom PC Builds</p>
+      <p onMouseEnter={() => setSelectedProductCategory('CCTV')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'CCTV' && 'text-blue-600'}`}>CCTV & Surveillance</p>
+      <p onMouseEnter={() => setSelectedProductCategory('Networking')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Networking' && 'text-blue-600'}`}>Networking Equipment</p>
+      <p onMouseEnter={() => setSelectedProductCategory('Solar')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Solar' && 'text-blue-600'}`}>Solar & Power Systems</p>
+      <p onMouseEnter={() => setSelectedProductCategory('Automation')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Automation' && 'text-blue-600'}`}>Home & Office Automation</p>
+      <p onMouseEnter={() => setSelectedProductCategory('Access')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Access' && 'text-blue-600'}`}>Security & Access Control</p>
+      <p onMouseEnter={() => setSelectedProductCategory('Gates')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Gates' && 'text-blue-600'}`}>Automated Gates & Shutters</p>
+      <p onMouseEnter={() => setSelectedProductCategory('Components')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Components' && 'text-blue-600'}`}>PC Components & Peripherals</p>
+      <p onMouseEnter={() => setSelectedProductCategory('Accessories')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Accessories' && 'text-blue-600'}`}>Accessories</p>
     </div>
 
     {/* RIGHT: Sub-Items */}
@@ -252,7 +252,7 @@ const Header = () => {
 
 <div className="relative">
   <a
-    onClick={() => setOpenMenu(openMenu === 'solutions' ? null : 'solutions')}
+    onMouseEnter={() => setOpenMenu(openMenu === 'solutions' ? null : 'solutions')}
     className="px-3 py-1 cursor-pointer hover:text-blue-500"
   >
     SOLUTIONS ▼
@@ -262,28 +262,28 @@ const Header = () => {
     <div className="absolute top-full left-0 mt-1 bg-white border rounded shadow-md w-[600px] p-4 z-50 flex">
       {/* LEFT: Main Categories */}
       <div className="w-1/2 pr-4 space-y-2 text-sm font-medium text-gray-800">
-        <p onClick={() => setSelectedMainService('VideoSurveillance')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'VideoSurveillance' && 'text-blue-600'}`}>
+        <p onMouseEnter={() => setSelectedMainService('VideoSurveillance')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'VideoSurveillance' && 'text-blue-600'}`}>
           Video Surveillance
         </p>
-        <p onClick={() => setSelectedMainService('AudioVisual')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'AudioVisual' && 'text-blue-600'}`}>
+        <p onMouseEnter={() => setSelectedMainService('AudioVisual')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'AudioVisual' && 'text-blue-600'}`}>
           Audio Visual Solutions
         </p>
-        <p onClick={() => setSelectedMainService('DigitalClassrooms')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'DigitalClassrooms' && 'text-blue-600'}`}>
+        <p onMouseEnter={() => setSelectedMainService('DigitalClassrooms')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'DigitalClassrooms' && 'text-blue-600'}`}>
           Digital Classrooms
         </p>
-        <p onClick={() => setSelectedMainService('AutoID')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'AutoID' && 'text-blue-600'}`}>
+        <p onMouseEnter={() => setSelectedMainService('AutoID')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'AutoID' && 'text-blue-600'}`}>
           Auto ID Solutions
         </p>
-        <p onClick={() => setSelectedMainService('VideoAnalytics')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'VideoAnalytics' && 'text-blue-600'}`}>
+        <p onMouseEnter={() => setSelectedMainService('VideoAnalytics')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'VideoAnalytics' && 'text-blue-600'}`}>
           Video Analytics
         </p>
-        <p onClick={() => setSelectedMainService('SmartCity')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'SmartCity' && 'text-blue-600'}`}>
+        <p onMouseEnter={() => setSelectedMainService('SmartCity')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'SmartCity' && 'text-blue-600'}`}>
           Smart City Solutions
         </p>
-        <p onClick={() => setSelectedMainService('ITInfra')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'ITInfra' && 'text-blue-600'}`}>
+        <p onMouseEnter={() => setSelectedMainService('ITInfra')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'ITInfra' && 'text-blue-600'}`}>
           IT Infrastructure
         </p>
-        <p onClick={() => setSelectedMainService('CommandCenter')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'CommandCenter' && 'text-blue-600'}`}>
+        <p onMouseEnter={() => setSelectedMainService('CommandCenter')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'CommandCenter' && 'text-blue-600'}`}>
           Command & Control Center
         </p>
       </div>
@@ -370,7 +370,7 @@ const Header = () => {
 
           <div
   className="relative" >
-  <button onClick={() => setOpenMenu(openMenu === 'services' ? null : 'services')}
+  <button onMouseEnter={() => setOpenMenu(openMenu === 'services' ? null : 'services')}
    className="px-3 py-1 cursor-pointer hover:text-blue-500">SERVICES ▼</button>
 
   {openMenu === 'services' && (
@@ -438,37 +438,37 @@ const Header = () => {
       <div className="w-1/2 pl-4">
         <ul className="space-y-2 text-sm font-medium">
           <li
-            onClick={() => setSelectedMainService('Power')}
+            onMouseEnter={() => setSelectedMainService('Power')}
             className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'Power' ? 'text-blue-500' : ''}`}
           >
             Power & Energy Solutions
           </li>
           <li
-            onClick={() => setSelectedMainService('Networking')}
+            onMouseEnter={() => setSelectedMainService('Networking')}
             className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'Networking' ? 'text-blue-500' : ''}`}
           >
             Networking & Security
           </li>
           <li
-            onClick={() => setSelectedMainService('IT')}
+            onMouseEnter={() => setSelectedMainService('IT')}
             className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'IT' ? 'text-blue-500' : ''}`}
           >
             IT & Computing
           </li>
           <li
-            onClick={() => setSelectedMainService('Automation')}
+            onMouseEnter={() => setSelectedMainService('Automation')}
             className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'Automation' ? 'text-blue-500' : ''}`}
           >
             Smart Automation
           </li>
           <li
-            onClick={() => setSelectedMainService('Surveillance')}
+            onMouseEnter={() => setSelectedMainService('Surveillance')}
             className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'Surveillance' ? 'text-blue-500' : ''}`}
           >
             Surveillance & Safety
           </li>
           <li
-            onClick={() => setSelectedMainService('Support')}
+            onMouseEnter={() => setSelectedMainService('Support')}
             className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'Support' ? 'text-blue-500' : ''}`}
           >
             Support & Maintenance
@@ -483,7 +483,7 @@ const Header = () => {
           <div  className="relative">
 
   <button
-  onClick={() => setOpenMenu(openMenu === 'industries' ? null : 'industries')}
+  onMouseEnter={() => setOpenMenu(openMenu === 'industries' ? null : 'industries')}
     className="px-3 py-1 cursor-pointer hover:text-blue-500"
   >
     INDUSTRIES ▼
@@ -551,7 +551,7 @@ const Header = () => {
             {['Government', 'Education', 'Retail', 'Hospitality', 'Residential'].map(item => (
               <li
                 key={item}
-                onClick={() => setSelectedMainService(item)}
+                onMouseEnter={() => setSelectedMainService(item)}
                 className={`cursor-pointer hover:text-blue-500 ${
                   selectedMainService === item ? 'text-blue-600 font-semibold' : ''
                 }`}
@@ -569,7 +569,7 @@ const Header = () => {
                   <div
           className="relative"        >
           <button 
-           onClick={() => setOpenMenu(openMenu === 'support' ? null : 'support')}
+           onMouseEnter={() => setOpenMenu(openMenu === 'support' ? null : 'support')}
            className="px-3 py-1 cursor-pointer hover:text-blue-500">
             INSTALL & SUPPORT ▼
           </button>
@@ -624,7 +624,7 @@ const Header = () => {
                     {['Accessories', 'Installations', 'Maintenance & AMC'].map(item => (
                       <li
                         key={item}
-                        onClick={() => setSelectedSupport(item)}
+                        onMouseEnter={() => setSelectedSupport(item)}
                         className={`cursor-pointer hover:text-blue-500 ${
                           selectedSupport === item ? 'text-blue-600 font-semibold' : ''
                         }`}
