@@ -22,6 +22,7 @@ import zain from '../assets/logos/zain.png'
 import ideal from '../assets/logos/ideal.png'
 import mount from '../assets/logos/mount.png'
 import sins from '../assets/logos/sins.png'
+import mesg from '../assets/logos/mesg.png'
 
 import back from '../assets/ba.jpeg'
  
@@ -29,7 +30,7 @@ import back from '../assets/ba.jpeg'
 
 const HappyCl = () => {
   const logos = [
-    rev,kp,excise,edk,elect,wa,ptb,sng,ideal,mount,mes,occ,bob,pnb,hdfc,poont,ster,zain,mrl,total,dmart,am,ams,sins,
+    rev,kp,excise,edk,elect,wa,ptb,sng,mesg,mes,ideal,mount,occ,bob,pnb,hdfc,dmart,ams,poont,ster,zain,mrl,total,am,sins,
   ];
   return (
     <section

@@ -85,7 +85,7 @@ const Carousel = () => {
 
                 {/* Foreground Content */}
                 <div className="flex flex-col gap-6 relative z-20 text-white px-6 py-8 h-full w-full  hover:font-bold hover:text-black">
-                  <item.icon className="text-blue-600 w-[30px] h-[30px]"/>
+                  <item.icon className="text-white w-[30px] h-[30px]"/>
                   <h3 className="text-lg font-bold mb-[-10px]">{item.title}</h3>
                   <p className="text-sm font-bold mb-[-20px]">{item.subHeading}</p>
                   <ul className="text-sm list-disc list-inside">

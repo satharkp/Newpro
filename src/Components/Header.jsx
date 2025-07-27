@@ -83,7 +83,7 @@ const Header = () => {
     <>
       <header ref={dropdownRef}
         id='home'
-        className="fixed top-0 left-0 w-full bg-[#d1d1d1] shadow z-50 flex justify-between items-center h-16 px-4 lp:px-20"
+        className="fixed top-0 left-0 w-full  bg-[#d1d1d1]  shadow z-50 flex justify-between items-center h-16 px-4 lp:px-20"
       >
 
         <div className="flex items-center">
@@ -96,7 +96,7 @@ const Header = () => {
         </div>
 
         {/* Navabars*/}
-        <nav className="hidden custom:flex justify-end items-center gap-8 w-full bg-[#d1d1d1] py-3 text-sm font-semibold">
+        <nav className="hidden custom:flex justify-end items-center gap-8 w-full py-3 text-sm font-semibold">
           <a
             href="/"
             className={`px-3 py-1 rounded ${location.pathname === '/' ? 'text-white bg-blue-500' : 'hover:text-blue-500'}`}
