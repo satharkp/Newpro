@@ -48,6 +48,7 @@ const Home = () => {
               key={idx}
               src={src}
               alt={`Client ${idx + 1}`}
+              loading="lazy"
               className="z-10 h-10 sm:h-12 md:h-14 max-w-[100px] sm:max-w-[100px] object-contain transition-transform duration-300 hover:scale-150"
             />
           ))}

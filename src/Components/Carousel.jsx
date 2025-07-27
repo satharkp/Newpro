@@ -75,9 +75,11 @@ const Carousel = () => {
               <div
                className="relative mb-20 ml-1 lg:ml-6 group h-[320px] w-[280px] lg:h-[400px] lg:w-[300px] rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300 ease-in-out">
                 {/* Background Image */}
-                <div
-                  className="absolute inset-0 bg-cover bg-center opacity-90 group-hover:opacity-50 transition-opacity duration-400 z-0 "
-                  style={{ backgroundImage: `url(${item.backgroundImage})` }}
+                <img
+                  src={item.backgroundImage}
+                  alt={item.title}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-50 transition-opacity duration-400 z-0"
                 />
 
                 {/* Overlay on hover */}
