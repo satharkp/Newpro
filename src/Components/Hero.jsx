@@ -35,6 +35,7 @@ const Hero = () => {
 
 
 
+
     </div>
     {/*robot that only can for canvas*/} 
 
