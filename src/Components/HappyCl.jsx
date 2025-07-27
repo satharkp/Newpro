@@ -34,7 +34,7 @@ const HappyCl = () => {
   ];
   return (
     <section
-      className="relative w-full min-h-screen text-center"
+      className="relative w-full min-h-screen text-center overflow-hidden"
       style={{
         position: 'relative',
         width: '100%',
@@ -46,7 +46,7 @@ const HappyCl = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          opacity: 0.2,
+          opacity: 0.1,
           position: 'absolute',
           top: 0,
           left: 0,
@@ -63,7 +63,7 @@ const HappyCl = () => {
           OUR HAPPY CLIENTS
         </h1>
         <p className="mb-16 text-gray-600">Trusted by Government Departments and Leading Businesses</p>
-        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-6 gap-6 place-items-center mx-auto lg:max-w-[110rem] max-w-[400px] mb-10 lg:mb-0">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-6 place-items-center mx-auto w-full max-w-7xl px-4 mb-10 lg:mb-0">
           {logos.map((src, idx) => (
             <img
               key={idx}
@@ -72,7 +72,7 @@ const HappyCl = () => {
               loading="lazy"
               width="100"
               height="60"
-              className="h-[60px] max-w-[100px] opacity-80 hover:opacity-100 object-contain mx-auto transition-transform duration-300 hover:scale-110"
+              className="h-[60px] w-[100px] object-contain opacity-80 hover:opacity-100 transition-transform duration-300 hover:scale-110"
             />
           ))}
         </div>

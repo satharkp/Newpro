@@ -3,11 +3,17 @@ import 'boxicons/css/boxicons.min.css';
 
 const Hero = () => {
   const [SplineComponent, setSplineComponent] = useState(null);
+  const [showSpline, setShowSpline] = useState(false);
 
   useEffect(() => {
     import('@splinetool/react-spline').then((module) => {
       setSplineComponent(() => module.default);
     });
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowSpline(true), 500);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -38,8 +44,8 @@ const Hero = () => {
         </div>
     </div>
     {/* 3d Robot*/}
-    <div className="flex justify-center mt-28  lg:mt-0 lg:ml-[13%] items-center w-full max-w-5xl mx-auto scale-[1.5] sm:scale-[1] md:scale-[1.2] lg:scale-[2]">
-    {SplineComponent && (
+    <div className="flex justify-center mt-28 lg:mt-0 lg:ml-[13%] items-center w-full max-w-5xl mx-auto scale-[1.5] sm:scale-[1] md:scale-[1.2] lg:scale-[2] min-h-[200px]">
+    {showSpline && SplineComponent && (
       <SplineComponent
         scene="https://prod.spline.design/Mzsufjfbt4z5nMrl/scene.splinecode"
         loading="lazy"

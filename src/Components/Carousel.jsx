@@ -32,7 +32,7 @@ const Carousel = () => {
       </p>
     </div>
 
-   <div className="relative flex items-center justify-between h-screen px-5">
+   <div className="relative flex items-center justify-between px-5 min-h-[750px] lg:min-h-[800px]">
       <button
         aria-label="Previous Slide"
         onClick={() => swiperRef.current.swiper.slidePrev()}
@@ -75,7 +75,7 @@ const Carousel = () => {
           {ServiceData.map((item) => (
             <SwiperSlide key={item.title} >
               <div
-               className="relative mb-20 ml-1 lg:ml-6 group h-[320px] w-[90vw] max-w-[280px] lg:h-[400px] lg:w-[300px] rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300 ease-in-out">
+               className="relative mb-20 ml-1 lg:ml-6 group w-[90vw] max-w-[280px] lg:w-[300px] rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300 ease-in-out min-h-[320px] lg:min-h-[400px]">
                 {/* Background Image */}
                 <img
                   src={item.backgroundImage || '/fallback.jpg'}
@@ -83,7 +83,7 @@ const Carousel = () => {
                   loading="lazy"
                   width="300"
                   height="400"
-                  className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-50 transition-opacity duration-400 z-0"
+                  className="absolute inset-0 w-full h-full object-cover aspect-[3/4] opacity-90 group-hover:opacity-50 transition-opacity duration-400 z-0"
                 />
 
                 {/* Overlay on hover */}

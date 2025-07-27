@@ -19,8 +19,10 @@ const About = () => {
 
         {/* Section 1 – On-site services (solar) */}
         <div className="flex flex-col lg:flex-row items-center gap-12 mb-20">
-          <div className="w-full lg:w-1/2 opacity-100">
+          <div className="w-full lg:w-1/2 opacity-100 min-h-[200px]">
             <img
+              decoding="async"
+              fetchpriority="low"
               className="w-full rounded-sm h-auto object-cover shadow-lg"
               src={solar}
               alt="On-site service"
@@ -32,7 +34,7 @@ const About = () => {
           <div data-aos="fade-left"
                 data-aos-easing="ease-in-sine"
                 data-aos-duration="500"
-               className="w-full lg:w-1/2 text-white  text-lg lg:text-xl leading-relaxed">
+               className="w-full lg:w-1/2 text-white  text-lg lg:text-xl leading-relaxed text-balance">
             <div className="space-y-6 min-h-[16rem] sm:min-h-[20rem]">
               <p>
                 At <span className="font-bold text-black">NETMAGIC</span>, we specialize in delivering cutting-edge technology through expert <strong>on-site installation services</strong>. 
@@ -47,8 +49,10 @@ const About = () => {
 
         {/* Section 2 – Tech-focused services */}
         <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
-          <div className="w-full lg:w-1/2 opacity-100">
+          <div className="w-full lg:w-1/2 opacity-100 min-h-[200px]">
             <img
+              decoding="async"
+              fetchpriority="low"
               className="w-full rounded-sm h-auto object-cover shadow-lg"
               src={tech}
               alt="Tech services"
@@ -60,7 +64,7 @@ const About = () => {
           <div data-aos="fade-right"
               data-aos-easing="ease-in-sine"
               data-aos-duration="500"
-              className="w-full lg:w-1/2 text-white text-lg lg:text-xl leading-relaxed">
+              className="w-full lg:w-1/2 text-white text-lg lg:text-xl leading-relaxed text-balance">
             <div className="space-y-6 min-h-[16rem] sm:min-h-[20rem]">
               <p>
                 At <span className="font-bold text-black">NETMAGIC</span>, we offer comprehensive <strong>technical support services</strong> designed to keep your systems optimized and secure. 
