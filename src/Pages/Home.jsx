@@ -42,16 +42,16 @@ const Home = () => {
         
 
 
-        <div className="absolute top-20 right-1 lg:top-4 lg:right-4 flex flex-row flex-wrap items-center justify-end gap-2 max-w-full">
-  {logos.map((src, idx) => (
-    <img
-      key={idx}
-      src={src}
-      alt={`Client ${idx + 1}`}
-      className="h-10 sm:h-12 md:h-14 max-w-[80px] sm:max-w-[100px] opacity-80 hover:opacity-100 object-contain transition-transform duration-300 hover:scale-110"
-    />
-  ))}
-</div>
+        <div className="absolute top-20 right-3 lg:top-4 lg:right-4 flex flex-row flex-wrap items-center justify-end lg:gap-3 gap-2  max-w-full">
+          {logos.map((src, idx) => (
+            <img
+              key={idx}
+              src={src}
+              alt={`Client ${idx + 1}`}
+              className="z-10 h-10 sm:h-12 md:h-14 max-w-[100px] sm:max-w-[100px] object-contain transition-transform duration-300 hover:scale-150"
+            />
+          ))}
+        </div>
 
         {/* Blur effect */}
         <div className="absolute top-[3.5%] right-[-10%] w-[44rem] h-[9rem] bg-[#A1A1DE] opacity-100 blur-[35px] rotate-[-30deg] z-[-1]"></div>

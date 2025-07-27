@@ -3,7 +3,7 @@ import Spline from '@splinetool/react-spline';
 
 const Hero = () => {
   return (
-    <main className="flex lg:mt-20 mt-0 flex-col-reverse lg:flex-row items-center justify-between min-h-[calc(90vh-6em)]">
+    <main className="flex lg:mt-20 mb-[100px] mt-0 flex-col-reverse lg:flex-row items-center justify-between min-h-[calc(90vh-6em)]">
       
 
     <div data-aos="fade-right"

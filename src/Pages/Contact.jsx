@@ -77,13 +77,13 @@ const Contact = () => {
       <Header />
 
       <section
-        className="w-full py-10 min-h-[420px] bg-cover bg-center bg-no-repeat"
+        className="w-full py-10 min-h-[420px] bg-cover bg-center bg-no-repeat mt-[60px]"
         style={{ backgroundImage: `url(${back})` }}
       >
         <div className="w-full">
           <h1
             data-aos="zoom-in"
-            className="text-3xl mt-20 text-white text-center sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16"
+            className="text-3xl mt-10 text-white text-center sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16"
           >
             GET IN TOUCH WITH US
           </h1>
