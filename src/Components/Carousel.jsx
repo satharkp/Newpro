@@ -7,7 +7,7 @@ import 'swiper/css/free-mode'
 import { FreeMode, Pagination, Mousewheel } from "swiper/modules";
 import { RxArrowTopRight } from "react-icons/rx";
 import { ServiceData } from "../Constants";
-import back from '../assets/newbee.jpg'
+import back from '../assets/newbee.webp'
 
 
 const Carousel = () => {

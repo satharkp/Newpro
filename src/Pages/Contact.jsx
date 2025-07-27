@@ -6,7 +6,7 @@ import { useEffect, useState, useRef } from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import emailjs from '@emailjs/browser';
 import { useNavigate } from "react-router-dom";
-import back from '../assets/bluba.jpg'
+import back from '../assets/bluba.webp'
 
 
 const containerStyle = {

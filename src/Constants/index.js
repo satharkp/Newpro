@@ -6,16 +6,16 @@ import { ImDisplay } from "react-icons/im";
 import { LuPrinter } from "react-icons/lu";
 import { IoHardwareChipOutline } from "react-icons/io5";
 
-import SpaceCity1 from "../assets/solar.png";
-import SpaceCity2 from "../assets/cct.jpg";
-import SpaceCity3 from "../assets/homie.png";
+import SpaceCity1 from "../assets/solar.webp";
+import SpaceCity2 from "../assets/cct.webp";
+import SpaceCity3 from "../assets/homie.webp";
 import SpaceCity4 from "../assets/autoG.png";
-import SpaceCity5 from "../assets/inter.jpg";
-import SpaceCity6 from "../assets/pcj.jpg";
-import SpaceCity7 from "../assets/pri.jpg";
-import SpaceCity8 from "../assets/netw.jpg";
-import SpaceCity9 from "../assets/pcA.jpg";
-import SpaceCity10 from "../assets/erp.jpg";
+import SpaceCity5 from "../assets/inter.webp";
+import SpaceCity6 from "../assets/pcj.webp";
+import SpaceCity7 from "../assets/pri.webp";
+import SpaceCity8 from "../assets/netw.webp";
+import SpaceCity9 from "../assets/pcA.webp";
+import SpaceCity10 from "../assets/erp.webp";
 
 export const ServiceData = [
   {

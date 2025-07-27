@@ -1,4 +1,4 @@
-import gradient from '../assets/gradient.png'
+import gradient from '../assets/gradient.webp'
 import Header from '../Components/Header'
 import Hero from '../Components/Hero'
 import AOS from 'aos';
@@ -10,7 +10,7 @@ import About from '../Components/Waw';
 import { useLocation } from 'react-router-dom';
 import HappyCl from '../Components/HappyCl';
 import bni from '../assets/logos/bni.webp';
-import akks from '../assets/logos/akks.png'
+import akks from '../assets/logos/akks.webp'
 
 const Home = () => {
   const location = useLocation();

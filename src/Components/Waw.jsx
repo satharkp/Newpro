@@ -1,6 +1,6 @@
-import solar from '../assets/sol.jpg'
-import tech from '../assets/tech.jpg'
-import back from '../assets/bak.jpg'
+import solar from '../assets/sol.webp'
+import tech from '../assets/tech.webp'
+import back from '../assets/bak.webp'
 
 const About = () => {
   return (
