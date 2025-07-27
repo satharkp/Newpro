@@ -9,12 +9,24 @@ const Header = () => {
   const [selectedProductCategory, setSelectedProductCategory] = useState(null);
   const [selectedSupport, setSelectedSupport] = useState('Accessories');
   const [openMobileSection, setOpenMobileSection] = useState(null);
+  const hideTimer = useRef(null);
   
   
   const dropdownRef = useRef(null);
   const location = useLocation();
   // const lastScrollY = useRef(0);
   // const idleTimer = useRef(null);
+  const handleMouseEnter = (menuName) => {
+    clearTimeout(hideTimer.current);
+    setOpenMenu(menuName);
+  };
+
+  const handleMouseLeave = () => {
+    // Set a delay before closing the menu
+    hideTimer.current = setTimeout(() => {
+      setOpenMenu(null);
+    }, 200); // ← Adjust delay in ms (e.g., 300 = 0.3s)
+  };
 
   const toggleMenu = () => {
     setMenuOpen(pre => !pre);
@@ -35,45 +47,6 @@ const Header = () => {
   };
 }, [dropdownRef]);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (menuOpen) return;
-
-  //     const currentScrollY = window.scrollY;
-
-  //     if (currentScrollY > lastScrollY.current) {
-  //       setIsVisible(false); // scrolling down
-  //     } else {
-  //       setIsVisible(true); // scrolling up
-  //     }
-
-  //     lastScrollY.current = currentScrollY;
-  //     resetIdleTimer();
-  //   };
-
-  //   const handleMouseMove = () => {
-  //     if (menuOpen) return;
-  //     setIsVisible(true);
-  //     resetIdleTimer();
-  //   };
-
-  //   const resetIdleTimer = () => {
-  //     if (idleTimer.current) clearTimeout(idleTimer.current);
-  //     idleTimer.current = setTimeout(() => {
-  //       if (!menuOpen) setIsVisible(false);
-  //     }, 4000);
-  //   };
-
-  //   window.addEventListener('scroll', handleScroll);
-  //   window.addEventListener('mousemove', handleMouseMove);
-  //   window.addEventListener('touchstart', handleMouseMove);
-
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //     window.removeEventListener('mousemove', handleMouseMove);
-  //     window.removeEventListener('touchstart', handleMouseMove);
-  //   };
-  // }, [menuOpen]);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : 'auto';
@@ -83,7 +56,7 @@ const Header = () => {
     <>
       <header ref={dropdownRef}
         id='home'
-        className="fixed top-0 left-0 w-full  bg-[#d1d1d1]  shadow z-50 flex justify-between items-center h-16 px-4 lp:px-20"
+        className="fixed top-0 left-0 w-full  bg-[#d1d1d1]  shadow z-50 flex justify-between items-center h-16 px-2 lp:px-20"
       >
 
         <div className="flex items-center">
@@ -96,18 +69,19 @@ const Header = () => {
         </div>
 
         {/* Navabars*/}
-        <nav className="hidden custom:flex justify-end items-center gap-8 w-full py-3 text-sm font-semibold">
+        <nav className="hidden custom:flex justify-end items-center gap-1 w-full py-3 text-sm font-semibold">
           <a
             href="/"
-            className={`px-3 py-1 rounded ${location.pathname === '/' ? 'text-white bg-blue-500' : 'hover:text-blue-500'}`}
+            className={`px-5 py-1 rounded ${location.pathname === '/' ? 'text-white bg-[#1d2f36]' : 'hover:text-[#1d2f36]'}`}
           >
             HOME
           </a>
 
-          <div  className="relative">
+          <div  className="relative" 
+          onMouseEnter={() => handleMouseEnter("products")}
+          onMouseLeave={handleMouseLeave}>
           <button
-  onMouseEnter={() => setOpenMenu(openMenu === 'products' ? null : 'products')}
-  className="px-3 py-1 cursor-pointer hover:text-blue-500"
+  className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] hover:font-bold "
 >
   PRODUCTS ▼
 </button>
@@ -117,18 +91,17 @@ const Header = () => {
     
     {/* LEFT: Product Categories */}
     <div className="w-1/2 pr-4 space-y-2 text-sm font-medium text-gray-800 border-r border-gray-200">
-      <p onMouseEnter={() => setSelectedProductCategory('Laptops')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Laptops' && 'text-blue-600'}`}>Laptops & Desktops</p>
-      <p onMouseEnter={() => setSelectedProductCategory('CustomPC')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'CustomPC' && 'text-blue-600'}`}>Custom PC Builds</p>
-      <p onMouseEnter={() => setSelectedProductCategory('CCTV')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'CCTV' && 'text-blue-600'}`}>CCTV & Surveillance</p>
-      <p onMouseEnter={() => setSelectedProductCategory('Networking')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Networking' && 'text-blue-600'}`}>Networking Equipment</p>
-      <p onMouseEnter={() => setSelectedProductCategory('Solar')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Solar' && 'text-blue-600'}`}>Solar & Power Systems</p>
-      <p onMouseEnter={() => setSelectedProductCategory('Automation')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Automation' && 'text-blue-600'}`}>Home & Office Automation</p>
-      <p onMouseEnter={() => setSelectedProductCategory('Access')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Access' && 'text-blue-600'}`}>Security & Access Control</p>
-      <p onMouseEnter={() => setSelectedProductCategory('Gates')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Gates' && 'text-blue-600'}`}>Automated Gates & Shutters</p>
-      <p onMouseEnter={() => setSelectedProductCategory('Components')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Components' && 'text-blue-600'}`}>PC Components & Peripherals</p>
-      <p onMouseEnter={() => setSelectedProductCategory('Accessories')} className={`cursor-pointer hover:text-blue-500 ${selectedProductCategory === 'Accessories' && 'text-blue-600'}`}>Accessories</p>
+      <p onMouseEnter={() => setSelectedProductCategory('Laptops')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedProductCategory === 'Laptops' ? 'text-[#1d2f36] font-bold' : ''}`}>Laptops & Desktops</p>
+      <p onMouseEnter={() => setSelectedProductCategory('CustomPC')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedProductCategory === 'CustomPC' ? 'text-[#1d2f36] font-bold' : ''}`}>Custom PC Builds</p>
+      <p onMouseEnter={() => setSelectedProductCategory('CCTV')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedProductCategory === 'CCTV' ? 'text-[#1d2f36] font-bold' : ''}`}>CCTV & Surveillance</p>
+      <p onMouseEnter={() => setSelectedProductCategory('Networking')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedProductCategory === 'Networking' ? 'text-[#1d2f36] font-bold' : ''}`}>Networking Equipment</p>
+      <p onMouseEnter={() => setSelectedProductCategory('Solar')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedProductCategory === 'Solar' ? 'text-[#1d2f36] font-bold' : ''}`}>Solar & Power Systems</p>
+      <p onMouseEnter={() => setSelectedProductCategory('Automation')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedProductCategory === 'Automation' ? 'text-[#1d2f36] font-bold' : ''}`}>Home & Office Automation</p>
+      <p onMouseEnter={() => setSelectedProductCategory('Access')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedProductCategory === 'Access' ? 'text-[#1d2f36] font-bold' : ''}`}>Security & Access Control</p>
+      <p onMouseEnter={() => setSelectedProductCategory('Gates')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedProductCategory === 'Gates' ? 'text-[#1d2f36] font-bold' : ''}`}>Automated Gates & Shutters</p>
+      <p onMouseEnter={() => setSelectedProductCategory('Components')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedProductCategory === 'Components' ? 'text-[#1d2f36] font-bold' : ''}`}>PC Components & Peripherals</p>
+      <p onMouseEnter={() => setSelectedProductCategory('Accessories')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedProductCategory === 'Accessories' ? 'text-[#1d2f36] font-bold' : ''}`}>Accessories</p>
     </div>
-
     {/* RIGHT: Sub-Items */}
     <div className="w-1/2 pl-4 text-sm text-gray-700 space-y-1">
       {!selectedProductCategory && (
@@ -250,10 +223,11 @@ const Header = () => {
 </div>
 
 
-<div className="relative">
+<div className="relative" 
+          onMouseEnter={() => handleMouseEnter("solutions")}
+          onMouseLeave={handleMouseLeave}>
   <a
-    onMouseEnter={() => setOpenMenu(openMenu === 'solutions' ? null : 'solutions')}
-    className="px-3 py-1 cursor-pointer hover:text-blue-500"
+    className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] hover:font-bold"
   >
     SOLUTIONS ▼
   </a>
@@ -261,29 +235,29 @@ const Header = () => {
   {openMenu === 'solutions' && (
     <div className="absolute top-full left-0 mt-1 bg-white border rounded shadow-md w-[600px] p-4 z-50 flex">
       {/* LEFT: Main Categories */}
-      <div className="w-1/2 pr-4 space-y-2 text-sm font-medium text-gray-800">
-        <p onMouseEnter={() => setSelectedMainService('VideoSurveillance')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'VideoSurveillance' && 'text-blue-600'}`}>
+            <div className="w-1/2 pr-4 space-y-2 text-sm font-medium text-gray-800">
+        <p onMouseEnter={() => setSelectedMainService('VideoSurveillance')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold hover:font-bold ${selectedMainService === 'VideoSurveillance' ? 'text-[#1d2f36] font-bold' : ''}`}>
           Video Surveillance
         </p>
-        <p onMouseEnter={() => setSelectedMainService('AudioVisual')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'AudioVisual' && 'text-blue-600'}`}>
+        <p onMouseEnter={() => setSelectedMainService('AudioVisual')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold hover:font-bold ${selectedMainService === 'AudioVisual' ? 'text-[#1d2f36] font-bold' : ''}`}>
           Audio Visual Solutions
         </p>
-        <p onMouseEnter={() => setSelectedMainService('DigitalClassrooms')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'DigitalClassrooms' && 'text-blue-600'}`}>
+        <p onMouseEnter={() => setSelectedMainService('DigitalClassrooms')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold hover:font-bold ${selectedMainService === 'DigitalClassrooms' ? 'text-[#1d2f36] font-bold' : ''}`}>
           Digital Classrooms
         </p>
-        <p onMouseEnter={() => setSelectedMainService('AutoID')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'AutoID' && 'text-blue-600'}`}>
+        <p onMouseEnter={() => setSelectedMainService('AutoID')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold hover:font-bold ${selectedMainService === 'AutoID' ? 'text-[#1d2f36] font-bold' : ''}`}>
           Auto ID Solutions
         </p>
-        <p onMouseEnter={() => setSelectedMainService('VideoAnalytics')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'VideoAnalytics' && 'text-blue-600'}`}>
+        <p onMouseEnter={() => setSelectedMainService('VideoAnalytics')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold hover:font-bold ${selectedMainService === 'VideoAnalytics' ? 'text-[#1d2f36] font-bold' : ''}`}>
           Video Analytics
         </p>
-        <p onMouseEnter={() => setSelectedMainService('SmartCity')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'SmartCity' && 'text-blue-600'}`}>
+        <p onMouseEnter={() => setSelectedMainService('SmartCity')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold hover:font-bold ${selectedMainService === 'SmartCity' ? 'text-[#1d2f36] font-bold' : ''}`}>
           Smart City Solutions
         </p>
-        <p onMouseEnter={() => setSelectedMainService('ITInfra')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'ITInfra' && 'text-blue-600'}`}>
+        <p onMouseEnter={() => setSelectedMainService('ITInfra')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold hover:font-bold ${selectedMainService === 'ITInfra' ? 'text-[#1d2f36] font-bold' : ''}`}>
           IT Infrastructure
         </p>
-        <p onMouseEnter={() => setSelectedMainService('CommandCenter')} className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'CommandCenter' && 'text-blue-600'}`}>
+        <p onMouseEnter={() => setSelectedMainService('CommandCenter')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold hover:font-bold ${selectedMainService === 'CommandCenter' ? 'text-[#1d2f36] font-bold' : ''}`}>
           Command & Control Center
         </p>
       </div>
@@ -369,15 +343,17 @@ const Header = () => {
 </div>
 
           <div
-  className="relative" >
-  <button onMouseEnter={() => setOpenMenu(openMenu === 'services' ? null : 'services')}
-   className="px-3 py-1 cursor-pointer hover:text-blue-500">SERVICES ▼</button>
+          className="relative" 
+          onMouseEnter={() => handleMouseEnter("services")}
+          onMouseLeave={handleMouseLeave}>
+          <button
+          className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] hover:font-bold">SERVICES ▼</button>
 
   {openMenu === 'services' && (
     <div className="absolute top-full right-0 mt-1 bg-white border rounded shadow-md w-[500px] p-4 z-50 flex">
 
       {/* Left Column: Subcategories */}
-      <div className="w-1/2 pr-4 text-sm text-gray-700 border-r">
+      <div className="w-1/2 pr-4 text-sm text-gray-700 border-r ">
         <ul className="list-disc pl-5 space-y-1">
           {selectedMainService === 'Power' && (
             <>
@@ -437,42 +413,12 @@ const Header = () => {
       {/* Right Column: Main Categories */}
       <div className="w-1/2 pl-4">
         <ul className="space-y-2 text-sm font-medium">
-          <li
-            onMouseEnter={() => setSelectedMainService('Power')}
-            className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'Power' ? 'text-blue-500' : ''}`}
-          >
-            Power & Energy Solutions
-          </li>
-          <li
-            onMouseEnter={() => setSelectedMainService('Networking')}
-            className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'Networking' ? 'text-blue-500' : ''}`}
-          >
-            Networking & Security
-          </li>
-          <li
-            onMouseEnter={() => setSelectedMainService('IT')}
-            className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'IT' ? 'text-blue-500' : ''}`}
-          >
-            IT & Computing
-          </li>
-          <li
-            onMouseEnter={() => setSelectedMainService('Automation')}
-            className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'Automation' ? 'text-blue-500' : ''}`}
-          >
-            Smart Automation
-          </li>
-          <li
-            onMouseEnter={() => setSelectedMainService('Surveillance')}
-            className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'Surveillance' ? 'text-blue-500' : ''}`}
-          >
-            Surveillance & Safety
-          </li>
-          <li
-            onMouseEnter={() => setSelectedMainService('Support')}
-            className={`cursor-pointer hover:text-blue-500 ${selectedMainService === 'Support' ? 'text-blue-500' : ''}`}
-          >
-            Support & Maintenance
-          </li>
+          <li onMouseEnter={() => setSelectedMainService('Power')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedMainService === 'Power' ? 'text-[#1d2f36] font-bold' : ''}`}>Power & Energy Solutions</li>
+          <li onMouseEnter={() => setSelectedMainService('Networking')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedMainService === 'Networking' ? 'text-[#1d2f36] font-bold' : ''}`}>Networking & Security</li>
+          <li onMouseEnter={() => setSelectedMainService('IT')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedMainService === 'IT' ? 'text-[#1d2f36] font-bold' : ''}`}>IT & Computing</li>
+          <li onMouseEnter={() => setSelectedMainService('Automation')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedMainService === 'Automation' ? 'text-[#1d2f36] font-bold' : ''}`}>Smart Automation</li>
+          <li onMouseEnter={() => setSelectedMainService('Surveillance')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedMainService === 'Surveillance' ? 'text-[#1d2f36] font-bold' : ''}`}>Surveillance & Safety</li>
+          <li onMouseEnter={() => setSelectedMainService('Support')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedMainService === 'Support' ? 'text-[#1d2f36] font-bold' : ''}`}>Support & Maintenance</li>
         </ul>
       </div>
     </div>
@@ -480,11 +426,12 @@ const Header = () => {
 </div>
 
 
-          <div  className="relative">
+          <div  className="relative"
+          onMouseEnter={() => handleMouseEnter("industries")}
+          onMouseLeave={handleMouseLeave}>
 
   <button
-  onMouseEnter={() => setOpenMenu(openMenu === 'industries' ? null : 'industries')}
-    className="px-3 py-1 cursor-pointer hover:text-blue-500"
+    className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] hover:font-bold"
   >
     INDUSTRIES ▼
   </button>
@@ -552,8 +499,8 @@ const Header = () => {
               <li
                 key={item}
                 onMouseEnter={() => setSelectedMainService(item)}
-                className={`cursor-pointer hover:text-blue-500 ${
-                  selectedMainService === item ? 'text-blue-600 font-semibold' : ''
+                className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${
+                  selectedMainService === item ? 'text-[#1d2f36] font-semibold' : ''
                 }`}
               >
                 {item === 'Retail' ? 'Retail & Distribution' :
@@ -567,10 +514,11 @@ const Header = () => {
   )}
 </div>
                   <div
-          className="relative"        >
+          className="relative"  
+           onMouseEnter={() => handleMouseEnter("support")}
+          onMouseLeave={handleMouseLeave}     >
           <button 
-           onMouseEnter={() => setOpenMenu(openMenu === 'support' ? null : 'support')}
-           className="px-3 py-1 cursor-pointer hover:text-blue-500">
+           className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] hover:font-bold">
             INSTALL & SUPPORT ▼
           </button>
 
@@ -625,8 +573,8 @@ const Header = () => {
                       <li
                         key={item}
                         onMouseEnter={() => setSelectedSupport(item)}
-                        className={`cursor-pointer hover:text-blue-500 ${
-                          selectedSupport === item ? 'text-blue-600 font-semibold' : ''
+                        className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${
+                          selectedSupport === item ? 'text-[#1d2f36] font-semibold' : ''
                         }`}
                       >
                         {item}
@@ -641,7 +589,7 @@ const Header = () => {
 
           <a
             href="/contact"
-            className={`px-3 py-1 cursor-pointer rounded ${location.pathname === '/contact' ? 'text-white bg-blue-500' : 'hover:text-blue-500'}`}
+            className={`px-3 py-1 cursor-pointer rounded ${location.pathname === '/contact' ? 'text-white bg-[#1d2f36]' : 'hover:text-[#1d2f36]'}`}
           >
             CONTACT
           </a>

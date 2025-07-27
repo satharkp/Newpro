@@ -42,14 +42,14 @@ const Home = () => {
         
 
 
-        <div className="absolute top-20 right-3 lg:top-4 lg:right-4 flex flex-row flex-wrap items-center justify-end lg:gap-3 gap-2  max-w-full">
+        <div className="absolute top-20 right-3 lg:top-4 lg:right-4 flex flex-row flex-wrap items-center justify-end lg:gap-6 gap-5  max-w-full ">
           {logos.map((src, idx) => (
             <img
               key={idx}
               src={src}
               alt={`Client ${idx + 1}`}
               loading="lazy"
-              className="z-10 h-10 sm:h-12 md:h-14 max-w-[100px] sm:max-w-[100px] object-contain transition-transform duration-300 hover:scale-150"
+              className="z-10 h-16 sm:h-12 md:h-14 lg:h-24 max-w-[200px] sm:max-w-[200px] lg:max-w-[400px] object-contain transition-transform duration-300 hover:scale-11"
             />
           ))}
         </div>
