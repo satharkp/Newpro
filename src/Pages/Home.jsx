@@ -59,7 +59,7 @@ const Home = () => {
         {/* Actual content */}
         <Header/>
         <Hero/>
-        <About/>
+        <About />
         <section id="wwd">
          <Carousel />
         </section>

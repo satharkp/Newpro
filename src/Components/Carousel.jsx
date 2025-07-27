@@ -7,7 +7,7 @@ import 'swiper/css/free-mode'
 import { FreeMode, Pagination, Mousewheel } from "swiper/modules";
 import { RxArrowTopRight } from "react-icons/rx";
 import { ServiceData } from "../Constants";
-// import back from '../assets/cor.png'
+import back from '../assets/newbee.jpg'
 
 
 const Carousel = () => {
@@ -15,28 +15,33 @@ const Carousel = () => {
   return (
 
     <div
-      className="bg-cover bg-center bg-no-repeat w-full min-h-screen"
+      className="relative w-full pt-12 pb-16"
     >
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80 z-0"
+        style={{ backgroundImage: `url(${back})` }}
+      />
+      <div className="relative z-10">
     <div>
       <h1 id='wwd'  
       data-aos="zoom-in" 
-     className="text-3xl text-center mt-10 sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-10 ">
+     className="text-3xl text-center mt-0 sm:mt-0 md:mt-0 sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-2 lg:mb-6">
         PRODUCTS & SOLUTIONS
       </h1>
-      <p className=" text-gray-600 text-center text-[13px] ">Every product is backed by expert service & installation support <br /> Need help choosing the right solution? <br /> <a href="/contact" className=" transition-colors duration-300 text-blue-400 ">📞 Contact us </a>anytime
+      <p className=" text-gray-600 text-center text-[11px] lg:text-[13px] ">Every product is backed by expert service & installation support <br /> Need help choosing the right solution? <br /> <a href="/contact" className=" transition-colors duration-300 text-blue-400 ">📞 Contact us </a>anytime
       </p>
     </div>
 
    <div className="relative flex items-center justify-between h-screen px-5">
       <button
         onClick={() => swiperRef.current.swiper.slidePrev()}
-        className="absolute mt-[-50px] left-0 sm:left-4 top-1/2 -translate-y-1/2 sm:-translate-y-1/2 bg-gray-400 text-white text-3xl sm:text-5xl p-3 sm:p-5 rounded-full hover:bg-gray-500 transition z-40"
+        className="absolute lg:mt-[-50px] mt-[-30px] left-0 sm:left-4 top-1/2 -translate-y-1/2 sm:-translate-y-1/2 bg-gray-300 text-white text-3xl sm:text-5xl p-3 sm:p-5 rounded-full hover:bg-gray-500 transition z-40"
       >
         &#10094;
       </button>
       <button
         onClick={() => swiperRef.current.swiper.slideNext()}
-        className="absolute mt-[-50px] right-0 sm:right-4 top-1/2 -translate-y-1/2 sm:-translate-y-1/2 bg-gray-400 text-white text-3xl sm:text-5xl p-3 sm:p-5 rounded-full hover:bg-gray-500 transition z-40"
+        className="absolute lg:mt-[-50px] mt-[-30px] right-0 sm:right-4 top-1/2 -translate-y-1/2 sm:-translate-y-1/2 bg-gray-300 text-white text-3xl sm:text-5xl p-3 sm:p-5 rounded-full hover:bg-gray-500 transition z-40"
       >
         &#10095;
       </button>
@@ -63,7 +68,7 @@ const Carousel = () => {
 
       modules={[FreeMode, Pagination, Mousewheel]}
       mousewheel={true}
-        className="max-w-[90%] lg:max-w-[80%] !pb-10 swiper-center-pagination mx-auto flex flex-col items-center" 
+        className="max-w-[90%] lg:max-w-[80%] !pb-10 mt-16 lg:mt-0 swiper-center-pagination mx-auto flex flex-col items-center" 
         >
           {ServiceData.map((item) => (
             <SwiperSlide key={item.title} >
@@ -71,7 +76,7 @@ const Carousel = () => {
                className="relative mb-20 ml-1 lg:ml-6 group h-[320px] w-[280px] lg:h-[400px] lg:w-[300px] rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300 ease-in-out">
                 {/* Background Image */}
                 <div
-                  className="absolute inset-0 bg-cover bg-center opacity-40 group-hover:opacity-50 transition-opacity duration-400 z-0 "
+                  className="absolute inset-0 bg-cover bg-center opacity-90 group-hover:opacity-50 transition-opacity duration-400 z-0 "
                   style={{ backgroundImage: `url(${item.backgroundImage})` }}
                 />
 
@@ -79,7 +84,7 @@ const Carousel = () => {
                 <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-0 transition-opacity duration-300 z-10 " />
 
                 {/* Foreground Content */}
-                <div className="flex flex-col gap-6 relative z-20 text-black px-6 py-8 h-full w-full  hover:font-bold hover:text-black">
+                <div className="flex flex-col gap-6 relative z-20 text-white px-6 py-8 h-full w-full  hover:font-bold hover:text-black">
                   <item.icon className="text-blue-600 w-[30px] h-[30px]"/>
                   <h3 className="text-lg font-bold mb-[-10px]">{item.title}</h3>
                   <p className="text-sm font-bold mb-[-20px]">{item.subHeading}</p>
@@ -98,7 +103,7 @@ const Carousel = () => {
 
     </div>
     </div>
-
+      </div>
     
   )
 }

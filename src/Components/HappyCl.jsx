@@ -62,7 +62,7 @@ const HappyCl = () => {
           OUR HAPPY CLIENTS
         </h1>
         <p className="mb-16 text-gray-600">Trusted by leading businesses</p>
-        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-6 gap-6 place-items-center mx-auto lg:max-w-[900px] max-w-[400px] mb-10 lg:mb-0">
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-6 gap-6 place-items-center mx-auto lg:max-w-[110rem] max-w-[400px] mb-10 lg:mb-0">
           {logos.map((src, idx) => (
             <img
               key={idx}

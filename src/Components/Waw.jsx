@@ -4,10 +4,10 @@ import back from '../assets/bak.jpg'
 
 const About = () => {
   return (
-    <div className="scroll-smooth mt-40">
+    <div className="scroll-smooth mt-20">
       <div
         id="about"
-        className="w-full px-4 py-16 mb-20 bg-cover bg-center bg-no-repeat bg-fixed"
+        className="w-full px-4 py-16 mb-0 bg-cover bg-center bg-no-repeat bg-fixed"
         style={{ backgroundImage: `url(${back})` }}
       >
         <h1
