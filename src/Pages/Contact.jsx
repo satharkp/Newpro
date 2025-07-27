@@ -78,16 +78,22 @@ const Contact = () => {
 
       <section
         className="w-full py-10 min-h-[420px] bg-cover bg-center bg-no-repeat mt-[60px]"
-        style={{ backgroundImage: `url(${back})` }}
+        style={{
+          backgroundImage: `url(${back})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+
+        }}
       >
         <div className="w-full">
           <h1
             data-aos="zoom-in"
-            className="text-3xl mt-10 text-white text-center sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16"
+            className="text-3xl mt-20 text-white text-center sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16"
           >
             GET IN TOUCH WITH US
           </h1>
-          <div className="w-full font-mono bg-white/10 backdrop-blur-md border border-white/30 p-6 rounded-xl shadow-lg flex flex-col lg:flex-row gap-6 overflow-visible">
+          <div className="w-full font-mono bg-white/10 backdrop-blur-md border border-white/30 p-6 rounded-xl shadow-lg flex flex-col lg:flex-row gap-6 overflow-visible mt-20">
             {/* Section 1: Quote and Address */}
             <div className="flex-1 space-y-4   bg-white/80 backdrop-blur-md border border-white/30 p-5 rounded-xl shadow-lg">
               <h2 className="text-xl font-semibold">Get a Quote</h2>

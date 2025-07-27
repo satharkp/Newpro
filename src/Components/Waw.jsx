@@ -25,6 +25,8 @@ const About = () => {
               src={solar}
               alt="On-site service"
               loading="lazy"
+              width="600"
+              height="400"
             />
           </div>
           <div data-aos="fade-left"
@@ -49,6 +51,8 @@ const About = () => {
               src={tech}
               alt="Tech services"
               loading="lazy"
+              width="600"
+              height="400"
             />
           </div>
           <div data-aos="fade-right"
