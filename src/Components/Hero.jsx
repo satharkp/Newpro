@@ -1,7 +1,15 @@
+import React, { useEffect, useState } from 'react';
 import 'boxicons/css/boxicons.min.css';
-import Spline from '@splinetool/react-spline';
 
 const Hero = () => {
+  const [SplineComponent, setSplineComponent] = useState(null);
+
+  useEffect(() => {
+    import('@splinetool/react-spline').then((module) => {
+      setSplineComponent(() => module.default);
+    });
+  }, []);
+
   return (
     <main className="flex lg:mt-20 mb-[100px] mt-0 flex-col-reverse lg:flex-row items-center justify-between min-h-[calc(90vh-6em)]">
       
@@ -9,30 +17,34 @@ const Hero = () => {
     <div data-aos="fade-right"
      data-aos-offset="300"
      data-aos-easing="ease-in-sine" className="max-w-xl ml-[3%] z-10 mt-[20%] md:mt-[20%] lg:mt-0">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wider mt-10 mb-1">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wider mt-10 mb-1 leading-tight min-h-[3.5rem] sm:min-h-[4rem] md:min-h-[5rem] lg:min-h-[6rem]">
         SECURE. POWER.AUTOMATE. REPAIR.
         </h1>
-        <p className="text-base mb-5 sm:text-lg tracking-wider text-gray-600 max-w-[25rem] lg:max-w-[30rem]">
+        <p className="text-base mb-5 sm:text-lg tracking-wider text-gray-600 max-w-[25rem] lg:max-w-[30rem] min-h-[4.5rem] sm:min-h-[5.5rem]">
         Your space deserves reliable technology. We specialize in security systems, solar energy, home automation, and IT support — all delivered with expert care and attention to detail.
         </p>
 
         {/* Call to action button*/}
 
         <div className="flex gap-4 lg:mt-10 mb-20">
-            <a href="#about" className="border border-blue-500 py-4 sm:py-5 px-5 sm:px-7 rounded-full sm:text-lg text-sm font-semibold tracking-wider transition-all duration-300 hover:bg-black hover:text-white">
+            <a href="#about" className="border border-blue-500 h-14 sm:h-[60px] px-5 sm:px-7 rounded-full sm:text-lg text-sm font-semibold tracking-wider transition-all duration-300 hover:bg-black hover:text-white flex items-center gap-2">
             <i className='bx bx-link-external'></i>
               More about Us
             </a>
-            <a className="border border-blue-500 py-4 sm:py-5 px-5 sm:px-7  rounded-full sm:text-lg text-sm font-semibold tracking-wider transition-all duration-300 hover:bg-black hover:text-white" href="/contact">
+            <a className="border border-blue-500 h-14 sm:h-[60px] px-5 sm:px-7 rounded-full sm:text-lg text-sm font-semibold tracking-wider transition-all duration-300 hover:bg-black hover:text-white flex items-center gap-2" href="/contact">
               Contact Us
               <i className='bx bx-chevron-right'></i> 
             </a>
         </div>
     </div>
     {/* 3d Robot*/}
-    <div className="flex justify-center mt-28  lg:mt-0 lg:ml-[13%] items-center w-full max-w-5xl mx-auto scale-[2] sm:scale-[1] md:scale-[1.2] lg:scale-[2]">
-    <Spline scene="https://prod.spline.design/Mzsufjfbt4z5nMrl/scene.splinecode" loading="lazy" />
-
+    <div className="flex justify-center mt-28  lg:mt-0 lg:ml-[13%] items-center w-full max-w-5xl mx-auto scale-[1.5] sm:scale-[1] md:scale-[1.2] lg:scale-[2]">
+    {SplineComponent && (
+      <SplineComponent
+        scene="https://prod.spline.design/Mzsufjfbt4z5nMrl/scene.splinecode"
+        loading="lazy"
+      />
+    )}
 
 
 
