@@ -21,7 +21,7 @@ const About = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12 mb-20">
           <div className="w-full lg:w-1/2 opacity-100">
             <img
-              className="w-full h-auto object-cover shadow-lg"
+              className="w-full rounded-sm h-auto object-cover shadow-lg"
               src={solar}
               alt="On-site service"
             />
@@ -44,7 +44,7 @@ const About = () => {
         <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
           <div className="w-full lg:w-1/2 opacity-100">
             <img
-              className=" w-full h-auto object-cover shadow-lg"
+              className=" w-full rounded-sm h-auto object-cover shadow-lg"
               src={tech}
               alt="Tech services"
             />

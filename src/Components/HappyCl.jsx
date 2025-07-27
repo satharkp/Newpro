@@ -22,6 +22,8 @@ import zain from '../assets/logos/zain.png'
 import ideal from '../assets/logos/ideal.png'
 import mount from '../assets/logos/mount.png'
 import sins from '../assets/logos/sins.png'
+
+import back from '../assets/ba.jpeg'
  
 
 
@@ -30,22 +32,46 @@ const HappyCl = () => {
     rev,kp,excise,edk,elect,wa,ptb,sng,ideal,mount,mes,occ,bob,pnb,hdfc,poont,ster,zain,mrl,total,dmart,am,ams,sins,
   ];
   return (
-    <section className="text-center px-4 mt-32">
-      <h1  
-      data-aos="zoom-in" 
-     className="text-3xl text-center  sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16">
-        OUR HAPPY CLIENTS
-      </h1>
-      <p className="mb-10  text-gray-600">Trusted by leading businesses</p>
-      <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-6 gap-6 place-items-center mx-auto lg:max-w-[900px] max-w-[400px] mb-32  ">
-        {logos.map((src, idx) => (
-          <img
-            key={idx}
-            src={src}
-            alt={`Client ${idx + 1}`}
-            className="h-[60px] max-w-[100px] opacity-80 hover:opacity-100 object-contain mx-auto transition-transform duration-300 hover:scale-110 "
-          />
-        ))}
+    <section
+      className="relative w-full min-h-screen text-center"
+      style={{
+        position: 'relative',
+        width: '100%',
+      }}
+    >
+      <div
+        style={{
+          backgroundImage: `url(${back})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.2,
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          height: '100%',
+          width: '100%',
+          zIndex: 0,
+        }}
+      />
+      <div className="relative z-10 min-h-screen flex flex-col items-center justify-start">
+        <h1
+          data-aos="zoom-in"
+          className="text-3xl text-center sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-14 opacity-100 mt-32"
+        >
+          OUR HAPPY CLIENTS
+        </h1>
+        <p className="mb-16 text-gray-600">Trusted by leading businesses</p>
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-6 gap-6 place-items-center mx-auto lg:max-w-[900px] max-w-[400px] mb-10 lg:mb-0">
+          {logos.map((src, idx) => (
+            <img
+              key={idx}
+              src={src}
+              alt={`Client ${idx + 1}`}
+              className="h-[60px] max-w-[100px] opacity-80 hover:opacity-100 object-contain mx-auto transition-transform duration-300 hover:scale-110"
+            />
+          ))}
+        </div>
       </div>
     </section>
   )

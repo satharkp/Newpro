@@ -7,12 +7,16 @@ import 'swiper/css/free-mode'
 import { FreeMode, Pagination, Mousewheel } from "swiper/modules";
 import { RxArrowTopRight } from "react-icons/rx";
 import { ServiceData } from "../Constants";
+// import back from '../assets/cor.png'
+
 
 const Carousel = () => {
   const swiperRef = useRef(null);
   return (
 
-    <div>
+    <div
+      className="bg-cover bg-center bg-no-repeat w-full min-h-screen"
+    >
     <div>
       <h1 id='wwd'  
       data-aos="zoom-in" 
@@ -59,11 +63,12 @@ const Carousel = () => {
 
       modules={[FreeMode, Pagination, Mousewheel]}
       mousewheel={true}
-        className="max-w-[90%] lg:max-w-[80%] !pb-10 swiper-center-pagination mx-auto flex flex-col items-center"
+        className="max-w-[90%] lg:max-w-[80%] !pb-10 swiper-center-pagination mx-auto flex flex-col items-center" 
         >
           {ServiceData.map((item) => (
-            <SwiperSlide key={item.title}>
-              <div className="relative mb-20 ml-1 lg:ml-6 group h-[320px] w-[280px] lg:h-[400px] lg:w-[300px] rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300 ease-in-out">
+            <SwiperSlide key={item.title} >
+              <div
+               className="relative mb-20 ml-1 lg:ml-6 group h-[320px] w-[280px] lg:h-[400px] lg:w-[300px] rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300 ease-in-out">
                 {/* Background Image */}
                 <div
                   className="absolute inset-0 bg-cover bg-center opacity-40 group-hover:opacity-50 transition-opacity duration-400 z-0 "
