@@ -35,7 +35,7 @@ const Home = () => {
         />
 
         {/* Blur effect */}
-        <div className="h-0 w-[40rem] absolute top-[5%] right-[-5%] shadow-[0_0_900px_20px_blue] -rotate-[30deg] z-[-1]"></div>
+        <div className="absolute top-[3.5%] right-[-10%] w-[44rem] h-[9rem] bg-[#A1A1DE] opacity-100 blur-[35px] rotate-[-30deg] z-[-1]"></div>
 
         {/* Actual content */}
         <Header/>

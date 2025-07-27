@@ -11,12 +11,16 @@ import mrl from '../assets/logos/MrL.webp';
 import total from '../assets/logos/total.png';
 import dmart from '../assets/logos/dmart.png';
 import am from '../assets/logos/am.png';
-
+import ams from '../assets/logos/ams.png'
+import excise from '../assets/logos/ecxi.png'
+import poont from '../assets/logos/poonth.png'
+import occ from '../assets/logos/occ.png'
+ 
 
 
 const HappyCl = () => {
   const logos = [
-    rev,kp,wa,edk,sng,ptb,mes,bob,pnb,mrl,total,dmart,am
+    rev,kp,wa,edk,excise,sng,ptb,mes,bob,pnb,mrl,total,dmart,am,ams,poont,occ
   ];
   return (
     <section className=" text-center px-4 mt-32">
