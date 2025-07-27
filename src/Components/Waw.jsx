@@ -22,7 +22,7 @@ const About = () => {
           <div className="w-full lg:w-1/2 opacity-100 min-h-[200px]">
             <img
               decoding="async"
-              fetchpriority="low"
+              fetchPriority="low"
               className="w-full rounded-sm h-auto object-cover shadow-lg"
               src={solar}
               alt="On-site service"
@@ -52,7 +52,7 @@ const About = () => {
           <div className="w-full lg:w-1/2 opacity-100 min-h-[200px]">
             <img
               decoding="async"
-              fetchpriority="low"
+              fetchPriority="low"
               className="w-full rounded-sm h-auto object-cover shadow-lg"
               src={tech}
               alt="Tech services"
