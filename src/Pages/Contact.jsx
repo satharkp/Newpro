@@ -93,9 +93,9 @@ const Contact = () => {
           >
             GET IN TOUCH WITH US
           </h1>
-          <div className="w-full font-mono bg-white/10 backdrop-blur-md border border-white/30 p-6 rounded-xl shadow-lg flex flex-col lg:flex-row gap-6 overflow-visible mt-20">
+          <div className="w-full font-mono bg-white/10 backdrop-blur-md border border-white/30 p-6 rounded-xl shadow-lg flex flex-col lg:flex-row gap-6 overflow-visible mt-20 min-h-[400px]">
             {/* Section 1: Quote and Address */}
-            <div className="flex-1 space-y-4   bg-white/80 backdrop-blur-md border border-white/30 p-5 rounded-xl shadow-lg">
+            <div className="flex-1 space-y-4 bg-white/80 backdrop-blur-md border border-white/30 p-5 rounded-xl shadow-lg text-balance">
               <h2 className="text-xl font-semibold">Get a Quote</h2>
               <p className="text-sm">Call us for inquiries:</p>
               
@@ -131,7 +131,7 @@ const Contact = () => {
             </div>
 
             {/* Section 3: Map */}
-            <div className="w-full overflow-hidden bg-white/20 backdrop-blur-md border border-white/30 rounded-xl shadow-lg h-[300px] lg:flex-1 lg:h-auto">
+            <div className="w-full overflow-hidden bg-white/20 backdrop-blur-md border border-white/30 rounded-xl shadow-lg min-h-[300px] aspect-[16/9] lg:flex-1 lg:h-auto">
               <LoadScript googleMapsApiKey="AIzaSyAQGIKzmVWKNZ7gdjOeJAmrPe2r7iBqSi0">
                 <GoogleMap
                   mapContainerStyle={{ width: '100%', height: '100%' }}
