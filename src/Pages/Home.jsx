@@ -49,7 +49,7 @@ const Home = () => {
               src={src}
               alt={`Client ${idx + 1}`}
               loading="lazy"
-              className="z-10 h-16 sm:h-12 md:h-14 lg:h-24 max-w-[200px] sm:max-w-[200px] lg:max-w-[400px] object-contain transition-transform duration-300 hover:scale-11"
+              className="z-10 h-16 sm:h-12 md:h-14 lg:h-24 max-w-[200px] sm:max-w-[200px] lg:max-w-[400px] object-contain transition-transform duration-300 hover:scale-110"
             />
           ))}
         </div>
