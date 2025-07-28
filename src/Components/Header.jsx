@@ -236,28 +236,28 @@ const Header = () => {
     <div className="absolute top-full left-0 mt-1 bg-white border rounded shadow-md w-[600px] p-4 z-50 flex">
       {/* LEFT: Main Categories */}
             <div className="w-1/2 pr-4 space-y-2 text-sm font-medium text-gray-800">
-        <p onMouseEnter={() => setSelectedMainService('VideoSurveillance')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold hover:font-bold ${selectedMainService === 'VideoSurveillance' ? 'text-[#1d2f36] font-bold' : ''}`}>
+        <p onMouseEnter={() => setSelectedMainService('VideoSurveillance')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold  ${selectedMainService === 'VideoSurveillance' ? 'text-[#1d2f36] font-bold' : ''}`}>
           Video Surveillance
         </p>
-        <p onMouseEnter={() => setSelectedMainService('AudioVisual')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold hover:font-bold ${selectedMainService === 'AudioVisual' ? 'text-[#1d2f36] font-bold' : ''}`}>
+        <p onMouseEnter={() => setSelectedMainService('AudioVisual')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold  ${selectedMainService === 'AudioVisual' ? 'text-[#1d2f36] font-bold' : ''}`}>
           Audio Visual Solutions
         </p>
-        <p onMouseEnter={() => setSelectedMainService('DigitalClassrooms')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold hover:font-bold ${selectedMainService === 'DigitalClassrooms' ? 'text-[#1d2f36] font-bold' : ''}`}>
+        <p onMouseEnter={() => setSelectedMainService('DigitalClassrooms')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedMainService === 'DigitalClassrooms' ? 'text-[#1d2f36] font-bold' : ''}`}>
           Digital Classrooms
         </p>
-        <p onMouseEnter={() => setSelectedMainService('AutoID')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold hover:font-bold ${selectedMainService === 'AutoID' ? 'text-[#1d2f36] font-bold' : ''}`}>
+        <p onMouseEnter={() => setSelectedMainService('AutoID')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold  ${selectedMainService === 'AutoID' ? 'text-[#1d2f36] font-bold' : ''}`}>
           Auto ID Solutions
         </p>
-        <p onMouseEnter={() => setSelectedMainService('VideoAnalytics')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold hover:font-bold ${selectedMainService === 'VideoAnalytics' ? 'text-[#1d2f36] font-bold' : ''}`}>
+        <p onMouseEnter={() => setSelectedMainService('VideoAnalytics')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold  ${selectedMainService === 'VideoAnalytics' ? 'text-[#1d2f36] font-bold' : ''}`}>
           Video Analytics
         </p>
-        <p onMouseEnter={() => setSelectedMainService('SmartCity')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold hover:font-bold ${selectedMainService === 'SmartCity' ? 'text-[#1d2f36] font-bold' : ''}`}>
+        <p onMouseEnter={() => setSelectedMainService('SmartCity')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold  ${selectedMainService === 'SmartCity' ? 'text-[#1d2f36] font-bold' : ''}`}>
           Smart City Solutions
         </p>
-        <p onMouseEnter={() => setSelectedMainService('ITInfra')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold hover:font-bold ${selectedMainService === 'ITInfra' ? 'text-[#1d2f36] font-bold' : ''}`}>
+        <p onMouseEnter={() => setSelectedMainService('ITInfra')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold  ${selectedMainService === 'ITInfra' ? 'text-[#1d2f36] font-bold' : ''}`}>
           IT Infrastructure
         </p>
-        <p onMouseEnter={() => setSelectedMainService('CommandCenter')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold hover:font-bold ${selectedMainService === 'CommandCenter' ? 'text-[#1d2f36] font-bold' : ''}`}>
+        <p onMouseEnter={() => setSelectedMainService('CommandCenter')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold  ${selectedMainService === 'CommandCenter' ? 'text-[#1d2f36] font-bold' : ''}`}>
           Command & Control Center
         </p>
       </div>
