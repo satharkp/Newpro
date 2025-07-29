@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+iframe[src*="spline.design"] {
+  pointer-events: none; /* Optional: disable interactions */
+}
+
+/* OR inside JSX you can overlay a div */
 body {
   background-color: #d1d1d1;
   scroll-behavior: smooth;

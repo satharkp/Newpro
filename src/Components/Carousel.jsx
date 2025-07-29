@@ -63,15 +63,17 @@ const Carousel = () => {
             spaceBetween: 32
           }
         }}
-      freeMode={true}
-      pagination={{
-         clickable:true
-      }}
-
-      modules={[FreeMode, Pagination, Mousewheel]}
-      mousewheel={true}
-        className="max-w-[90%] lg:max-w-[80%] !pb-10 mt-16 lg:mt-0 swiper-center-pagination mx-auto flex flex-col items-center" 
-        >
+        freeMode={true}
+        pagination={{
+          clickable: true
+        }}
+        modules={[FreeMode, Pagination, Mousewheel]}
+        mousewheel={{
+          forceToAxis: true,
+          sensitivity: 1,
+        }}
+        className="max-w-[90%] lg:max-w-[80%] !pb-10 mt-16 lg:mt-0 swiper-center-pagination mx-auto flex flex-col items-center"
+      >
           {ServiceData.map((item) => (
             <SwiperSlide key={item.title} >
               <div

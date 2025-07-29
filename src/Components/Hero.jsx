@@ -45,15 +45,13 @@ const Hero = () => {
         </div>
     </div>
     {/* 3d Robot*/}
-    <div className="flex justify-center mt-32 lg:mt-0 lg:ml-[13%] items-center w-full max-w-5xl mx-auto scale-[1.5] sm:scale-[1] md:scale-[1.2] lg:scale-[2] min-h-[200px] ">
+    <div className="relative flex justify-center mt-40 lg:mt-0 lg:ml-[13%] items-center w-full max-w-5xl mx-auto scale-[1.5] sm:scale-[1] md:scale-[1.2] lg:scale-[2] min-h-[200px] ">
     {showSpline && SplineComponent && (
       <SplineComponent
-        scene="https://prod.spline.design/Mzsufjfbt4z5nMrl/scene.splinecode"
+      scene="https://prod.spline.design/Mzsufjfbt4z5nMrl/scene.splinecode"
         loading="lazy"
       />
     )}
-
-
 
     </div>
 
