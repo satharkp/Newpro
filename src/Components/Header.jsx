@@ -72,7 +72,7 @@ const Header = () => {
         <nav className="hidden custom:flex justify-end items-center gap-1 w-full py-3 text-sm font-semibold">
           <a
             href="/"
-            className={`px-5 py-1 rounded ${location.pathname === '/' ? 'text-white bg-[#1d2f36]' : 'hover:text-[#1d2f36]'}`}
+            className={`px-5 py-6  rounded-sm  ${location.pathname === '/' ? 'text-white bg-[#1d2f36] opacity-50' : 'hover:text-[#1d2f36] text-black opacity-100'}`}
           >
             HOME
           </a>
