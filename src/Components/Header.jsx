@@ -10,19 +10,22 @@ const Header = () => {
   const [selectedSupport, setSelectedSupport] = useState('Accessories');
   const [openMobileSection, setOpenMobileSection] = useState(null);
   const hideTimer = useRef(null);
-  
+  const [activeDropdown, setActiveDropdown] = useState(null);
   
   const dropdownRef = useRef(null);
   const location = useLocation();
   // const lastScrollY = useRef(0);
   // const idleTimer = useRef(null);
+
   const handleMouseEnter = (menuName) => {
     clearTimeout(hideTimer.current);
     setOpenMenu(menuName);
+    setActiveDropdown(menuName);
   };
 
   const handleMouseLeave = () => {
     // Set a delay before closing the menu
+    setActiveDropdown(null);
     hideTimer.current = setTimeout(() => {
       setOpenMenu(null);
     }, 200); // ← Adjust delay in ms (e.g., 300 = 0.3s)
@@ -69,7 +72,7 @@ const Header = () => {
         </div>
 
         {/* Navabars*/}
-        <nav className="hidden custom:flex justify-end items-center gap-1 w-full py-3 text-sm font-semibold">
+        <nav className="hidden custom:flex justify-end items-center gap-1 w-full py-3 text-[12px] font-semibold">
           <a
             href="/"
             className={`px-5 py-6  rounded-sm  ${location.pathname === '/' ? 'text-white bg-[#1d2f36] opacity-50' : 'hover:text-[#1d2f36] text-black opacity-100'}`}
@@ -80,11 +83,16 @@ const Header = () => {
           <div  className="relative" 
           onMouseEnter={() => handleMouseEnter("products")}
           onMouseLeave={handleMouseLeave}>
-          <button
-  className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] hover:font-bold "
->
-  PRODUCTS ▼
-</button>
+          <button className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] flex items-center gap-1">
+            PRODUCTS
+            <span
+              className={`inline-block transition-transform duration-300 ${
+                activeDropdown === "products" ? "rotate-0" : "rotate-180"
+              }`}
+            >
+              ⌃
+            </span>
+          </button>
 
 {openMenu === 'products' && (
   <div className="absolute top-full left-0 mt-1 bg-white border rounded shadow-md w-[600px] p-4 z-50 flex">
@@ -226,11 +234,16 @@ const Header = () => {
 <div className="relative" 
           onMouseEnter={() => handleMouseEnter("solutions")}
           onMouseLeave={handleMouseLeave}>
-  <a
-    className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] hover:font-bold"
-  >
-    SOLUTIONS ▼
-  </a>
+  <button className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] flex items-center gap-1">
+            SOLUTIONS
+            <span
+              className={`inline-block transition-transform duration-300 ${
+                activeDropdown === "solutions" ? "rotate-0" : "rotate-180"
+              }`}
+            >
+              ⌃
+            </span>
+          </button>
 
   {openMenu === 'solutions' && (
     <div className="absolute top-full left-0 mt-1 bg-white border rounded shadow-md w-[600px] p-4 z-50 flex">
@@ -346,8 +359,16 @@ const Header = () => {
           className="relative" 
           onMouseEnter={() => handleMouseEnter("services")}
           onMouseLeave={handleMouseLeave}>
-          <button
-          className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] hover:font-bold">SERVICES ▼</button>
+          <button className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] flex items-center gap-1">
+            SERVICES
+            <span
+              className={`inline-block transition-transform duration-300 ${
+                activeDropdown === "services" ? "rotate-0" : "rotate-180"
+              }`}
+            >
+              ⌃
+            </span>
+          </button>
 
   {openMenu === 'services' && (
     <div className="absolute top-full right-0 mt-1 bg-white border rounded shadow-md w-[500px] p-4 z-50 flex">
@@ -430,11 +451,16 @@ const Header = () => {
           onMouseEnter={() => handleMouseEnter("industries")}
           onMouseLeave={handleMouseLeave}>
 
-  <button
-    className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] hover:font-bold"
-  >
-    INDUSTRIES ▼
-  </button>
+<button className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] flex items-center gap-1">
+            INDUSTRIES
+            <span
+              className={`inline-block transition-transform duration-300 ${
+                activeDropdown === "industries" ? "rotate-0" : "rotate-180"
+              }`}
+            >
+              ⌃
+            </span>
+          </button>
 
   {openMenu === 'industries' && (
     <div className="absolute top-full right-0 mt-2 z-50">
@@ -517,9 +543,15 @@ const Header = () => {
           className="relative"  
            onMouseEnter={() => handleMouseEnter("support")}
           onMouseLeave={handleMouseLeave}     >
-          <button 
-           className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] hover:font-bold">
-            INSTALL & SUPPORT ▼
+          <button className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] flex items-center gap-1">
+            INSTALL & SUPPORT
+            <span
+              className={`inline-block transition-transform duration-300 ${
+                activeDropdown === "support" ? "rotate-0" : "rotate-180"
+              }`}
+            >
+              ⌃
+            </span>
           </button>
 
           {openMenu === 'support' && (
@@ -589,7 +621,7 @@ const Header = () => {
 
           <a
             href="/contact"
-            className={`px-3 py-1 cursor-pointer rounded ${location.pathname === '/contact' ? 'text-white bg-[#1d2f36]' : 'hover:text-[#1d2f36]'}`}
+            className={`px-2 py-6  rounded-sm  ${location.pathname === '/contact' ? 'text-white bg-[#1d2f36] opacity-50' : 'hover:text-[#1d2f36] text-black opacity-100'}`}
           >
             CONTACT
           </a>
