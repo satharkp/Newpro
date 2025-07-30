@@ -13,7 +13,6 @@ const About = () => {
         <div className="absolute inset-0 bg-black/50 z-0" />
         <div className="relative z-10">
           <h1
-            data-aos="zoom-in"
             className="text-3xl text-white text-start mt-10 sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider  lg: leading-tight min-h-[4rem] sm:min-h-[5rem] md:min-h-[6rem]"
           >
             ABOUT US
