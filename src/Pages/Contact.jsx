@@ -4,7 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-import back from '../assets/bluba.webp'
+import back from '../assets/contaa.jpg'
  
 const center = {
   lat: 10.804048122805051,   // You can change to your location
@@ -24,38 +24,41 @@ const center = {
       <>
       <Header />
 
-      <section
-        className="w-full py-10 min-h-[420px] bg-cover bg-center bg-no-repeat mt-[60px]"
-        style={{
-          backgroundImage: `url(${back})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-
-        }}
-      >
-        <div className="w-full">
+      <section className="relative w-full py-10 min-h-[420px] mt-[60px] overflow-hidden">
+        {/* Background image layer */}
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${back})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            opacity: 0.9
+          }}
+        />
+        {/* Foreground content */}
+        <div className="relative z-10 w-full font-sans">
           <h1
             data-aos="zoom-in"
-            className="text-3xl mt-20 text-white text-center sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-16"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white text-center mb-16 tracking-tight"
           >
             GET IN TOUCH WITH US
           </h1>
-          <div className="w-full font-mono bg-white/10 backdrop-blur-md border border-white/30 p-6 rounded-xl shadow-lg flex flex-col lg:flex-row gap-6 overflow-visible mt-20 min-h-[400px]">
+          <div className="w-full bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl shadow-lg flex flex-col lg:flex-row gap-6 overflow-visible mt-20 min-h-[400px] font-sans">
             {/* Section 1: Quote and Address */}
-            <div className="flex-1 space-y-4 bg-white/80 backdrop-blur-md border border-white/30 p-5 rounded-xl shadow-lg text-balance">
-              <h2 className="text-xl font-semibold">Get a Quote</h2>
-              <p className="text-sm">Call us for inquiries:</p>
+            <div className="flex-1 space-y-4 bg-white/70 backdrop-blur-md border border-white/20 p-5 rounded-xl shadow-lg text-balance">
+              <h2 className="text-2xl font-semibold text-gray-800">Get a Quote</h2>
+              <p className="text-base text-gray-700">Call us for inquiries:</p>
               
              
               <a href="tel:974-504-5345" aria-label="Our phone" title="Our phone" className="text-black transition-colors duration-300 hover:text-blue-400 text-lg font-bold">+91 97450 45345</a>
               <br />
               <a href="tel:894-320-1000" aria-label="Our phone" title="Our phone" className="text-black transition-colors duration-300 hover:text-blue-400 text-lg font-bold">+91 89432 01000</a>
 
-              <p className="text-sm">Email:</p>
+              <p className="text-base text-gray-700">Email:</p>
               <a href="mailto:netmagiccomputersptb@gmail.com" aria-label="Our email" title="Our email"      className="transition-colors duration-300 hover:text-blue-400 font-bold">netmagiccomputersptb@gmail.com</a>
-              <p className="text-sm  mt-4">Corporate Address:</p>
-              <p className="text-sm ">
+              <p className="text-base text-gray-700 mt-4">Corporate Address:</p>
+              <p className="text-base text-gray-700">
                 1st Floor, Anwariya Building,<br />
                 Opp. Police Station, Pattambi,<br />
                 Palakkad
@@ -63,23 +66,23 @@ const center = {
             </div>
 
             {/* Section 2: Opening Hours */}
-            <div className="flex-1   bg-white/80 backdrop-blur-md border border-white/30 p-5 rounded-xl shadow-lg">
-              <h2 className="text-xl font-semibold mb-10 mt-10 text-center " >Opening Hours</h2>
-              <table className="text-sm leading-6 w-full ">
+            <div className="flex-1 space-y-4 bg-white/70 backdrop-blur-md border border-white/20 p-5 rounded-xl shadow-lg">
+              <h2 className="text-xl font-semibold mb-10 mt-10 text-center" >Opening Hours</h2>
+              <table className="text-base leading-7 w-full font-sans">
                 <tbody>
-                  <tr><td className="pr-4 text-red-600">Sunday</td><td className="text-right text-red-600">Closed</td></tr>
-                  <tr><td className="pr-4">Monday</td><td className="text-right text-blue-500">9:30 am–7 pm</td></tr>
-                  <tr><td className="pr-4">Tuesday</td><td className="text-right text-blue-500">9:30 am–7 pm</td></tr>
-                  <tr><td className="pr-4">Wednesday</td><td className="text-right text-blue-500">9:30 am–7 pm</td></tr>
-                  <tr><td className="pr-4">Thursday</td><td className="text-right text-blue-500">9:30 am–7 pm</td></tr>
-                  <tr><td className="pr-4">Friday</td><td className="text-right text-blue-500">9:30 am–7 pm</td></tr>
-                  <tr><td className="pr-4">Saturday</td><td className="text-right text-blue-500">9:30 am–7 pm</td></tr>
+                  <tr><td className="pr-4 text-red-600 font-medium">Sunday</td><td className="text-right text-red-600 font-medium">Closed</td></tr>
+                  <tr><td className="pr-4 font-medium">Monday</td><td className="text-right text-blue-500 font-medium">9:30 am–7 pm</td></tr>
+                  <tr><td className="pr-4 font-medium">Tuesday</td><td className="text-right text-blue-500 font-medium">9:30 am–7 pm</td></tr>
+                  <tr><td className="pr-4 font-medium">Wednesday</td><td className="text-right text-blue-500 font-medium">9:30 am–7 pm</td></tr>
+                  <tr><td className="pr-4 font-medium">Thursday</td><td className="text-right text-blue-500 font-medium">9:30 am–7 pm</td></tr>
+                  <tr><td className="pr-4 font-medium">Friday</td><td className="text-right text-blue-500 font-medium">9:30 am–7 pm</td></tr>
+                  <tr><td className="pr-4 font-medium">Saturday</td><td className="text-right text-blue-500 font-medium">9:30 am–7 pm</td></tr>
                 </tbody>
               </table>
             </div>
 
             {/* Section 3: Map */}
-            <div className="w-full overflow-hidden bg-white/20 backdrop-blur-md border border-white/30 rounded-xl shadow-lg min-h-[300px] aspect-[16/9] lg:flex-1 lg:h-auto">
+            <div className="w-full overflow-hidden bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-lg min-h-[300px] aspect-[16/9] lg:flex-1 lg:h-auto">
               <LoadScript googleMapsApiKey="AIzaSyAQGIKzmVWKNZ7gdjOeJAmrPe2r7iBqSi0">
                 <GoogleMap
                   mapContainerStyle={{ width: '100%', height: '100%' }}

@@ -23,6 +23,10 @@ import ideal from '../assets/logos/ideal.webp'
 import mount from '../assets/logos/mount.webp'
 import sins from '../assets/logos/sins.webp'
 import mesg from '../assets/logos/mesg.webp'
+import dubai from '../assets/logos/dubai.png'
+import hayath from '../assets/logos/hayath.jpg'
+import mesk from '../assets/logos/meska.png'
+import pazheri from '../assets/logos/pazheri.png'
 
 import back from '../assets/ba.webp'
  
@@ -30,23 +34,17 @@ import back from '../assets/ba.webp'
 
 const HappyCl = () => {
   const logos = [
-    rev,kp,excise,edk,elect,wa,ptb,sng,mesg,mes,ideal,mount,occ,bob,pnb,hdfc,dmart,ams,poont,ster,zain,mrl,total,am,sins,
+    rev,kp,excise,edk,elect,wa,ptb,sng,mesk,mesg,mes,ideal,mount,occ,bob,pnb,hdfc,dmart,ams,poont,ster,zain,mrl,total,am,sins,dubai,hayath,pazheri
   ];
   return (
-    <section
-      className="relative w-full min-h-screen text-center overflow-hidden"
-      style={{
-        position: 'relative',
-        width: '100%',
-      }}
-    >
+    <section className="relative w-full min-h-screen text-center overflow-hidden bg-[#2f4446] py-20 px-4">
       <div
         style={{
           backgroundImage: `url(${back})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          opacity: 0.1,
+          opacity: 0.12,
           position: 'absolute',
           top: 0,
           left: 0,
@@ -58,11 +56,13 @@ const HappyCl = () => {
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-start">
         <h1
           data-aos="zoom-in"
-          className="text-3xl text-center sm:text-4xl md:text-5xl lg:text-5xl font-semibold tracking-wider mb-14 opacity-100 mt-32"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-6"
         >
           OUR HAPPY CLIENTS
         </h1>
-        <p className="mb-16 text-gray-600">Trusted by Government Departments and Leading Businesses</p>
+        <p className="mb-16 text-gray-300 text-sm sm:text-base">
+          Trusted by Government Departments and Leading Businesses
+        </p>
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-6 place-items-center mx-auto w-full max-w-7xl px-4 mb-10 lg:mb-0">
           {logos.map((src, idx) => (
             <img
@@ -72,7 +72,7 @@ const HappyCl = () => {
               loading="lazy"
               width="100"
               height="60"
-              className="h-[60px] w-[100px] object-contain opacity-80 hover:opacity-100 transition-transform duration-500 hover:scale-110 border-1"
+              className="h-[60px] w-[100px] object-contain opacity-100 hover:scale-110 transition duration-300 ease-in-out "
             />
           ))}
         </div>
