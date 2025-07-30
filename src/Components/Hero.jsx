@@ -14,7 +14,7 @@ const Hero = () => {
     <main 
     style={{ backgroundImage: `url(${back})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }} 
     
-    className="w-screen h-screen flex items-center justify-start px-10  bg-[#355e3b]">
+    className="w-screen h-screen flex items-center justify-start px-5 lg:px-10  bg-[#355e3b]">
       <div data-aos="fade-right"
        data-aos-offset="300"
        data-aos-easing="ease-in-sine" 
@@ -23,7 +23,7 @@ const Hero = () => {
 
         
 
-        <div className="flex items-center gap-3 flex-wrap mb-6">
+        <div className="flex items-center gap-3 flex-wrap mb- mt-[50%] lg:mt-0">
           <img
             src={magic}
             alt="magic logo"
@@ -31,10 +31,10 @@ const Hero = () => {
           />
         </div>
 
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-5">
           SECURE. EMPOWER. <br /> AUTOMATE. SUPPORT.
         </h1>
-        <p className="text-lg text-white/90 mb-8 leading-relaxed max-w-2xl">
+        <p className="text-md text-white/90 mb-8 leading-relaxed max-w-2xl">
           Your space deserves reliable, future-ready technology. We specialize in security systems, solar energy, home and office automation, custom PCs, automated gates & shutters, and IT support — all delivered with precision, expertise, and a commitment to long-term reliability.
         </p>
 
