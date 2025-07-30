@@ -77,7 +77,7 @@ const Carousel = () => {
           {ServiceData.map((item) => (
             <SwiperSlide key={item.title} >
               <div
-               className="relative mb-20 mx-auto group w-[90vw] max-w-[280px] lg:w-[300px] rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300 ease-in-out min-h-[320px] lg:min-h-[400px]">
+               className="relative mb-20 mx-auto group w-[90vw] max-w-[280px] lg:w-[300px] rounded-md overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300 ease-in-out min-h-[320px] lg:min-h-[400px]">
                 {/* Background Image */}
                 <img
                   src={item.backgroundImage || '/fallback.jpg'}

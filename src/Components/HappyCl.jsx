@@ -72,7 +72,7 @@ const HappyCl = () => {
               loading="lazy"
               width="100"
               height="60"
-              className="h-[60px] w-[100px] object-contain opacity-80 hover:opacity-100 transition-transform duration-300 hover:scale-110"
+              className="h-[60px] w-[100px] object-contain opacity-80 hover:opacity-100 transition-transform duration-500 hover:scale-110 border-1"
             />
           ))}
         </div>

@@ -11,6 +11,7 @@ const Header = () => {
   const [openMobileSection, setOpenMobileSection] = useState(null);
   const hideTimer = useRef(null);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [openNavbar, setOpenNavbar] = useState(false);
   
   const dropdownRef = useRef(null);
   const location = useLocation();
@@ -22,6 +23,11 @@ const Header = () => {
     setOpenMenu(menuName);
     setActiveDropdown(menuName);
   };
+  useEffect(() => {
+    if (!openNavbar) {
+      setOpenMobileSection(null);
+    }
+  }, [openNavbar]);
 
   const handleMouseLeave = () => {
     // Set a delay before closing the menu
@@ -59,7 +65,7 @@ const Header = () => {
     <>
       <header ref={dropdownRef}
         id='home'
-        className="fixed top-0 left-0 w-full  bg-[#d1d1d1]  shadow z-50 flex justify-between items-center h-16 px-2 lp:px-20"
+        className="fixed top-0 left-0 w-full  bg-[white]  shadow-sm z-50 flex justify-between items-center h-16 px-2 lp:px-20"
       >
 
         <div className="flex items-center">
@@ -75,7 +81,7 @@ const Header = () => {
         <nav className="hidden custom:flex justify-end items-center gap-1 w-full py-3 text-[12px] font-semibold">
           <a
             href="/"
-            className={`px-5 py-6  rounded-sm  ${location.pathname === '/' ? 'text-white bg-[#1d2f36] opacity-50' : 'hover:text-[#1d2f36] text-black opacity-100'}`}
+            className={`px-5 py-[25px]  rounded-sm  ${location.pathname === '/' ? 'text-white bg-[#1d2f36] opacity-70' : 'hover:text-[#1d2f36] text-black opacity-100'}`}
           >
             HOME
           </a>
@@ -86,7 +92,7 @@ const Header = () => {
           <button className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] flex items-center gap-1">
             PRODUCTS
             <span
-              className={`inline-block transition-transform duration-300 ${
+              className={`inline-block transition-transform duration-500 ${
                 activeDropdown === "products" ? "rotate-0" : "rotate-180"
               }`}
             >
@@ -95,10 +101,10 @@ const Header = () => {
           </button>
 
 {openMenu === 'products' && (
-  <div className="absolute top-full left-0 mt-1 bg-white border rounded shadow-md w-[600px] p-4 z-50 flex">
+  <div className="absolute top-full left-0 mt-1 bg-white border rounded shadow-md w-[600px] p-4 z-50 flex ">
     
     {/* LEFT: Product Categories */}
-    <div className="w-1/2 pr-4 space-y-2 text-sm font-medium text-gray-800 border-r border-gray-200">
+    <div className="w-1/2 pr-4 space-y-2 text-[13px] font-medium text-gray-800 border-r border-gray-200">
       <p onMouseEnter={() => setSelectedProductCategory('Laptops')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedProductCategory === 'Laptops' ? 'text-[#1d2f36] font-bold' : ''}`}>Laptops & Desktops</p>
       <p onMouseEnter={() => setSelectedProductCategory('CustomPC')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedProductCategory === 'CustomPC' ? 'text-[#1d2f36] font-bold' : ''}`}>Custom PC Builds</p>
       <p onMouseEnter={() => setSelectedProductCategory('CCTV')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedProductCategory === 'CCTV' ? 'text-[#1d2f36] font-bold' : ''}`}>CCTV & Surveillance</p>
@@ -111,14 +117,14 @@ const Header = () => {
       <p onMouseEnter={() => setSelectedProductCategory('Accessories')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedProductCategory === 'Accessories' ? 'text-[#1d2f36] font-bold' : ''}`}>Accessories</p>
     </div>
     {/* RIGHT: Sub-Items */}
-    <div className="w-1/2 pl-4 text-sm text-gray-700 space-y-1">
+    <div className="w-1/2 pl-4 text-[13px] text-gray-700 space-y-1">
       {!selectedProductCategory && (
         <p className="text-gray-400">← Select a product category</p>
       )}
 
       {selectedProductCategory === 'Laptops' && (
         <>
-          <p className="text-xs mb-1 text-gray-500">For Offices, Businesses, Home, and Gaming</p>
+          <p className=" mb-1 text-gray-500">For Offices, Businesses, Home, and Gaming</p>
           <ul className="list-disc pl-5">
             <li>Branded Laptops</li>
             <li>Office & Business Desktops</li>
@@ -237,7 +243,7 @@ const Header = () => {
   <button className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] flex items-center gap-1">
             SOLUTIONS
             <span
-              className={`inline-block transition-transform duration-300 ${
+              className={`inline-block transition-transform duration-500 ${
                 activeDropdown === "solutions" ? "rotate-0" : "rotate-180"
               }`}
             >
@@ -246,7 +252,7 @@ const Header = () => {
           </button>
 
   {openMenu === 'solutions' && (
-    <div className="absolute top-full left-0 mt-1 bg-white border rounded shadow-md w-[600px] p-4 z-50 flex">
+    <div className="absolute top-full text-[13px] left-0 mt-1 bg-white border rounded shadow-md w-[600px] p-4 z-50 flex">
       {/* LEFT: Main Categories */}
             <div className="w-1/2 pr-4 space-y-2 text-sm font-medium text-gray-800">
         <p onMouseEnter={() => setSelectedMainService('VideoSurveillance')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold  ${selectedMainService === 'VideoSurveillance' ? 'text-[#1d2f36] font-bold' : ''}`}>
@@ -276,7 +282,7 @@ const Header = () => {
       </div>
 
       {/* RIGHT: Sub Items */}
-      <div className="w-1/2 pl-4 text-sm text-gray-700 space-y-1 border-l border-gray-200">
+      <div className="w-1/2 pl-4 text-[13px] text-gray-700 space-y-1 border-l border-gray-200">
         {!selectedMainService && (
           <p className="text-gray-400">← Select a solution category</p>
         )}
@@ -362,7 +368,7 @@ const Header = () => {
           <button className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] flex items-center gap-1">
             SERVICES
             <span
-              className={`inline-block transition-transform duration-300 ${
+              className={`inline-block transition-transform duration-500 ${
                 activeDropdown === "services" ? "rotate-0" : "rotate-180"
               }`}
             >
@@ -374,7 +380,7 @@ const Header = () => {
     <div className="absolute top-full right-0 mt-1 bg-white border rounded shadow-md w-[500px] p-4 z-50 flex">
 
       {/* Left Column: Subcategories */}
-      <div className="w-1/2 pr-4 text-sm text-gray-700 border-r ">
+      <div className="w-1/2 pr-4 text-[13px] text-gray-700 border-r ">
         <ul className="list-disc pl-5 space-y-1">
           {selectedMainService === 'Power' && (
             <>
@@ -433,7 +439,7 @@ const Header = () => {
 
       {/* Right Column: Main Categories */}
       <div className="w-1/2 pl-4">
-        <ul className="space-y-2 text-sm font-medium">
+        <ul className="space-y-2 text-[13px] font-medium">
           <li onMouseEnter={() => setSelectedMainService('Power')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedMainService === 'Power' ? 'text-[#1d2f36] font-bold' : ''}`}>Power & Energy Solutions</li>
           <li onMouseEnter={() => setSelectedMainService('Networking')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedMainService === 'Networking' ? 'text-[#1d2f36] font-bold' : ''}`}>Networking & Security</li>
           <li onMouseEnter={() => setSelectedMainService('IT')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedMainService === 'IT' ? 'text-[#1d2f36] font-bold' : ''}`}>IT & Computing</li>
@@ -451,10 +457,10 @@ const Header = () => {
           onMouseEnter={() => handleMouseEnter("industries")}
           onMouseLeave={handleMouseLeave}>
 
-<button className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] flex items-center gap-1">
+<button className="px-3 py-1 cursor-pointer hover:text-[#1d2f36]  flex items-center gap-1">
             INDUSTRIES
             <span
-              className={`inline-block transition-transform duration-300 ${
+              className={`inline-block transition-transform duration-500 ${
                 activeDropdown === "industries" ? "rotate-0" : "rotate-180"
               }`}
             >
@@ -467,7 +473,7 @@ const Header = () => {
       <div className="flex bg-white border rounded shadow-md w-[640px]">
 
         {/* Sub-items LEFT */}
-        <div className="w-[400px] p-4 text-sm text-gray-700 border-r">
+        <div className="w-[400px] p-4 text-[13px] text-gray-700 border-r">
           {selectedMainService === 'Government' && (
             <ul className="list-disc list-inside space-y-1">
               <li>Smart City Infrastructure</li>
@@ -519,7 +525,7 @@ const Header = () => {
         </div>
 
         {/* Categories RIGHT */}
-        <div className="w-[240px] p-4 bg-gray-50">
+        <div className="w-[240px] p-4 text-[13px] bg-gray-50">
           <ul className="text-sm font-medium space-y-2">
             {['Government', 'Education', 'Retail', 'Hospitality', 'Residential'].map(item => (
               <li
@@ -543,10 +549,10 @@ const Header = () => {
           className="relative"  
            onMouseEnter={() => handleMouseEnter("support")}
           onMouseLeave={handleMouseLeave}     >
-          <button className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] flex items-center gap-1">
+          <button className="px-3 py-1 cursor-pointer text-[13px] hover:text-[#1d2f36] flex items-center gap-1">
             INSTALL & SUPPORT
             <span
-              className={`inline-block transition-transform duration-300 ${
+              className={`inline-block transition-transform duration-500 ${
                 activeDropdown === "support" ? "rotate-0" : "rotate-180"
               }`}
             >
@@ -559,7 +565,7 @@ const Header = () => {
               <div className="flex bg-white border rounded shadow-md w-[640px]">
 
                 {/* Sub-items LEFT */}
-                <div className="w-[400px] p-4 text-sm text-gray-700 border-r">
+                <div className="w-[400px] p-4 text-[13px] text-gray-700 border-r">
                   {selectedSupport === 'Accessories' && (
                     <>
                       <p className="font-semibold mb-2">All essential add-ons for:</p>
@@ -650,25 +656,34 @@ const Header = () => {
               role="dialog"
               aria-modal="true"
             >
-              <button
-                onClick={() => setMenuOpen(false)}
-                className="absolute top-4 right-4 text-3xl text-gray-700"
-                aria-label="Close menu"
-              >
-                <i className="bx bx-x"></i>
-              </button>
-              <nav className="flex flex-col gap-6 items-start w-full max-w-sm">
-                <a onClick={() => setMenuOpen(false)} href="/" className="text-lg font-bold px-4 py-2 w-full hover:bg-gray-100 rounded">HOME</a>
+             <button
+              onClick={() => {
+                setMenuOpen(false);
+                setOpenMobileSection(null); // this closes all submenus
+              }}
+              className="absolute top-4 right-4 text-3xl text-gray-700"
+              aria-label="Close menu"
+            >
+              <i className="bx bx-x"></i>
+            </button>
+              <nav className="flex flex-col gap-6 items-start w-full max-w-sm text-start ">
+                <a onClick={() => setMenuOpen(false)} href="/" className="border-b-2 text-lg border-black px-4 py-2 font-semibold w-full hover:bg-gray-100 ">HOME</a>
 
                 <div className="w-full">
-                  <button
-                    onClick={() =>
-                      setOpenMobileSection(openMobileSection === 'products' ? null : 'products')
-                    }
-                    className="text-lg font-bold px-4 py-2 cursor-pointer hover:bg-gray-100 rounded"
-                  >
-                    PRODUCTS ▼
-                  </button>
+                <button
+                  onClick={() =>
+                    setOpenMobileSection(openMobileSection === 'products' ? null : 'products')
+                  }
+                  className="w-full flex items-center justify-between text-left text-lg font-semibold px-4 py-2 border-b-2 border-black hover:bg-gray-100"
+                >
+                  PRODUCTS
+                  <i
+                  className={`bx bx-chevron-right text-xl transform transition-transform duration-300 ${
+                    openMobileSection === 'products' ? 'rotate-90' : ''
+                  }`}
+                  ></i>
+                </button>
+
 
 
                   {openMobileSection === 'products' &&(
@@ -788,9 +803,14 @@ const Header = () => {
                   onClick={() =>
                     setOpenMobileSection(openMobileSection === 'solutions' ? null : 'solutions')
                   }
-                  className="text-lg font-bold px-4 py-2 w-full text-left hover:bg-gray-100 rounded"
+                  className="w-full flex items-center justify-between text-left text-lg font-semibold px-4 py-2 border-b-2 border-black hover:bg-gray-100"
                 >
-                  SOLUTIONS ▼
+                  SOLUTIONS  
+                  <i
+                  className={`bx bx-chevron-right text-xl transform transition-transform duration-300 ${
+                    openMobileSection === 'solutions' ? 'rotate-90' : ''
+                  }`}
+                  ></i>
                 </button>
 
                 {openMobileSection === 'solutions' && (
@@ -889,9 +909,14 @@ const Header = () => {
                   onClick={() =>
                     setOpenMobileSection(openMobileSection === 'services' ? null : 'services')
                   }
-                  className="text-lg font-bold px-4 py-2 w-full text-left hover:bg-gray-100 rounded"
+                  className="w-full flex items-center justify-between text-left text-lg font-semibold px-4 py-2 border-b-2 border-black hover:bg-gray-100"
                 >
-                  SERVICES ▼
+                  SERVICES 
+                  <i
+                  className={`bx bx-chevron-right text-xl transform transition-transform duration-300 ${
+                    openMobileSection === 'services' ? 'rotate-90' : ''
+                  }`}
+                  ></i>
                 </button>
 
                 {openMobileSection === 'services' && (
@@ -977,9 +1002,14 @@ const Header = () => {
                 onClick={() =>
                   setOpenMobileSection(openMobileSection === 'industries' ? null : 'industries')
                 }
-                className="text-lg font-bold px-4 py-2 w-full text-left hover:bg-gray-100 rounded"
+                className="w-full flex items-center justify-between text-left text-lg font-semibold px-4 py-2 border-b-2 border-black hover:bg-gray-100"
               >
-                INDUSTRIES ▼
+                INDUSTRIES  
+                <i
+                  className={`bx bx-chevron-right text-xl transform transition-transform duration-300 ${
+                    openMobileSection === 'industries' ? 'rotate-90' : ''
+                  }`}
+                  ></i>
               </button>
 
               {openMobileSection === 'industries' && (
@@ -1049,9 +1079,14 @@ const Header = () => {
               onClick={() =>
                 setOpenMobileSection(openMobileSection === 'installSupport' ? null : 'installSupport')
               }
-              className="text-lg font-bold px-4 py-2 w-full text-left hover:bg-gray-100 rounded"
+              className="w-full flex items-center justify-between text-left text-lg font-semibold px-4 py-2 border-b-2 border-black hover:bg-gray-100"
             >
-              INSTALL & SUPPORT ▼
+              INSTALL & SUPPORT 
+              <i
+                  className={`bx bx-chevron-right text-xl transform transition-transform duration-300 ${
+                    openMobileSection === 'installSupport' ? 'rotate-90' : ''
+                  }`}
+                  ></i>
             </button>
 
             {openMobileSection === 'installSupport' && (
@@ -1111,7 +1146,7 @@ const Header = () => {
           </div>
 
 
-                <a onClick={() => setMenuOpen(false)} href="/contact" className="text-lg font-bold px-4 py-2 w-full hover:bg-gray-100 rounded">CONTACT</a>
+                <a onClick={() => setMenuOpen(false)} href="/contact" className="border-b-2 text-lg border-black px-4 py-2 font-semibold w-full hover:bg-gray-100 ">CONTACT</a>
               </nav>
             </div>
           </>

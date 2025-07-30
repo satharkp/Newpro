@@ -1,10 +1,10 @@
 import solar from '../assets/sol.webp'
 import tech from '../assets/tech.webp'
-import back from '../assets/bak.webp'
+import back from '../assets/aboutbaa.webp'
 
 const About = () => {
   return (
-    <div className="scroll-smooth mt-20">
+    <div className="scroll-smooth">
       <div
         id="about"
         className="w-full px-4 py-16 mb-0 bg-cover bg-center bg-no-repeat bg-fixed"
@@ -34,7 +34,7 @@ const About = () => {
           <div data-aos="fade-left"
                 data-aos-easing="ease-in-sine"
                 data-aos-duration="500"
-               className="w-full lg:w-1/2 text-white  text-lg lg:text-xl leading-relaxed text-balance">
+               className="w-full lg:w-1/2 text-white text-md lg:text-md leading-relaxed text-balance">
             <div className="space-y-6 min-h-[16rem] sm:min-h-[20rem]">
               <p>
                 At <span className="font-bold text-black">NETMAGIC</span>, we specialize in delivering cutting-edge technology through expert <strong>on-site installation services</strong>. 

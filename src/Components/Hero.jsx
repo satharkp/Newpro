@@ -1,61 +1,66 @@
 import React, { useEffect, useState } from 'react';
 import 'boxicons/css/boxicons.min.css';
+import magic from '../assets/logos/magic.webp'
+import back from '../assets/baack.jpg'
+import bni from '../assets/logos/bni.webp';
+import akks from '../assets/logos/akks.webp'
 
 const Hero = () => {
-  const [SplineComponent, setSplineComponent] = useState(null);
-  const [showSpline, setShowSpline] = useState(false);
-
-  useEffect(() => {
-    import('@splinetool/react-spline').then((module) => {
-      setSplineComponent(() => module.default);
-    });
-  }, []);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setShowSpline(true), 500);
-    return () => clearTimeout(timer);
-  }, []);
-
+  const logos = [
+    bni,akks
+];
   return (
-    <main className="flex lg:mt-20 mb-[100px] mt-0 flex-col-reverse lg:flex-row items-center justify-between min-h-[calc(90vh-6em)]">
-      
+    <>
+    <main 
+    style={{ backgroundImage: `url(${back})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }} 
+    
+    className="w-screen h-screen flex items-center justify-start px-10  bg-[#355e3b]">
+      <div data-aos="fade-right"
+       data-aos-offset="300"
+       data-aos-easing="ease-in-sine" 
+       className="z-10 max-w-3xl text-white">
 
-    <div data-aos="fade-right"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine" className="max-w-xl ml-[3%] z-10 mt-[20%] md:mt-[20%] lg:mt-0">
-        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wider mt-10 mb-1 leading-tight lg:w-[700px] min-h-[3.5rem] sm:min-h-[4rem] md:min-h-[5rem] lg:min-h-[6rem]">
-        SECURE. EMPOWER. AUTOMATE. SUPPORT.
+
+        
+
+        <div className="flex items-center gap-3 flex-wrap mb-6">
+          <img
+            src={magic}
+            alt="magic logo"
+            className="h-16 object-contain max-w-[200px]"
+          />
+        </div>
+
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          SECURE. EMPOWER. <br /> AUTOMATE. SUPPORT.
         </h1>
-        <p className="text-base mt-3 lg:mt-5 sm:text-md tracking-wider text-gray-600 max-w-[25rem] lg:max-w-[30rem] min-h-[4.5rem] sm:min-h-[5.5rem]">
-        Your space deserves reliable, future-ready technology.
-        We specialize in security systems, solar energy, home and office automation, custom PCs, automated gates & shutters, and IT support — all delivered with precision, expertise, and a commitment to long-term reliability.
+        <p className="text-lg text-white/90 mb-8 leading-relaxed max-w-2xl">
+          Your space deserves reliable, future-ready technology. We specialize in security systems, solar energy, home and office automation, custom PCs, automated gates & shutters, and IT support — all delivered with precision, expertise, and a commitment to long-term reliability.
         </p>
 
-        {/* Call to action button*/}
-
-        <div className="flex gap-4 mt-5 lg:mt-5 mb-20">
-            <a href="#about" className="border border-[#1d2f36] h-14 sm:h-[60px] px-5 sm:px-7 rounded-full sm:text-lg text-sm font-semibold tracking-wider transition-all duration-300 hover:bg-black hover:text-white flex items-center gap-2">
-            <i className='bx bx-link-external'></i>
-              About Us
-            </a>
-            <a className="border border-[#1d2f36] h-14 sm:h-[60px] px-5 sm:px-7 rounded-full sm:text-lg text-sm font-semibold tracking-wider transition-all duration-300 hover:bg-black hover:text-white flex items-center gap-2" href="/contact">
-              Contact Us
-              <i className='bx bx-chevron-right'></i> 
-            </a>
+        <div className="flex gap-4">
+          <a href="#about" className="border border-white text-white hover:bg-white hover:text-black transition-all px-6 py-3 rounded-md font-medium flex items-center gap-2">
+            About Us <i className='bx bx-right-arrow-alt'></i>
+          </a>
+          <a href="/contact" className="border border-white text-white hover:bg-white hover:text-black transition-all px-6 py-3 rounded-md font-medium flex items-center gap-2">
+            Contact Us <i className='bx bx-right-arrow-alt'></i>
+          </a>
         </div>
-    </div>
-    {/* 3d Robot*/}
-    <div className="relative flex justify-center mt-40 lg:mt-0 lg:ml-[13%] items-center w-full max-w-5xl mx-auto scale-[1.5] sm:scale-[1] md:scale-[1.9] md:ml-10 lg:scale-[2] min-h-[200px] ">
-    {showSpline && SplineComponent && (
-      <SplineComponent
-      scene="https://prod.spline.design/Mzsufjfbt4z5nMrl/scene.splinecode"
-        loading="lazy"
-      />
-    )}
-
-    </div>
-
+      </div>
+      <div className="absolute scale-[2] top-4 right-14 flex gap-2 mt-[70px]">
+        {logos.map((src, idx) => (
+          <img
+            key={idx}
+            src={src}
+            alt={`Client ${idx + 1}`}
+            loading="lazy"
+            className="h-10 object-contain max-w-[100px]"
+          />
+        ))}
+      </div>
     </main>
+    </>
+    
   )
 }
 

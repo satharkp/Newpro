@@ -1,4 +1,3 @@
-import gradient from '../assets/gradient.webp'
 import Header from '../Components/Header'
 import Hero from '../Components/Hero'
 import AOS from 'aos';
@@ -9,15 +8,13 @@ import Footer from '../Components/Footer';
 import About from '../Components/Waw';
 import { useLocation } from 'react-router-dom';
 import HappyCl from '../Components/HappyCl';
-import bni from '../assets/logos/bni.webp';
-import akks from '../assets/logos/akks.webp'
+
+
 
 const Home = () => {
   const location = useLocation();
 
-  const logos = [
-      bni,akks
-  ];
+
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -33,27 +30,8 @@ const Home = () => {
   return (
     <div className="overflow-x-hidden">
       <main className="w-full relative">
-        {/* Gradient image */}
-        <img
-          className="absolute top-0 right-0 opacity-60 z-[-1]"
-          src={gradient}
-          alt="Colorful gradient background"
-        />
+
         
-
-
-        <div className="absolute top-20 right-3 lg:top-4 lg:right-4 flex flex-row flex-wrap items-center justify-end lg:gap-6 gap-5  max-w-full ">
-          {logos.map((src, idx) => (
-            <img
-              key={idx}
-              src={src}
-              alt={`Client ${idx + 1}`}
-              loading="lazy"
-              className="z-10 h-16 sm:h-12 md:h-14 lg:h-24 max-w-[200px] sm:max-w-[200px] lg:max-w-[400px] object-contain transition-transform duration-300 hover:scale-110"
-            />
-          ))}
-        </div>
-
         {/* Blur effect */}
         <div className="absolute top-[3.5%] right-[-10%] w-[44rem] h-[9rem] bg-[#bcb88a] opacity-100 blur-[70px] rotate-[-30deg] z-[-1]"></div>
 
