@@ -8,7 +8,7 @@ import Footer from '../Components/Footer';
 import About from '../Components/Waw';
 import { useLocation } from 'react-router-dom';
 import HappyCl from '../Components/HappyCl';
-
+import Brandeal from '../Components/Brandeal';
 
 
 const Home = () => {
@@ -42,6 +42,7 @@ const Home = () => {
         <section id="wwd">
          <Carousel />
         </section>
+        <Brandeal/>
         <HappyCl/>
         <Footer/>
       </main>
