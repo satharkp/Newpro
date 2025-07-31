@@ -36,6 +36,7 @@ const partners = [
   { name: 'MSI', logo: msi },
   { name: 'AMD', logo: amd },
   { name: 'INTEL', logo: intel },
+  { name: 'NVIDIA', logo: nvidia },
   { name: 'COOLER MASTER', logo: cooler },
   { name: 'CORNEA', logo: corn },
   { name: 'CORSAIR', logo: corsair },
@@ -45,7 +46,6 @@ const partners = [
   { name: 'HIK VISION', logo: hik},
   { name: 'LIVFAST', logo: liv },
   { name: 'LUMINOUS', logo: lumi },
-  { name: 'NVIDIA', logo: nvidia },
   { name: 'NZXT', logo: nzxt },
   { name: 'SEAGATE', logo: sea },
   { name: 'SPECTRUM', logo: spec },
@@ -53,7 +53,6 @@ const partners = [
   { name: 'ZOTAC', logo: zotac },
   { name: 'SENSES', logo: senses },
   { name: 'WESTERN DIGITAL', logo: western },
-  { name: 'CBSE', logo: rog },
 ];
 
 const Brandeal = () => {
@@ -67,40 +66,18 @@ const Brandeal = () => {
         to ensure scalable, reliable, and secure digital solutions.
       </p>
       <div className="relative">
-        <div className="flex justify-end gap-3 mb-4">
-          <button
-            className="bg-white/20 text-white px-3 py-2  hover:text-[#122828] transition"
-            onClick={() => {
-              const container = document.getElementById('scroll-container');
-              container.scrollBy({ left: -300, behavior: 'smooth' });
-            }}
-          >
-            ←
-          </button>
-          <button
-            className="bg-white/20 text-white px-3 py-2  hover:text-[#122828] transition"
-            onClick={() => {
-              const container = document.getElementById('scroll-container');
-              container.scrollBy({left: 300, behavior: 'smooth'});
-            }}
-          >
-            →
-          </button>
-        </div>
-        <div id="scroll-container" className="flex gap-5 overflow-x-auto scroll-smooth pb-9 lg:pb-24">
+        
+        <div id="scroll-container" className="flex flex-wrap gap-5 overflow-x-auto scroll-smooth pb-9 lg:pb-24 max-h-[450px]">
           {partners.map((partner, index) => (
             <div
               key={index}
-              className="min-w-[130px] lg:min-w-[200px] lg:h-[150px] bg-gray-100 rounded-lg flex flex-col justify-center items-center shadow-md p-3"
+              className="w-[70px] lg:w-[80px] h-[80px] bg-gray-100 rounded-lg flex flex-col justify-center items-center shadow-md p-3"
             >
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="w-[100px] h-[100px] object-contain mb-2 hover:scale-110 "
+                className="w-[100px] h-[100px] object-contain mb-2 hover:scale-110 duration-300"
               />
-              <div className="font-bold text-gray-800 text-base">
-                {partner.name}
-              </div>
             </div>
           ))}
         </div>
