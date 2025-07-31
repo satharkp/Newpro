@@ -21,10 +21,10 @@ const center = {
       }, []);
 
       return (
-      <>
+      <div className="overflow-hidden">
       <Header />
 
-      <section className="relative w-full py-10 min-h-[420px] mt-[60px] overflow-hidden">
+      <section className="relative w-full py-10 bg-gradient-to-br from-[#d7efc3] to-[#4da8ab] min-h-[420px] mt-[60px] overflow-x-hidden">
         {/* Background image layer */}
         <div
           className="absolute inset-0 z-0"
@@ -44,7 +44,7 @@ const center = {
           >
             GET IN TOUCH WITH US
           </h1>
-          <div className="w-full bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl shadow-lg flex flex-col lg:flex-row gap-6 overflow-visible mt-20 min-h-[400px] font-sans">
+          <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-6 bg-white/10 p-6 rounded-xl shadow-lg overflow-hidden mt-20 min-h-[400px] font-sans">
             {/* Section 1: Quote and Address */}
             <div className="flex-1 space-y-4 bg-white/70 backdrop-blur-md border border-white/20 p-5 rounded-xl shadow-lg text-balance">
               <h2 className="text-2xl font-semibold text-gray-800">Get a Quote</h2>
@@ -82,24 +82,25 @@ const center = {
             </div>
 
             {/* Section 3: Map */}
-            <div className="w-full overflow-hidden bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-lg min-h-[300px] aspect-[16/9] lg:flex-1 lg:h-auto">
-              <LoadScript googleMapsApiKey="AIzaSyAQGIKzmVWKNZ7gdjOeJAmrPe2r7iBqSi0">
-                <GoogleMap
-                  mapContainerStyle={{ width: '100%', height: '100%' }}
-                  center={center}
-                  zoom={16}
-                >
-                  <Marker position={center} />
-                </GoogleMap>
-              </LoadScript>
+            <div className="flex-1">
+              <div className="w-full h-full overflow-hidden bg-white/10 rounded-xl shadow-lg min-h-[300px]">
+                <LoadScript googleMapsApiKey="AIzaSyAQGIKzmVWKNZ7gdjOeJAmrPe2r7iBqSi0">
+                  <GoogleMap
+                    mapContainerStyle={{ width: '100%', height: '100%' }}
+                    center={center}
+                    zoom={16}
+                  >
+                    <Marker position={center} />
+                  </GoogleMap>
+                </LoadScript>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <Footer />
-      
-    </>
+    </div>
   );
 }
 

@@ -67,7 +67,7 @@ const Brandeal = () => {
       </p>
       <div className="relative">
         
-        <div id="scroll-container" className="flex flex-wrap gap-5 overflow-x-auto scroll-smooth pb-9 lg:pb-24 max-h-[450px]">
+        <div id="scroll-container" className="flex flex-wrap gap-5 overflow-x-auto scroll-smooth pb-9 lg:pb-24 max-h-[500px] ">
           {partners.map((partner, index) => (
             <div
               key={index}
