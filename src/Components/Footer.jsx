@@ -1,4 +1,11 @@
+import magic from '../assets/logos/magic.webp'
+import bni from '../assets/logos/bni.webp';
+import akks from '../assets/logos/akks.webp'
+
 const Footer = () => {
+  const logos = [
+    bni,akks
+];
   return (
 
 
@@ -6,10 +13,16 @@ const Footer = () => {
 <div className="bg-black px-4 pt-16 w-full md:px-24 lg:px-8">
   <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
     <div className="sm:col-span-2">
-      <a href="/" aria-label="Go home" title="Company" className="inline-flex items-center">
-        <span className="ml-2 text-xl font-bold font-logo tracking-wide text-white uppercase">NETMAGIC</span>
+      <a href="/" aria-label="Go home" title="Company" className="inline-flex items-center cursor-pointer">
+        <div className="flex items-center gap-3 flex-wrap ml-[-15px]">
+          <img
+            src={magic}
+            alt="magic logo"
+            className="h-16 object-contain max-w-[200px]"
+          />
+        </div>
       </a>
-      <div className="mt-6 lg:max-w-sm">
+      <div className="lg:max-w-sm">
         <p className="text-sm text-gray-300">
           NetMagic Computers in Pattambi, Kerala specializes in solar panel installation, CCTV systems, home automation, laptop servicing, networking, and IT support. We deliver reliable tech solutions with expert care for homes and businesses.
         </p>
@@ -65,7 +78,19 @@ const Footer = () => {
           Need help with tech?<br />
            From solar to software — we’ve got you covered.
       </p>
+      <div className="flex justify-center gap-5 scale-[1.7] mt-8">
+        {logos.map((src, idx) => (
+          <img
+            key={idx}
+            src={src}
+            alt={`Client ${idx + 1}`}
+            loading="lazy"
+            className="h-10 object-contain max-w-[100px]"
+          />
+        ))}
+      </div>
     </div>
+    {/* Logos block moved below */}
   </div>
   <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
     <p className="text-sm text-gray-300">

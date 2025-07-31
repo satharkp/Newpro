@@ -39,11 +39,17 @@ const Hero = () => {
         </p>
 
         <div className="flex gap-4">
-          <a href="#about" className="border border-white text-white hover:bg-white hover:text-black transition-all px-6 py-3 rounded-md font-medium flex items-center gap-2">
-            About Us <i className='bx bx-right-arrow-alt'></i>
+          <a
+            href="#about"
+            className="cursor-pointer border border-white text-white hover:bg-white hover:text-black transition-all px-6 py-3 rounded-md font-medium flex items-center gap-2"
+          >
+            About Us <i className="bx bx-right-arrow-alt cursor-pointer"></i>
           </a>
-          <a href="/contact" className="border border-white text-white hover:bg-white hover:text-black transition-all px-6 py-3 rounded-md font-medium flex items-center gap-2">
-            Contact Us <i className='bx bx-right-arrow-alt'></i>
+          <a
+            href="/contact"
+            className="cursor-pointer border border-white text-white hover:bg-white hover:text-black transition-all px-6 py-3 rounded-md font-medium flex items-center gap-2"
+          >
+            Contact Us <i className="bx bx-right-arrow-alt cursor-pointer"></i>
           </a>
         </div>
       </div>
