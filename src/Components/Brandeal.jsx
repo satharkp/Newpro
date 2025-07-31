@@ -22,6 +22,8 @@ import sea from '../assets/logos/blogo/seagate.webp'
 import spec from '../assets/logos/blogo/spec.webp'
 import tp from '../assets/logos/blogo/tp.webp'
 import zotac from '../assets/logos/blogo/zotac.webp'
+import senses from '../assets/logos/blogo/senses.webp'
+import western from '../assets/logos/blogo/western.webp'
 
 const partners = [
   
@@ -49,8 +51,8 @@ const partners = [
   { name: 'SPECTRUM', logo: spec },
   { name: 'TP-Link', logo: tp },
   { name: 'ZOTAC', logo: zotac },
-  { name: 'RPSC', logo: nvidia },
-  { name: 'University of Delhi', logo: nzxt },
+  { name: 'SENSES', logo: senses },
+  { name: 'WESTERN DIGITAL', logo: western },
   { name: 'CBSE', logo: rog },
 ];
 
@@ -85,7 +87,7 @@ const Brandeal = () => {
             →
           </button>
         </div>
-        <div id="scroll-container" className="flex gap-5 overflow-x-auto pb-2 scroll-smooth">
+        <div id="scroll-container" className="flex gap-5 overflow-x-auto scroll-smooth pb-9 lg:pb-24">
           {partners.map((partner, index) => (
             <div
               key={index}
@@ -94,7 +96,7 @@ const Brandeal = () => {
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="w-[100px] h-[100px] object-contain mb-2"
+                className="w-[100px] h-[100px] object-contain mb-2 hover:scale-110 "
               />
               <div className="font-bold text-gray-800 text-base">
                 {partner.name}

@@ -44,7 +44,7 @@ const HappyCl = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          opacity: 0.12,
+          opacity: 0.8,
           position: 'absolute',
           top: 0,
           left: 0,
@@ -55,11 +55,11 @@ const HappyCl = () => {
       />
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-start">
         <h1
-          className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-6"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-black mb-6"
         >
           OUR HAPPY CLIENTS
         </h1>
-        <p className="mb-16 text-gray-300 text-sm sm:text-base">
+        <p className="mb-16 text-gray-500 text-sm sm:text-base">
           Trusted by Government Departments and Leading Businesses
         </p>
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-6 place-items-center mx-auto w-full max-w-7xl px-4 mb-10 lg:mb-0">
