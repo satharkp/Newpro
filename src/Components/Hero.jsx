@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+
 import 'boxicons/css/boxicons.min.css';
 import magic from '../assets/logos/magic.webp'
 import back from '../assets/baack.jpg'
