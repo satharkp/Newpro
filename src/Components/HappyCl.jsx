@@ -55,7 +55,6 @@ const HappyCl = () => {
       />
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-start">
         <h1
-          data-aos="zoom-in"
           className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-6"
         >
           OUR HAPPY CLIENTS
