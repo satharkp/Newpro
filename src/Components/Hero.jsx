@@ -1,6 +1,6 @@
 import 'boxicons/css/boxicons.min.css';
 import magic from '../assets/logos/magic.webp'
-import back from '../assets/baack.jpg'
+import back from '../assets/baack.webp'
 import bni from '../assets/logos/bni.webp';
 import akks from '../assets/logos/akks.webp'
 

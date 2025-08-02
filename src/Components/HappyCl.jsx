@@ -23,11 +23,10 @@ import ideal from '../assets/logos/ideal.webp'
 import mount from '../assets/logos/mount.webp'
 import sins from '../assets/logos/sins.webp'
 import mesg from '../assets/logos/mesg.webp'
-import dubai from '../assets/logos/dubai.png'
-import hayath from '../assets/logos/hayath.jpg'
-import mesk from '../assets/logos/meska.png'
-import pazheri from '../assets/logos/pazheri.png'
-
+import dubai from '../assets/logos/dubai.webp'
+import hayath from '../assets/logos/hayath.webp'
+import mesk from '../assets/logos/meska.webp'
+import pazheri from '../assets/logos/pazheri.webp'
 import back from '../assets/ba.webp'
  
 

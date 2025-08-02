@@ -69,7 +69,7 @@ const Carousel = () => {
               {ServiceData.map((item) => (
                 <SwiperSlide key={item.title} >
                   <div
-                   className="relative mb-10 mx-auto group w-[90vw] max-w-[280px] lg:w-[300px] overflow-hidden shadow-lg hover:-translate-y-3 hover:shadow-2xl transition-all duration-300 ease-in-out min-h-[320px] lg:min-h-[400px]">
+                   className="relative mb-10 mx-auto group w-[68vw] rounded-sm max-w-[280px] lg:w-[300px] overflow-hidden shadow-lg hover:-translate-y-3 hover:shadow-2xl transition-all duration-300 ease-in-out min-h-[320px] lg:min-h-[400px]">
                     {/* Background Image */}
                     <img
                       src={item.backgroundImage || '/fallback.jpg'}
@@ -85,7 +85,7 @@ const Carousel = () => {
 
                     {/* Foreground Content */}
                     <div className="flex flex-col gap-6 relative z-20 text-white px-6 py-8 h-full w-full  hover:font-bold hover:text-black">
-                      {item.icon && <item.icon className="text-white w-[30px] h-[30px]" />}
+                      {item.icon && <item.icon className="text-[yellow] w-[30px] h-[23px] lg:h-[30px]" />}
                       <h3 className="text-lg font-bold mb-[-10px]">{item.title}</h3>
                       <p className="text-sm font-bold mb-[-20px]">{item.subHeading}</p>
                       <ul className="text-sm list-disc list-inside">
