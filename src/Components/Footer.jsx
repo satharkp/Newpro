@@ -77,14 +77,20 @@ const Footer = () => {
            From solar to software — we’ve got you covered.
       </p>
       <div className="flex justify-center gap-5 scale-[1.7] mt-8">
-        {logos.map((src, idx) => (
-          <img
+      {logos.map((src, idx) => (
+          <a
             key={idx}
-            src={src}
-            alt={`Client ${idx + 1}`}
-            loading="lazy"
-            className="h-10 object-contain max-w-[100px]"
-          />
+            href={idx === 0 ? "https://bni-india.in/en-IN/index" : "https://akessia.com"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={src}
+              alt={`Client ${idx + 1}`}
+              loading="lazy"
+              className="h-10 object-contain max-w-[100px] hover:scale-110 duration-500"
+            />
+          </a>
         ))}
       </div>
     </div>

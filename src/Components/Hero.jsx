@@ -1,4 +1,3 @@
-
 import 'boxicons/css/boxicons.min.css';
 import magic from '../assets/logos/magic.webp'
 import back from '../assets/baack.jpg'
@@ -27,7 +26,7 @@ const Hero = () => {
           <img
             src={magic}
             alt="magic logo"
-            className="h-16 object-contain max-w-[200px]"
+            className="h-16 object-contain max-w-[200px] hover:scale-110 duration-500"
           />
         </div>
 
@@ -55,13 +54,19 @@ const Hero = () => {
       </div>
       <div className="absolute scale-[2] top-4 right-14 flex gap-2 mt-[70px]">
         {logos.map((src, idx) => (
-          <img
+          <a
             key={idx}
-            src={src}
-            alt={`Client ${idx + 1}`}
-            loading="lazy"
-            className="h-10 object-contain max-w-[100px]"
-          />
+            href={idx === 0 ? "https://bni-india.in/en-IN/index" : "https://akessia.com"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={src}
+              alt={`Client ${idx + 1}`}
+              loading="lazy"
+              className="h-10 object-contain max-w-[100px] hover:scale-110 duration-500"
+            />
+          </a>
         ))}
       </div>
     </main>
