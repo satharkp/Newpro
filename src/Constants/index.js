@@ -8,8 +8,8 @@ import { IoHardwareChipOutline } from "react-icons/io5";
 
 import SpaceCity1 from "../assets/solar.webp";
 import SpaceCity2 from "../assets/cct.webp";
-import SpaceCity3 from "../assets/homie.webp";
-import SpaceCity4 from "../assets/autoG.png";
+import SpaceCity3 from "../assets/homie.avif";
+import SpaceCity4 from "../assets/autoG.webp";
 import SpaceCity5 from "../assets/inter.webp";
 import SpaceCity6 from "../assets/pcj.webp";
 import SpaceCity7 from "../assets/pri.webp";

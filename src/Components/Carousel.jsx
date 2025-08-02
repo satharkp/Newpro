@@ -74,7 +74,7 @@ const Carousel = () => {
                     <img
                       src={item.backgroundImage || '/fallback.jpg'}
                       alt={item.title}
-                      loading="lazy"
+                      loading={item.title === ServiceData[0].title ? "eager" : "lazy"}
                       width="300"
                       height="400"
                       className="absolute inset-0 w-full h-full object-cover aspect-[3/4] opacity-90 group-hover:opacity-50 transition-opacity duration-400 z-0"

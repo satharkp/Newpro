@@ -4,7 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-import back from '../assets/contaa.jpg'
+import back from '../assets/contaa.webp'
  
 const center = {
   lat: 10.804048122805051,   // You can change to your location
