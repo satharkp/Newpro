@@ -77,14 +77,14 @@ const Carousel = () => {
                       loading={item.title === ServiceData[0].title ? "eager" : "lazy"}
                       width="300"
                       height="400"
-                      className="absolute inset-0 w-full h-full object-cover aspect-[3/4] opacity-90 group-hover:opacity-50 transition-opacity duration-400 z-0"
+                      className="absolute inset-0 w-full h-full object-cover aspect-[3/4] opacity-90 group-hover:opacity-10 transition-opacity duration-500 z-0"
                     />
 
                     {/* Overlay on hover */}
                     <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-0 transition-opacity duration-300 z-10 " />
 
                     {/* Foreground Content */}
-                    <div className="flex flex-col gap-6 relative z-20 text-white px-6 py-8 h-full w-full  hover:font-bold hover:text-black">
+                    <div className="flex flex-col gap-6 relative z-20 text-white px-6 py-8 h-full w-full ">
                       {item.icon && <item.icon className="text-[yellow] w-[30px] h-[23px] lg:h-[30px]" />}
                       <h3 className="text-lg font-bold mb-[-10px]">{item.title}</h3>
                       <p className="text-sm font-bold mb-[-20px]">{item.subHeading}</p>
