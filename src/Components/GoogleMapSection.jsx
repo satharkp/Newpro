@@ -11,9 +11,9 @@ export default function GoogleMapSection() {
   return (
     <LoadScript googleMapsApiKey="AIzaSyAQGIKzmVWKNZ7gdjOeJAmrPe2r7iBqSi0">
       <GoogleMap
-        mapContainerStyle={{ width: '100%', height: '300px' }}
+        mapContainerStyle={{ width: '100%', height: '362px' }}
         center={center}
-        zoom={16}
+        zoom={17}
       >
         <Marker position={center} />
       </GoogleMap>
