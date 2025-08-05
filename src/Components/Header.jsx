@@ -70,7 +70,7 @@ const Header = () => {
 
         <div className="flex items-center">
           <h1
-            className="text-xl font-logo md:ml-8"
+            className="text-xl font-logo lg:ml-8 ml-3"
           >
             <a href="/">NETMAGIC</a>
             
@@ -636,7 +636,7 @@ const Header = () => {
         {/* mobile view*/}
         <button
           onClick={toggleMenu}
-          className="custom:hidden text-5xl p-2 z-50 cursor-pointer"
+          className="custom:hidden text-[35px] p-3 z-50 cursor-pointer"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
@@ -652,7 +652,7 @@ const Header = () => {
             <div className="fixed inset-0 z-40 bg-black opacity-40"></div>
             <div
               id="mobile-menu"
-              className="fixed inset-0 top-0 z-[9999] bg-white backdrop-blur-10 w-full h-full flex flex-col pt-20 px-6 transition-all overflow-y-auto"
+              className="fixed inset-0 top-0 z-[9999] bg-white backdrop-blur-10 w-full h-full flex flex-col pt-20 px-5 transition-all overflow-y-auto"
               role="dialog"
               aria-modal="true"
             >

@@ -21,15 +21,12 @@ import back from '../assets/contaa.webp'
 
       <section className="relative w-full py-10 bg-gradient-to-br from-[#d7efc3] to-[#4da8ab] min-h-[420px] mt-[60px] overflow-x-hidden">
         {/* Background image layer */}
-        <div
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: `url(${back})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            opacity: 0.9
-          }}
+        <img
+          src={back}
+          alt="Contact background"
+          className="absolute inset-0 z-0 w-full h-full object-cover opacity-90"
+          loading="eager"
+          fetchpriority="high"
         />
         {/* Foreground content */}
         <div className="relative z-10 w-full font-sans">
