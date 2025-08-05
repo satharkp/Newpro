@@ -71,7 +71,7 @@ const Brandeal = () => {
           {partners.map((partner, index) => (
             <div
               key={index}
-              className="w-[70px] lg:w-[80px] h-[80px] bg-gray-100 rounded-lg flex flex-col justify-center items-center shadow-md p-3"
+              className="w-[70px] lg:w-[80px] h-[80px] bg-[white] rounded-lg flex flex-col justify-center items-center shadow-md p-3"
             >
               <img
                 src={partner.logo}
