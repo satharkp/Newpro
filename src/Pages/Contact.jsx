@@ -3,15 +3,10 @@ import Footer from "../Components/Footer";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import { lazy, Suspense } from "react";
+const GoogleMapSection = lazy(() => import("../Components/GoogleMapSection"));
 import back from '../assets/contaa.webp'
  
-const center = {
-  lat: 10.804048122805051,   // You can change to your location
-  lng: 76.18664964170154
-};
-
-
 
     function Contact() {
 
@@ -84,15 +79,9 @@ const center = {
             {/* Section 3: Map */}
             <div className="flex-1">
               <div className="w-full h-full overflow-hidden bg-white/10 rounded-xl shadow-lg min-h-[300px]">
-                <LoadScript googleMapsApiKey="AIzaSyAQGIKzmVWKNZ7gdjOeJAmrPe2r7iBqSi0">
-                  <GoogleMap
-                    mapContainerStyle={{ width: '100%', height: '100%' }}
-                    center={center}
-                    zoom={16}
-                  >
-                    <Marker position={center} />
-                  </GoogleMap>
-                </LoadScript>
+                <Suspense fallback={<div className="text-center py-10">Loading map...</div>}>
+                  <GoogleMapSection />
+                </Suspense>
               </div>
             </div>
           </div>
