@@ -3,7 +3,6 @@ import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
 import Notfound from "./Pages/Notfound";
 import Success from "./Pages/Success";
-import { SpeedInsights } from '@vercel/speed-insights/react';
 
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
         <Route path="*" element={<Notfound/>}/>
         <Route path="/success" element={<Success/>}/>
       </Routes>
-      <SpeedInsights />
     </BrowserRouter>
   );
 }

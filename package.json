@@ -10,11 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
     "@react-google-maps/api": "^2.20.7",
-    "@splinetool/react-spline": "^4.1.0",
-    "@splinetool/runtime": "^1.10.38",
-    "@vercel/speed-insights": "^1.2.0",
     "aos": "^3.0.0-beta.6",
     "boxicons": "^2.1.4",
     "react": "^19.1.0",
