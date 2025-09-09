@@ -57,21 +57,28 @@ const partners = [
 
 const Brandeal = () => {
   return (
-    <div className="px-10 py-10 bg-[#122828] text-white">
-      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight mb-6">
-        OUR PARTNERS IN SUCCESS
-      </h2>
-      <p className="text-white text-sm max-w-xl mb-[50px]">
-        We collaborate with top government and educational institutions across the country
-        to ensure scalable, reliable, and secure digital solutions.
-      </p>
+    <div className="px-10 py-10 bg-[#183B4E] text-white">
+<div className="flex justify-start lg:justify-end">
+  <div className="flex flex-col items-start lg:items-end">
+    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl tracking-tight text-white leading-tight lg:mb-6 mb-2 text-left lg:text-right">
+      OUR PARTNERS IN SUCCESS
+    </h2>
+    <p className="text-white text-sm max-w-xl mb-[50px] text-left lg:text-right">
+      We collaborate with top government and educational institutions across the country
+      to ensure scalable, reliable, and secure digital solutions.
+    </p>
+  </div>
+</div>
+      
       <div className="relative">
         
-        <div id="scroll-container" className="flex justify-center flex-wrap gap-5 overflow-x-auto scroll-smooth pb-9 lg:pb-24 max-h-[500px] ">
+
+        <div className='bg-black/30 lg:py-5 py-5 lg:px-5 backdrop-blur-xl'>
+        <div id="scroll-container" className="flex justify-center flex-wrap gap-5 overflow-x-auto scroll-smooth max-h-[400px] ">
           {partners.map((partner, index) => (
             <div
               key={index}
-              className="w-[70px] lg:w-[80px] h-[80px] bg-[white] rounded-lg flex flex-col justify-center items-center shadow-md p-3"
+              className="w-[70px] lg:w-[80px] h-[80px] bg-[white] rounded-sm flex flex-col justify-center items-center shadow-md p-3"
             >
               <img
                 src={partner.logo}
@@ -80,6 +87,7 @@ const Brandeal = () => {
               />
             </div>
           ))}
+        </div>
         </div>
       </div>
     </div>

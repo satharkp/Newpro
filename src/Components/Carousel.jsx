@@ -17,7 +17,7 @@ const Carousel = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-start mb-12">
           <h1 id="wwd"
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight mb-6">
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl tracking-tight text-white leading-tight mb-6">
             PRODUCTS & SOLUTIONS
           </h1>
           <p className="text-white text-sm max-w-xl lg:mb-[-100px] mb-[-200px]">

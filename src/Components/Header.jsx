@@ -65,10 +65,10 @@ const Header = () => {
     <>
       <header ref={dropdownRef}
         id='home'
-        className="fixed top-0 left-0 w-full  bg-[white]  shadow-sm z-50 flex justify-between items-center h-16 px-2 lp:px-20"
+        className="fixed top-0 left-0 w-full  bg-[#021526]  shadow-sm z-50 flex justify-between items-center h-16 px-2 lp:px-20 text-white"
       >
 
-        <div className="flex items-center">
+        <div className="flex items-center ">
           <h1
             className="text-xl font-logo lg:ml-8 ml-3"
           >
@@ -81,7 +81,7 @@ const Header = () => {
         <nav className="hidden custom:flex justify-end items-center gap-1 w-full py-3 text-[12px] font-semibold">
           <a
             href="/"
-            className={`px-5 py-[25px]  rounded-sm  ${location.pathname === '/' ? 'text-white bg-[#1d2f36] opacity-70' : 'hover:text-[#1d2f36] text-black opacity-100'}`}
+            className={`px-5 py-[25px]  rounded-sm  ${location.pathname === '/' ? 'text-white bg-[#1d2f36] opacity-90' : 'hover:text-[#1d2f36] text-white opacity-100'}`}
           >
             HOME
           </a>
@@ -381,7 +381,7 @@ const Header = () => {
 
       {/* Left Column: Subcategories */}
       <div className="w-1/2 pr-4 text-[13px] text-gray-700 border-r ">
-        <ul className="list-disc pl-5 space-y-1">
+        <ul className="list-disc pl-5 space-y-1 text-black">
           {selectedMainService === 'Power' && (
             <>
               <li>Solar System Installation & Maintenance</li>
@@ -439,7 +439,7 @@ const Header = () => {
 
       {/* Right Column: Main Categories */}
       <div className="w-1/2 pl-4">
-        <ul className="space-y-2 text-[13px] font-medium">
+        <ul className="space-y-2 text-[13px] font-medium text-black">
           <li onMouseEnter={() => setSelectedMainService('Power')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedMainService === 'Power' ? 'text-[#1d2f36] font-bold' : ''}`}>Power & Energy Solutions</li>
           <li onMouseEnter={() => setSelectedMainService('Networking')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedMainService === 'Networking' ? 'text-[#1d2f36] font-bold' : ''}`}>Networking & Security</li>
           <li onMouseEnter={() => setSelectedMainService('IT')} className={`cursor-pointer hover:text-[#1d2f36] hover:font-bold ${selectedMainService === 'IT' ? 'text-[#1d2f36] font-bold' : ''}`}>IT & Computing</li>
@@ -470,7 +470,7 @@ const Header = () => {
 
   {openMenu === 'industries' && (
     <div className="absolute top-full right-0 mt-2 z-50">
-      <div className="flex bg-white border rounded shadow-md w-[640px]">
+      <div className="flex bg-white border text-black rounded shadow-md w-[640px]">
 
         {/* Sub-items LEFT */}
         <div className="w-[400px] p-4 text-[13px] text-gray-700 border-r">
@@ -525,7 +525,7 @@ const Header = () => {
         </div>
 
         {/* Categories RIGHT */}
-        <div className="w-[240px] p-4 text-[13px] bg-gray-50">
+        <div className="w-[240px] p-4 text-[13px] bg-gray-50 text-black">
           <ul className="text-sm font-medium space-y-2">
             {['Government', 'Education', 'Retail', 'Hospitality', 'Residential'].map(item => (
               <li
@@ -562,7 +562,7 @@ const Header = () => {
 
           {openMenu === 'support' && (
             <div className="absolute top-full right-0 mt-2 z-50">
-              <div className="flex bg-white border rounded shadow-md w-[640px]">
+              <div className="flex bg-white border rounded shadow-md w-[640px] text-black">
 
                 {/* Sub-items LEFT */}
                 <div className="w-[400px] p-4 text-[13px] text-gray-700 border-r">
@@ -627,7 +627,7 @@ const Header = () => {
 
           <a
             href="/contact"
-            className={`px-2 py-6  rounded-sm  ${location.pathname === '/contact' ? 'text-white bg-[#1d2f36] opacity-50' : 'hover:text-[#1d2f36] text-black opacity-100'}`}
+            className={`px-2 py-6  rounded-sm  ${location.pathname === '/contact' ? 'text-white bg-[#1d2f36] opacity-90' : 'hover:text-[#1d2f36]  opacity-100'}`}
           >
             CONTACT
           </a>
