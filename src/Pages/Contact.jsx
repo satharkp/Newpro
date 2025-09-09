@@ -34,7 +34,7 @@ import back from '../assets/contaa.webp'
             data-aos="zoom-in"
             className="text-4xl sm:text-5xl md:text-6xl font-bold text-white text-center mb-16 tracking-tight"
           >
-            GET IN TOUCH WITH US
+            GET IN TOUCH WITH U
           </h1>
           <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-6 bg-white/10 p-6 rounded-xl shadow-lg overflow-hidden mt-20 min-h-[400px] font-sans">
             {/* Section 1: Quote and Address */}
