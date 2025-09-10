@@ -36,14 +36,14 @@ const HappyCl = () => {
     rev,kp,excise,edk,elect,wa,ptb,sng,mesk,mesg,mes,ideal,mount,occ,bob,pnb,hdfc,dmart,ams,poont,ster,zain,mrl,total,am,sins,dubai,hayath,pazheri
   ];
   return (
-    <section className="relative w-full min-h-screen text-center overflow-hidden bg-[#2f4446] py-20 px-4">
+    <section className="relative w-full min-h-screen text-center overflow-hidden bg-[black] py-12 ">
       <div
         style={{
           backgroundImage: `url(${back})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          opacity: 0.8,
+          opacity: 0.9,
           position: 'absolute',
           top: 0,
           left: 0,
@@ -52,15 +52,18 @@ const HappyCl = () => {
           zIndex: 0,
         }}
       />
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-start">
-        <h1
-          className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-black mb-6"
+      <div className='relative z-10 mb-10'>
+      <h1
+          className="text-3xl sm:text-4xl md:text-5xl tracking-tight text-black mb-3"
         >
           OUR HAPPY CLIENTS
         </h1>
-        <p className="mb-16 text-gray-500 text-sm sm:text-base">
+        <p className=" text-gray-500 text-sm ">
           Trusted by Government Departments and Leading Businesses
         </p>
+      </div>
+      <div className="relative z-10 min-h-screen flex flex-col">
+        
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-6 place-items-center mx-auto w-full max-w-7xl px-4 mb-10 lg:mb-0">
           {logos.map((src, idx) => (
             <img

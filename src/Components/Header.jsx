@@ -81,7 +81,7 @@ const Header = () => {
         <nav className="hidden custom:flex justify-end items-center gap-1 w-full py-3 text-[12px] font-semibold">
           <a
             href="/"
-            className={`px-5 py-[25px]  rounded-sm  ${location.pathname === '/' ? 'text-white bg-[#1d2f36] opacity-90' : 'hover:text-[#1d2f36] text-white opacity-100'}`}
+            className={`px-5 py-[25px]  rounded-sm  ${location.pathname === '/' ? 'text-white bg-[#1d2f36] opacity-90' : 'hover:text-[#939393] text-white opacity-100'}`}
           >
             HOME
           </a>
@@ -89,7 +89,7 @@ const Header = () => {
           <div  className="relative" 
           onMouseEnter={() => handleMouseEnter("products")}
           onMouseLeave={handleMouseLeave}>
-          <button className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] flex items-center gap-1">
+          <button className="px-3 py-1 cursor-pointer hover:text-[#cacbcb] flex items-center gap-1">
             PRODUCTS
             <span
               className={`inline-block transition-transform duration-500 ${
@@ -240,7 +240,7 @@ const Header = () => {
 <div className="relative" 
           onMouseEnter={() => handleMouseEnter("solutions")}
           onMouseLeave={handleMouseLeave}>
-  <button className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] flex items-center gap-1">
+  <button className="px-3 py-1 cursor-pointer hover:text-[#cacbcb] flex items-center gap-1">
             SOLUTIONS
             <span
               className={`inline-block transition-transform duration-500 ${
@@ -365,7 +365,7 @@ const Header = () => {
           className="relative" 
           onMouseEnter={() => handleMouseEnter("services")}
           onMouseLeave={handleMouseLeave}>
-          <button className="px-3 py-1 cursor-pointer hover:text-[#1d2f36] flex items-center gap-1">
+          <button className="px-3 py-1 cursor-pointer hover:text-[#cacbcb] flex items-center gap-1">
             SERVICES
             <span
               className={`inline-block transition-transform duration-500 ${
@@ -457,7 +457,7 @@ const Header = () => {
           onMouseEnter={() => handleMouseEnter("industries")}
           onMouseLeave={handleMouseLeave}>
 
-<button className="px-3 py-1 cursor-pointer hover:text-[#1d2f36]  flex items-center gap-1">
+<button className="px-3 py-1 cursor-pointer hover:text-[#cacbcb]  flex items-center gap-1">
             INDUSTRIES
             <span
               className={`inline-block transition-transform duration-500 ${
@@ -549,7 +549,7 @@ const Header = () => {
           className="relative"  
            onMouseEnter={() => handleMouseEnter("support")}
           onMouseLeave={handleMouseLeave}     >
-          <button className="px-3 py-1 cursor-pointer text-[13px] hover:text-[#1d2f36] flex items-center gap-1">
+          <button className="px-3 py-1 cursor-pointer text-[13px] hover:text-[#cacbcb] flex items-center gap-1">
             INSTALL & SUPPORT
             <span
               className={`inline-block transition-transform duration-500 ${
@@ -627,7 +627,7 @@ const Header = () => {
 
           <a
             href="/contact"
-            className={`px-2 py-6  rounded-sm  ${location.pathname === '/contact' ? 'text-white bg-[#1d2f36] opacity-90' : 'hover:text-[#1d2f36]  opacity-100'}`}
+            className={`px-2 py-6  rounded-sm  ${location.pathname === '/contact' ? 'text-white bg-[#1d2f36] opacity-90' : 'hover:text-[#cacbcb]  opacity-100'}`}
           >
             CONTACT
           </a>

@@ -1,6 +1,6 @@
 import solar from '../assets/sol.webp'
 import tech from '../assets/jubb.webp'
-import back from '../assets/aboutbaa.webp'
+// import back from '../assets/aboutbaa.webp'
 
 const About = () => {
   return (
