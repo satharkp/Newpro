@@ -57,14 +57,20 @@ const Carousel = () => {
                 slidesPerView: 1,
                 spaceBetween: 16
               },
-              640: {
+              790: {
                 slidesPerView: 2,
                 spaceBetween: 24
               },
-              1180: {
+              1060: {
+                slidesPerView: 3,
+                spaceBetween: 32
+              },
+              1420: {
                 slidesPerView: 4,
                 spaceBetween: 32
-              }
+              } 
+
+
             }}
             freeMode={true}
             pagination={{
