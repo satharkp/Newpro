@@ -19,26 +19,26 @@ import back from '../assets/contaa.webp'
       <div className="overflow-hidden">
       <Header />
 
-      <section className="relative w-full py-10 bg-gradient-to-br from-[#d7efc3] to-[#4da8ab] min-h-[420px] mt-[60px] overflow-x-hidden">
+      <section className="relative w-full py-10 bg-[#6e6e76] min-h-[420px] mt-[60px] overflow-x-hidden">
         {/* Background image layer */}
-        <img
+        {/* <img
           src={back}
           alt="Contact background"
           className="absolute inset-0 z-0 w-full h-full object-cover opacity-90"
           loading="eager"
           fetchpriority="high"
-        />
+        /> */}
         {/* Foreground content */}
         <div className="relative z-10 w-full font-sans">
           <h1
             data-aos="zoom-in"
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white text-center mb-16 tracking-tight"
+            className="text-4xl sm:text-5xl md:text-6xl text-white text-center mb-16 tracking-tight mt-12"
           >
             GET IN TOUCH WITH US
           </h1>
-          <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-6 bg-white/10 p-6 rounded-xl shadow-lg overflow-hidden mt-20 min-h-[400px] font-sans">
+          <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-6 bg-black/30 p-6 shadow-lg overflow-hidden mt-20 min-h-[400px] font-sans">
             {/* Section 1: Quote and Address */}
-            <div className="flex-1 space-y-4 bg-white/70 backdrop-blur-md border border-white/20 p-5 rounded-xl shadow-lg text-balance">
+            <div className="flex-1 space-y-4 bg-white/70 backdrop-blur-md border border-white/20 p-5  shadow-lg text-balance">
               <h2 className="text-2xl font-semibold text-gray-800">Get a Quote</h2>
               <p className="text-base text-gray-700">Call us for inquiries:</p>
               
@@ -58,7 +58,7 @@ import back from '../assets/contaa.webp'
             </div>
 
             {/* Section 2: Opening Hours */}
-            <div className="flex-1 space-y-4 bg-white/70 backdrop-blur-md border border-white/20 p-5 rounded-xl shadow-lg">
+            <div className="flex-1 space-y-4 bg-white/70 backdrop-blur-md border border-white/20 p-5  shadow-lg">
               <h2 className="text-xl font-semibold mb-10 mt-10 text-center" >Opening Hours</h2>
               <table className="text-base leading-7 w-full font-sans">
                 <tbody>
@@ -75,7 +75,7 @@ import back from '../assets/contaa.webp'
 
             {/* Section 3: Map */}
             <div className="flex-1">
-              <div className="w-full h-full overflow-hidden bg-white/10 rounded-xl shadow-lg min-h-[300px]">
+              <div className="w-full h-full overflow-hidden bg-white/10 shadow-lg min-h-[300px]">
                 <Suspense fallback={<div className="text-center py-10">Loading map...</div>}>
                   <GoogleMapSection />
                 </Suspense>

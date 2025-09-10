@@ -114,7 +114,7 @@ const Carousel = () => {
         </div>
 
         {/* Footer Section – Contact Us */}
-        <div className="relative z-50 text-gray-600 text-center text-[11px] mt-[-140px] lg:text-[13px] min-h-[3.5rem]">
+        <div className="relative z-50 text-gray-600 text-center text-[11px] mt-[-120px] lg:text-[13px] min-h-[3.5rem]">
           Every product is backed by expert service & installation support <br />
           Need help choosing the right solution? <br />
           <a href="/contact" className="transition-colors duration-300 text-blue-400 ">
