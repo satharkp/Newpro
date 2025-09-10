@@ -23,7 +23,7 @@ const Carousel = () => {
           >
             PRODUCTS & SOLUTIONS
           </h1>
-          <p className="text-white text-sm max-w-xl mb-4">
+          <p className="text-white text-md max-w-xl mb-4 font-sans">
             We provide integrated tech-driven products for safety, communication, surveillance, and automation—ensuring reliable support and installation across all services.
           </p>
         </div>
@@ -104,8 +104,7 @@ const Carousel = () => {
                   <div className="flex flex-col gap-6 relative z-20 text-white px-6 py-8 h-full w-full">
                     {item.icon && <item.icon className="text-white w-[27px] h-[30px] lg:h-[30px]" />}
                     <h3 className="text-lg font-bold mb-[-10px]">{item.title}</h3>
-                    <p className="text-sm font-bold mb-[-20px]">{item.subHeading}</p>
-                    <ul className="text-sm list-disc list-inside">
+                    <ul className="text-sm list-disc list-inside font-sans">
                       {item.content.map((point, index) => (
                         <li key={index}>{point}</li>
                       ))}
@@ -120,7 +119,7 @@ const Carousel = () => {
         </div>
 
         {/* Footer Section – Contact Us */}
-        <div className="relative z-50 text-gray-600 text-center text-[11px] mt-[-120px] lg:text-[13px] min-h-[3.5rem]">
+        <div className="relative z-40 text-gray-600 text-center text-[11px] mt-[-120px] lg:text-[13px] min-h-[3.5rem]">
           Every product is backed by expert service & installation support <br />
           Need help choosing the right solution? <br />
           <a href="/contact" className="transition-colors duration-300 text-blue-400 ">

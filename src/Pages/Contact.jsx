@@ -19,7 +19,7 @@ import back from '../assets/contaa.webp'
       <div className="overflow-hidden">
       <Header />
 
-      <section className="relative w-full py-10 bg-[#6e6e76] min-h-[420px] mt-[60px] overflow-x-hidden">
+      <section className="relative w-full py-10 bg-[#6e6e76] min-h-[420px] mt-[60px] overflow-x-hidden ">
         {/* Background image layer */}
         {/* <img
           src={back}
@@ -29,14 +29,14 @@ import back from '../assets/contaa.webp'
           fetchpriority="high"
         /> */}
         {/* Foreground content */}
-        <div className="relative z-10 w-full font-sans">
+        <div className="relative z-10 w-full ">
           <h1
             data-aos="zoom-in"
             className="text-4xl sm:text-5xl md:text-6xl text-white text-center mb-16 tracking-tight mt-12"
           >
             GET IN TOUCH WITH US
           </h1>
-          <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-6 bg-black/30 p-6 shadow-lg overflow-hidden mt-20 min-h-[400px] font-sans">
+          <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-6 bg-black/30 p-6 shadow-lg overflow-hidden mt-20 min-h-[400px]">
             {/* Section 1: Quote and Address */}
             <div className="flex-1 space-y-4 bg-white/70 backdrop-blur-md border border-white/20 p-5  shadow-lg text-balance">
               <h2 className="text-2xl font-semibold text-gray-800">Get a Quote</h2>
@@ -60,7 +60,7 @@ import back from '../assets/contaa.webp'
             {/* Section 2: Opening Hours */}
             <div className="flex-1 space-y-4 bg-white/70 backdrop-blur-md border border-white/20 p-5  shadow-lg">
               <h2 className="text-xl font-semibold mb-10 mt-10 text-center" >Opening Hours</h2>
-              <table className="text-base leading-7 w-full font-sans">
+              <table className="text-base leading-7 w-full ">
                 <tbody>
                   <tr><td className="pr-4 text-red-600 font-medium">Sunday</td><td className="text-right text-red-600 font-medium">Closed</td></tr>
                   <tr><td className="pr-4 font-medium">Monday</td><td className="text-right text-blue-500 font-medium">9:30 am–7 pm</td></tr>

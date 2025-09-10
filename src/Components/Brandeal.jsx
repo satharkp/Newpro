@@ -63,7 +63,7 @@ const Brandeal = () => {
     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl tracking-tight text-white leading-tight lg:mb-6 mb-2 text-left lg:text-right">
       OUR PARTNERS IN SUCCESS
     </h2>
-    <p className="text-white text-sm max-w-xl mb-[50px] text-left lg:text-right">
+    <p className="text-white text-md max-w-xl mb-[50px] text-left lg:text-right font-sans">
       We collaborate with top government and educational institutions across the country
       to ensure scalable, reliable, and secure digital solutions.
     </p>

@@ -33,7 +33,7 @@ const Hero = () => {
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-5" >
           SECURE. EMPOWER. <br /> AUTOMATE. SUPPORT.
         </h1>
-        <p className="text-md  mb-8 leading-relaxed max-w-2xl">
+        <p className="text-md  mb-8 leading-relaxed max-w-2xl font-sans">
           Your space deserves reliable, future-ready technology. We specialize in security systems, solar energy, home and office automation, custom PCs, automated gates & shutters, and IT support — all delivered with precision, expertise, and a commitment to long-term reliability.
         </p>
 

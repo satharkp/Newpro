@@ -58,7 +58,7 @@ const HappyCl = () => {
         >
           OUR HAPPY CLIENTS
         </h1>
-        <p className=" text-gray-500 text-sm ">
+        <p className=" text-gray-500 text-md font-sans">
           Trusted by Government Departments and Leading Businesses
         </p>
       </div>

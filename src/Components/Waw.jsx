@@ -19,7 +19,7 @@ const About = () => {
           </h1>
 
           {/* Section 1 – AI/ML enabled services (new layout) */}
-          <div className="w-full flex flex-col lg:flex-row items-center bg-cover bg-center bg-no-repeat bg-fixed px-3 lg:px-4 py-10 lg:py-16 mb-20 bg-[#1B3C53]">
+          <div className="w-full flex flex-col lg:flex-row items-center bg-cover bg-center bg-no-repeat bg-fixed px-3 lg:px-4 py-10 lg:py-16 mb-20 bg-[#1B3C53] font-sans">
             <div className="lg:w-1/2 w-full text-white bg-black/70 p-5  backdrop-blur-sm">
               <h2 className="text-lg text-[#8CCDEB] mb-4">On-Site Installation</h2>
               <h1 className="text-3xl sm:text-4xl md:text-3xl lg:text-4xl mb-6 leading-snug">
@@ -40,7 +40,7 @@ const About = () => {
           </div>
 
           {/* Section 2 – Tech-focused services */}
-          <div className="w-full flex flex-col lg:flex-row-reverse items-center bg-cover bg-center bg-no-repeat bg-fixed px-3 lg:px-4 py-10 lg:py-16 mb-10 bg-[#1B3C53]" >
+          <div className="w-full flex flex-col lg:flex-row-reverse items-center bg-cover bg-center bg-no-repeat bg-fixed px-3 lg:px-4 py-10 lg:py-16 mb-10 bg-[#1B3C53] font-sans" >
             <div className="lg:w-1/2 w-full text-white bg-black/70 p-5 backdrop-blur-sm">
               <h2 className="text-lg text-[#8CCDEB] mb-4">Tech Support Services</h2>
               <h1 className="text-3xl sm:text-4xl md:text-3xl lg:text-4xl mb-6 leading-snug">

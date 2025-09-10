@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         logo: ['Montserrat', 'sans-serif'],
+        sans: ["Roboto"],
       },
       screens: {
         'custom': '1253px',
