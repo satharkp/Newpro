@@ -19,7 +19,7 @@ import back from '../assets/contaa.webp'
       <div className="overflow-hidden">
       <Header />
 
-      <section className="relative w-full py-10 bg-[#6e6e76] min-h-[420px] mt-[60px] overflow-x-hidden ">
+      <section className="relative w-full py-10 bg-[#6e6e76] min-h-[420px] mt-[60px] overflow-x-hidden">
         {/* Background image layer */}
         {/* <img
           src={back}
@@ -60,7 +60,7 @@ import back from '../assets/contaa.webp'
             {/* Section 2: Opening Hours */}
             <div className="flex-1 space-y-4 bg-white/70 backdrop-blur-md border border-white/20 p-5  shadow-lg">
               <h2 className="text-xl font-semibold mb-10 mt-10 text-center" >Opening Hours</h2>
-              <table className="text-base leading-7 w-full ">
+              <table className="text-base leading-7 w-full">
                 <tbody>
                   <tr><td className="pr-4 text-red-600 font-medium">Sunday</td><td className="text-right text-red-600 font-medium">Closed</td></tr>
                   <tr><td className="pr-4 font-medium">Monday</td><td className="text-right text-blue-500 font-medium">9:30 am–7 pm</td></tr>
