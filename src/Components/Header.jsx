@@ -693,7 +693,7 @@ const Header = () => {
                   >
                   <div className="flex flex-col pl-6 space-y-4 text-sm text-gray-700">
                     <div>
-                      <p className="font-semibold flex justify-between items-center">Laptops & Desktops <span className="text-gray-400">→</span></p>
+                      <p className="font-semibold flex justify-between items-center">Laptops & Desktops </p>
                       <ul className="list-disc pl-6">
                         <li>Branded Laptops (All Leading Brands)</li>
                         <li>Office & Business Desktops</li>
@@ -703,7 +703,7 @@ const Header = () => {
                       </ul>
                     </div>
                     <div>
-                      <p className="font-semibold flex justify-between items-center">Custom PC Builds <span className="text-gray-400">→</span></p>
+                      <p className="font-semibold flex justify-between items-center">Custom PC Builds </p>
                       <ul className="list-disc pl-6">
                         <li>Custom Gaming PCs (Entry to Extreme)</li>
                         <li>Content Creation & Workstations</li>
@@ -713,7 +713,7 @@ const Header = () => {
                       </ul>
                     </div>
                     <div>
-                      <p className="font-semibold flex justify-between items-center">CCTV & Surveillance Systems <span className="text-gray-400">→</span></p>
+                      <p className="font-semibold flex justify-between items-center">CCTV & Surveillance Systems </p>
                       <ul className="list-disc pl-6">
                         <li>IP & Analog Cameras</li>
                         <li>Bullet, Dome, and PTZ Models</li>
@@ -723,7 +723,7 @@ const Header = () => {
                       </ul>
                     </div>
                     <div>
-                      <p className="font-semibold flex justify-between items-center">Networking Equipment <span className="text-gray-400">→</span></p>
+                      <p className="font-semibold flex justify-between items-center">Networking Equipment </p>
                       <ul className="list-disc pl-6">
                         <li>Routers & Wireless Access Points</li>
                         <li>LAN Switches (Managed/Unmanaged)</li>
@@ -733,7 +733,7 @@ const Header = () => {
                       </ul>
                     </div>
                     <div>
-                      <p className="font-semibold flex justify-between items-center">Solar & Power Systems <span className="text-gray-400">→</span></p>
+                      <p className="font-semibold flex justify-between items-center">Solar & Power Systems </p>
                       <ul className="list-disc pl-6">
                         <li>Solar Panels (Monocrystalline / Polycrystalline)</li>
                         <li>Inverters (Hybrid, On/Off-Grid)</li>
@@ -743,7 +743,7 @@ const Header = () => {
                       </ul>
                     </div>
                     <div>
-                      <p className="font-semibold flex justify-between items-center">Home & Office Automation <span className="text-gray-400">→</span></p>
+                      <p className="font-semibold flex justify-between items-center">Home & Office Automation </p>
                       <ul className="list-disc pl-6">
                         <li>Smart Switches & Voice-Control Systems</li>
                         <li>Motion & Light Sensors</li>
@@ -753,7 +753,7 @@ const Header = () => {
                       </ul>
                     </div>
                     <div>
-                      <p className="font-semibold flex justify-between items-center">Security & Access Control <span className="text-gray-400">→</span></p>
+                      <p className="font-semibold flex justify-between items-center">Security & Access Control </p>
                       <ul className="list-disc pl-6">
                         <li>Biometric & RFID Systems</li>
                         <li>Time Attendance Machines</li>
@@ -763,7 +763,7 @@ const Header = () => {
                       </ul>
                     </div>
                     <div>
-                      <p className="font-semibold flex justify-between items-center">Automated Gates & Shutters <span className="text-gray-400">→</span></p>
+                      <p className="font-semibold flex justify-between items-center">Automated Gates & Shutters </p>
                       <ul className="list-disc pl-6">
                         <li>Sliding & Swing Gate Motors</li>
                         <li>Rolling Shutters (Motorized & Manual)</li>
@@ -773,7 +773,7 @@ const Header = () => {
                       </ul>
                     </div>
                     <div>
-                      <p className="font-semibold flex justify-between items-center">PC Components & Peripherals <span className="text-gray-400">→</span></p>
+                      <p className="font-semibold flex justify-between items-center">PC Components & Peripherals </p>
                       <ul className="list-disc pl-6">
                         <li>RAM, SSD, HDD, GPUs, CPUs</li>
                         <li>Power Supplies, Cabinets, Motherboards</li>
@@ -783,7 +783,7 @@ const Header = () => {
                       </ul>
                     </div>
                     <div>
-                      <p className="font-semibold flex justify-between items-center">Accessories <span className="text-gray-400">→</span></p>
+                      <p className="font-semibold flex justify-between items-center">Accessories</p>
                       <ul className="list-disc pl-6">
                         <li>CCTV Accessories: Cables, Mounts, HDDs</li>
                         <li>Networking: Patch Cords, Tools, Crimpers</li>
@@ -927,7 +927,7 @@ const Header = () => {
                     <div className="flex flex-col pl-6 space-y-2 text-sm">
                       <div>
                         <p className="font-semibold flex justify-between items-center">
-                          Power & Energy Solutions <span className="text-gray-400">→</span>
+                          Power & Energy Solutions 
                         </p>
                         <ul className="list-disc pl-6">
                           <li>Solar System Installation & Maintenance</li>
@@ -937,7 +937,7 @@ const Header = () => {
                       </div>
                       <div>
                         <p className="font-semibold flex justify-between items-center">
-                          Networking & Security <span className="text-gray-400">→</span>
+                          Networking & Security 
                         </p>
                         <ul className="list-disc pl-6">
                           <li>Network Infrastructure Setup</li>
@@ -950,7 +950,7 @@ const Header = () => {
                       </div>
                       <div>
                         <p className="font-semibold flex justify-between items-center">
-                          IT & Computing <span className="text-gray-400">→</span>
+                          IT & Computing 
                         </p>
                         <ul className="list-disc pl-6">
                           <li>Branded Laptops & Desktops (Sales & Service)</li>
@@ -961,7 +961,7 @@ const Header = () => {
                       </div>
                       <div>
                         <p className="font-semibold flex justify-between items-center">
-                          Smart Automation <span className="text-gray-400">→</span>
+                          Smart Automation 
                         </p>
                         <ul className="list-disc pl-6">
                           <li>Home Automation Solutions</li>
@@ -972,7 +972,7 @@ const Header = () => {
                       </div>
                       <div>
                         <p className="font-semibold flex justify-between items-center">
-                          Surveillance & Safety <span className="text-gray-400">→</span>
+                          Surveillance & Safety 
                         </p>
                         <ul className="list-disc pl-6">
                           <li>CCTV Setup & Integration</li>
@@ -983,7 +983,7 @@ const Header = () => {
                       </div>
                       <div>
                         <p className="font-semibold flex justify-between items-center">
-                          Support & Maintenance <span className="text-gray-400">→</span>
+                          Support & Maintenance 
                         </p>
                         <ul className="list-disc pl-6">
                           <li>AMC for All Products (IT, CCTV, Solar, Automation)</li>
@@ -1019,7 +1019,7 @@ const Header = () => {
                 >
                   <div className="flex flex-col pl-6 space-y-4 text-sm text-gray-700">
                     <div>
-                      <p className="font-semibold flex justify-between items-center">Government <span className="text-gray-400">→</span></p>
+                      <p className="font-semibold flex justify-between items-center">Government </p>
                       <ul className="list-disc pl-6">
                         <li>Smart City Infrastructure</li>
                         <li>Surveillance & Security Projects</li>
@@ -1029,7 +1029,7 @@ const Header = () => {
                       </ul>
                     </div>
                     <div>
-                      <p className="font-semibold flex justify-between items-center">Education <span className="text-gray-400">→</span></p>
+                      <p className="font-semibold flex justify-between items-center">Education </p>
                       <ul className="list-disc pl-6">
                         <li>Smart Classroom Solutions</li>
                         <li>Audio-Visual & Projector Setup</li>
@@ -1039,7 +1039,7 @@ const Header = () => {
                       </ul>
                     </div>
                     <div>
-                      <p className="font-semibold flex justify-between items-center">Retail & Distribution <span className="text-gray-400">→</span></p>
+                      <p className="font-semibold flex justify-between items-center">Retail & Distribution </p>
                       <ul className="list-disc pl-6">
                         <li>CCTV & POS Integration</li>
                         <li>Security Gates & RFID</li>
@@ -1049,7 +1049,7 @@ const Header = () => {
                       </ul>
                     </div>
                     <div>
-                      <p className="font-semibold flex justify-between items-center">Hospitality <span className="text-gray-400">→</span></p>
+                      <p className="font-semibold flex justify-between items-center">Hospitality </p>
                       <ul className="list-disc pl-6">
                         <li>Guest Room Automation (Lighting, HVAC, Smart TV)</li>
                         <li>Surveillance in Common Areas</li>
@@ -1059,7 +1059,7 @@ const Header = () => {
                       </ul>
                     </div>
                     <div>
-                      <p className="font-semibold flex justify-between items-center">Residential / Apartments <span className="text-gray-400">→</span></p>
+                      <p className="font-semibold flex justify-between items-center">Residential / Apartments </p>
                       <ul className="list-disc pl-6">
                         <li>CCTV & Access Control for Buildings</li>
                         <li>Video Door Phones</li>
@@ -1098,7 +1098,7 @@ const Header = () => {
                   {/* Accessories */}
                   <div>
                     <p className="font-semibold flex justify-between items-center">
-                      Accessories <span className="text-gray-400">→</span>
+                      Accessories 
                     </p>
                     <ul className="list-disc pl-6">
                       <li>CCTV & Surveillance (mounts, cables, HDDs)</li>
@@ -1112,7 +1112,7 @@ const Header = () => {
                   {/* Installations */}
                   <div>
                     <p className="font-semibold flex justify-between items-center">
-                      Installations <span className="text-gray-400">→</span>
+                      Installations 
                     </p>
                     <ul className="list-disc pl-6">
                       <li>CCTV, Networking & Solar</li>
@@ -1128,7 +1128,7 @@ const Header = () => {
                   {/* Maintenance & AMC */}
                   <div>
                     <p className="font-semibold flex justify-between items-center">
-                      Maintenance & AMC <span className="text-gray-400">→</span>
+                      Maintenance & AMC 
                     </p>
                     <ul className="list-disc pl-6">
                       <li>Annual Maintenance Contracts (AMC)</li>
