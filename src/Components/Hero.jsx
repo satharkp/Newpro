@@ -22,11 +22,11 @@ const Hero = () => {
 
         
 
-        <div className="flex items-center gap-3 flex-wrap mb- mt-[50%] lg:mt-0">
+        <div className="flex items-center gap-3 flex-wrap  mt-[50%] lg:mt-0">
           <img
             src={magic}
             alt="magic logo"
-            className="h-16 object-contain max-w-[200px] hover:scale-110 duration-500 scale-[0.7] lg:scale-[1.2]"
+            className="h-16 object-contain max-w-[200px] duration-500 scale-[0.8] lg:ml-0 ml-[-26px] lg:scale-[1.2]"
           />
         </div>
 
