@@ -71,9 +71,7 @@ const HappyCl = () => {
               src={src}
               alt={`Client ${idx + 1}`}
               loading="lazy"
-              width="100"
-              height="60"
-              className="h-[60px] w-[100px] object-contain opacity-100 hover:scale-110 transition duration-300 ease-in-out "
+              className="h-[50px] w-[70px] lg:w-[100px] object-contain opacity-100 hover:scale-110 transition duration-300 ease-in-out "
             />
           ))}
         </div>
