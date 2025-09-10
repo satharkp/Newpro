@@ -77,6 +77,7 @@ const Header = () => {
           </h1>
         </div>
 
+
         {/* Navabars*/}
         <nav className="hidden custom:flex justify-end items-center gap-1 w-full py-3 text-[12px] ">
           <a

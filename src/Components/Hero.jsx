@@ -52,7 +52,7 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <div className="absolute scale-[1.3] lg:scale-[2] top-3 right-5 lg:right-14 flex gap-2 mt-[70px] " style={{ pointerEvents: 'auto' }}>
+      <div className="absolute scale-[1.3] lg:scale-[2] top-3 right-5 lg:right-14 flex gap-2 mt-[70px] z-[49]" style={{ pointerEvents: 'auto' }}>
         {logos.map((src, idx) => (
           <a
           key={idx}
