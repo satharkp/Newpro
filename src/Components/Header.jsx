@@ -79,7 +79,7 @@ const Header = () => {
 
 
         {/* Navabars*/}
-        <nav className="hidden custom:flex justify-end items-center gap-1 w-full py-3 text-[12px] ">
+        <nav className="hidden custom:flex justify-end items-center gap-9 w-full py-3 text-[12px] ">
           <a
             href="/"
             className={`px-5 py-[25px]  rounded-sm  ${location.pathname === '/' ? 'text-white bg-[#1d2f36] opacity-90' : 'hover:text-[#939393] text-white opacity-100'}`}

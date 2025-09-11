@@ -61,11 +61,10 @@ const Brandeal = () => {
 <div className="flex justify-start lg:justify-end">
   <div className="flex flex-col items-start lg:items-end">
     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl tracking-tight text-white leading-tight lg:mb-6 mb-2 text-left lg:text-right">
-      OUR PARTNERS IN SUCCESS
+    LEADING BRANDS, TRUSTED SOLUTIONS
     </h2>
     <p className="text-white text-md max-w-xl mb-[50px] text-left lg:text-right font-sans">
-      We collaborate with top government and educational institutions across the country
-      to ensure scalable, reliable, and secure digital solutions.
+    Our range includes a wide variety of products from top technology brands, trusted by government bodies, schools, and enterprises nationwide.
     </p>
   </div>
 </div>
