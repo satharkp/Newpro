@@ -15,7 +15,7 @@ import SpaceCity6 from "../assets/pcj.webp";
 import SpaceCity7 from "../assets/pri.webp";
 import SpaceCity8 from "../assets/netw.webp";
 import SpaceCity9 from "../assets/pcA.webp";
-import SpaceCity10 from "../assets/erp.webp";
+import SpaceCity10 from "../assets/werpi.webp";
 
 export const ServiceData = [
   {
