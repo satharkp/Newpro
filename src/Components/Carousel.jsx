@@ -72,7 +72,7 @@ const Carousel = () => {
 
 
             }}
-            freeMode={true}
+            freeMode={false}
             pagination={{
               clickable: true
             }}
