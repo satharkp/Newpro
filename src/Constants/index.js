@@ -67,7 +67,7 @@ export const ServiceData = [
   },
   {
     icon: FaComputer,
-    title: "Laptops, Desktops & Custom PCs",
+    title: "Laptops, Desktops & Gaming PCs",
     content: [
       "Business PCs, Gaming Rigs, Home Systems",
       "Custom Builds with RGB, Liquid Cooling & Tuning"
