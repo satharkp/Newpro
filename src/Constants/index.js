@@ -19,13 +19,13 @@ import SpaceCity10 from "../assets/werpi.webp";
 
 export const ServiceData = [
   {
-    icon: GiSolarPower,
-    title: "Solar & Power Systems",
+    icon: FaComputer,
+    title: "Laptops, Desktops & Gaming PCs",
     content: [
-      "Panels, Inverters, Batteries & Wiring Kits",
-      "Installation & Smart Power Management"
+      "Business PCs, Gaming Rigs, Home Systems",
+      "Custom Builds with RGB, Liquid Cooling & Tuning"
     ],
-    backgroundImage: SpaceCity1,
+    backgroundImage: SpaceCity6,
   },
   {
     icon: GiCctvCamera,
@@ -36,25 +36,33 @@ export const ServiceData = [
     ],
     backgroundImage: SpaceCity2,
   },
-
   {
-    icon: FaHome,
-    title: "Home & Office Automation",
+    icon: GiSolarPower,
+    title: "Solar & Power Systems",
     content: [
-      "Smart Switches, Sensors, Voice Control",
-       "App & Assistant Integration (Alexa, Google)"
+      "Panels, Inverters, Batteries & Wiring Kits",
+      "Installation & Smart Power Management"
     ],
-    backgroundImage: SpaceCity3,
+    backgroundImage: SpaceCity1,
   },
-
   {
-    icon: MdSettingsRemote,
-    title: "Automated Gates & Shutters",
+    icon: LuPrinter ,
+    title: "Printers & Scanners",
     content: [
-      "Motors, Boom Barriers, Remote/App Control",
-      "Commercial & Residential Installations"
+      "Laser, Inkjet, All-in-One, Barcode Printers",
+       "Thermal Printers, Toners & Software"
     ],
-    backgroundImage: SpaceCity4,
+    backgroundImage: SpaceCity7,
+  },
+  {
+    icon: MdBusinessCenter ,
+    title: "Inverters & Batteries",
+    content: [
+      "Home & Commercial Inverter Solutions",
+      "Lithium-ion, Tubular, & SMF Batteries",
+      "Backup Power Systems & UPS Integration"
+    ],
+    backgroundImage: SpaceCity10,
   },
   {
     icon: ImDisplay ,
@@ -66,22 +74,22 @@ export const ServiceData = [
     backgroundImage: SpaceCity5,
   },
   {
-    icon: FaComputer,
-    title: "Laptops, Desktops & Gaming PCs",
+    icon: MdSettingsRemote,
+    title: "Automated Gates & Shutters",
     content: [
-      "Business PCs, Gaming Rigs, Home Systems",
-      "Custom Builds with RGB, Liquid Cooling & Tuning"
+      "Motors, Boom Barriers, Remote/App Control",
+      "Commercial & Residential Installations"
     ],
-    backgroundImage: SpaceCity6,
+    backgroundImage: SpaceCity4,
   },
   {
-    icon: LuPrinter ,
-    title: "Printers & Scanners",
+    icon: FaHome,
+    title: "Home & Office Automation",
     content: [
-      "Laser, Inkjet, All-in-One, Barcode Printers",
-       "Thermal Printers, Toners & Software"
+      "Smart Switches, Sensors, Voice Control",
+       "App & Assistant Integration (Alexa, Google)"
     ],
-    backgroundImage: SpaceCity7,
+    backgroundImage: SpaceCity3,
   },
   {
     icon: MdOutlineRouter,
@@ -109,5 +117,5 @@ export const ServiceData = [
       "Deployment, Training & Ongoing Support"
     ],
     backgroundImage: SpaceCity10,
-  },
+  }
 ];
