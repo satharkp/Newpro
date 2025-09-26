@@ -24,6 +24,8 @@ import tp from '../assets/logos/blogo/tp.webp'
 import zotac from '../assets/logos/blogo/zotac.webp'
 import senses from '../assets/logos/blogo/senses.webp'
 import western from '../assets/logos/blogo/western.webp'
+import ravoz from  '../assets/logos/blogo/ravo.webp'
+import autozon from '../assets/logos/blogo/autozon.webp'
 
 const partners = [
   
@@ -53,6 +55,8 @@ const partners = [
   { name: 'ZOTAC', logo: zotac },
   { name: 'SENSES', logo: senses },
   { name: 'WESTERN DIGITAL', logo: western },
+  { name: 'RAVOZ', logo: ravoz },
+  { name: 'AUTOZONE', logo: autozon },
 ];
 
 const Brandeal = () => {

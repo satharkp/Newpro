@@ -28,12 +28,13 @@ import hayath from '../assets/logos/hayath.webp'
 import mesk from '../assets/logos/meska.webp'
 import pazheri from '../assets/logos/pazheri.webp'
 import back from '../assets/ba.webp'
+import mango from '../assets/logos/mango.webp'
  
 
 
 const HappyCl = () => {
   const logos = [
-    rev,kp,excise,edk,elect,wa,ptb,sng,mesk,mesg,mes,ideal,mount,occ,bob,pnb,hdfc,dmart,ams,poont,ster,zain,mrl,total,am,sins,dubai,hayath,pazheri
+    rev,kp,excise,edk,elect,wa,ptb,sng,mesk,mesg,mes,ideal,mount,occ,bob,pnb,hdfc,dmart,ams,poont,ster,zain,mrl,total,am,sins,dubai,hayath,pazheri,mango
   ];
   return (
     <section className="relative w-full min-h-screen text-center overflow-hidden bg-[black] py-12 ">

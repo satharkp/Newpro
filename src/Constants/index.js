@@ -46,15 +46,6 @@ export const ServiceData = [
     backgroundImage: SpaceCity1,
   },
   {
-    icon: LuPrinter ,
-    title: "Printers & Scanners",
-    content: [
-      "Laser, Inkjet, All-in-One, Barcode Printers",
-       "Thermal Printers, Toners & Software"
-    ],
-    backgroundImage: SpaceCity7,
-  },
-  {
     icon: MdBusinessCenter ,
     title: "Inverters & Batteries",
     content: [
@@ -64,6 +55,8 @@ export const ServiceData = [
     ],
     backgroundImage: SpaceCity10,
   },
+
+ 
   {
     icon: ImDisplay ,
     title: "Interactive Panels & Displays",
@@ -81,6 +74,15 @@ export const ServiceData = [
       "Commercial & Residential Installations"
     ],
     backgroundImage: SpaceCity4,
+  },
+  {
+    icon: LuPrinter ,
+    title: "Printers & Scanners",
+    content: [
+      "Laser, Inkjet, All-in-One, Barcode Printers",
+       "Thermal Printers, Toners & Software"
+    ],
+    backgroundImage: SpaceCity7,
   },
   {
     icon: FaHome,
