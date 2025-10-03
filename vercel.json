@@ -1,5 +1,7 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+  "redirects": [
+  { "source": "http://netmagic.co.in/:path*", "destination": "https://netmagic.co.in/:path*", "permanent": true },
+  { "source": "http://www.netmagic.co.in/:path*", "destination": "https://netmagic.co.in/:path*", "permanent": true },
+  { "source": "https://www.netmagic.co.in/:path*", "destination": "https://netmagic.co.in/:path*", "permanent": true }
   ]
-}
+  }
