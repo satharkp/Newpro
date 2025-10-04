@@ -15,7 +15,7 @@ const About = () => {
           <h1
             className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font- tracking-tight text-black leading-tight mb-6"
           >
-            ABOUT U
+            ABOUT US
           </h1>
 
           {/* Section 1 – AI/ML enabled services (new layout) */}
