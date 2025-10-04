@@ -16,6 +16,7 @@ import SpaceCity7 from "../assets/pri.webp";
 import SpaceCity8 from "../assets/netw.webp";
 import SpaceCity9 from "../assets/pcA.webp";
 import SpaceCity10 from "../assets/werpi.webp";
+import SpaceCity11 from "../assets/inv.webp";
 
 export const ServiceData = [
   {
@@ -53,7 +54,7 @@ export const ServiceData = [
       "Lithium-ion, Tubular, & SMF Batteries",
       "Backup Power Systems & UPS Integration"
     ],
-    backgroundImage: SpaceCity10,
+    backgroundImage: SpaceCity11,
   },
 
  
