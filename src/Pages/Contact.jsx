@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from "react";
 import { lazy, Suspense } from "react";
 const GoogleMapSection = lazy(() => import("../Components/GoogleMapSection"));
-import back from '../assets/contaa.webp'
+
  
 
     function Contact() {
