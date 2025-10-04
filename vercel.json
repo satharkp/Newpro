@@ -1,7 +1,5 @@
-
-{
-"$schema": "https://openapi.vercel.sh/vercel.json",
-"redirects": [
-{ "source": "/:path*", "has": [{ "type": "host", "value": "www.netmagic.co.in" }], "destination": "https://netmagic.co.in/:path*", "permanent": true }
-]
+ {
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
 }
