@@ -90,7 +90,7 @@ const Hero = () => {
         className="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-5 rounded-full shadow-lg flex items-center gap-2 transition-transform transform hover:scale-110 z-[1000]"
       >
         <i className="bx bxl-whatsapp text-xl"></i>
-        Chat Now
+        Find the Right Service – Chat Now
       </button>
 
       {/* Popup Modal */}
